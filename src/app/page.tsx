@@ -15,7 +15,13 @@ import SectionWrapper from "@/components/SectionWrapper";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <motion.main 
+      initial={{ opacity: 0, scale: 0.98 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 1.02 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      className="min-h-screen"
+    >
       <Navbar />
       
       {/* 1. Hero Section */}
@@ -46,9 +52,9 @@ export default function Home() {
 
       {/* 12. Footer */}
       <Footer />
-    </main>
+    </motion.main>
   );
 }
 
-// Internal motion import for the about section
+// Internal motion import for the home section
 import { motion } from "framer-motion";

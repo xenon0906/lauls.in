@@ -2,14 +2,15 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Play, ArrowRight, ChevronDown } from "lucide-react";
+import { Play, ArrowRight, ChevronDown, Mail } from "lucide-react";
+import Link from 'next/link';
 
 const slides = [
   {
     title: "About Lauls: \n90 Years of \nExcellence",
     highlight: "90 Years",
     subtext: "Founded in 1933, Lauls Ltd. has evolved from a trading house into Northern India's leading industrial conglomerate across steel, logistics, and manufacturing.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+    image: "/hero/1.jpg",
     stats: [
       { label: "Projects", value: "500+" },
       { label: "Clients", value: "150+" },
@@ -21,7 +22,7 @@ const slides = [
     title: "Leading Ferro Alloy \nDistribution \nin Northern India",
     highlight: "Ferro Alloy",
     subtext: "Sole authorized distributor of TATA Steel Ferro Alloys & Minerals. Powering the steel industry with quality and reliability.",
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop",
+    image: "/hero/2.jpg",
     stats: [
       { label: "Annual Distribution", value: "15K MT" },
       { label: "TATA Steel Partner", value: "Sole" },
@@ -33,7 +34,7 @@ const slides = [
     title: "World-Class \nLogistics & \nWarehousing",
     highlight: "Logistics",
     subtext: "Operating TATA Steel stockyards with WAREX GOLD certification. Precision in handling, safety in transportation.",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
+    image: "/hero/3.jpg",
     stats: [
       { label: "Steel Handling", value: "1M MT" },
       { label: "Warehousing", value: "Certified Gold" },
@@ -45,7 +46,7 @@ const slides = [
     title: "Pioneering \nSustainable \nElectric Trucking",
     highlight: "Electric Trucking",
     subtext: "Transitioning to a greener future with our electric truck fleet. Logistics engineered for sustainability and efficiency.",
-    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop",
+    image: "/hero/4.jpg",
     stats: [
       { label: "Zero Emission", value: "100%" },
       { label: "Sustainable", value: "Eco-Friendly" },
@@ -78,9 +79,9 @@ export default function Hero() {
           className="absolute inset-0 z-0"
         >
           <motion.div 
-            initial={{ scale: 1.1 }}
+            initial={{ scale: 1.15 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 8, ease: "easeOut" }}
+            transition={{ duration: 7, ease: "linear" }}
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
           />
@@ -151,12 +152,12 @@ export default function Hero() {
               <button className="px-8 py-4 bg-accent hover:bg-accent/90 text-white font-medium rounded-lg flex items-center gap-3 transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-accent/20">
                 Explore Our Solutions <ArrowRight size={20} />
               </button>
-              <button className="px-8 py-4 border border-white/20 hover:bg-white/10 text-white font-medium rounded-lg flex items-center gap-3 transition-all group backdrop-blur-sm">
+              <Link href="/contact" className="px-8 py-4 border border-white/20 hover:bg-white/10 text-white font-medium rounded-lg flex items-center gap-3 transition-all group backdrop-blur-sm">
                 <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-accent/80 transition-colors">
-                  <Play size={14} className="ml-1 fill-white" />
+                  <Mail size={14} className="ml-1" />
                 </span>
-                Watch Our Story
-              </button>
+                Contact Us
+              </Link>
             </motion.div>
           </motion.div>
         </AnimatePresence>

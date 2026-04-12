@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function LogisticsHero() {
   return (
@@ -51,12 +52,12 @@ export default function LogisticsHero() {
              transition={{ delay: 0.3 }}
              className="flex flex-wrap gap-4 mb-20"
           >
-            <button className="px-8 py-4 bg-[#DCA54C] text-[#0A1628] font-bold hover:bg-[#c5923b] transition-all text-sm flex items-center gap-2 group rounded-sm shadow-xl shadow-[#DCA54C]/20">
+            <Link href="/logistics/details" className="px-8 py-4 bg-[#DCA54C] text-[#0A1628] font-bold hover:bg-[#c5923b] transition-all text-sm flex items-center gap-2 group rounded-sm shadow-xl shadow-[#DCA54C]/20 inline-flex">
               Explore Our Fleet <ArrowRight size={16} className="text-[#0A1628] group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/20 text-white font-bold hover:bg-white/10 hover:border-white/40 transition-all text-sm rounded-sm">
+            </Link>
+            <Link href="/contact" className="px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/20 text-white font-bold hover:bg-white/10 hover:border-white/40 transition-all text-sm rounded-sm inline-block">
               Dispatch Inquiry
-            </button>
+            </Link>
           </motion.div>
 
           <motion.div 

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Phone, Clock, ShieldCheck, Globe, FileText, Mail } from "lucide-react";
+import AutoImageRotator from "../AutoImageRotator";
 
 export default function CTA() {
   return (
@@ -72,10 +73,14 @@ export default function CTA() {
         {/* Right Image Block */}
         <div className="lg:col-span-5 flex justify-end">
           <div className="relative w-full max-w-[450px] aspect-square lg:h-[450px] rounded-2xl overflow-hidden group">
-             <img 
-               src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" 
-               alt="Industrial Services Overview"
-               className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+             <AutoImageRotator 
+               images={[
+                 "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
+                 "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop",
+                 "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2069&auto=format&fit=crop",
+                 "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop"
+               ]}
+               interval={4500}
              />
              
              {/* Gradient for stats visibility */}

@@ -1,12 +1,13 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
+import AutoImageRotator from "../AutoImageRotator";
 
 const pillars = [
-  { num: "01", title: "Unyielding Quality", desc: "Every component undergoes rigorous ISO and testing standards.", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800", span: "lg:col-span-8 lg:row-span-1" },
-  { num: "02", title: "National Scale", desc: "Capabilities spanning across 12 strategic Indian distribution hubs.", image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800", span: "lg:col-span-4 lg:row-span-2" },
-  { num: "03", title: "EV Transport", desc: "Pioneering electric transport in heavy industrial logistics.", image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=800", span: "lg:col-span-4 lg:row-span-1" },
-  { num: "04", title: "Client Partnership", desc: "We build tailored supply chains for enterprise needs.", image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800", span: "lg:col-span-4 lg:row-span-1" },
+  { num: "01", title: "Unyielding Quality", desc: "Every component undergoes rigorous ISO and testing standards.", images: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800", "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800", "https://images.unsplash.com/photo-1536647960714-469b8c0da9aa?q=80&w=800"], span: "lg:col-span-8 lg:row-span-1" },
+  { num: "02", title: "National Scale", desc: "Capabilities spanning across 12 strategic Indian distribution hubs.", images: ["https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800", "https://images.unsplash.com/photo-1565439390234-5858cf85aeb9?q=80&w=800"], span: "lg:col-span-4 lg:row-span-2" },
+  { num: "03", title: "EV Transport", desc: "Pioneering electric transport in heavy industrial logistics.", images: ["https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=800", "https://images.unsplash.com/photo-1595822526362-e1cbce516e81?q=80&w=800"], span: "lg:col-span-4 lg:row-span-1" },
+  { num: "04", title: "Client Partnership", desc: "We build tailored supply chains for enterprise needs.", images: ["https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800", "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=800"], span: "lg:col-span-4 lg:row-span-1" },
 ];
 
 export default function AboutPillars() {
@@ -39,9 +40,11 @@ export default function AboutPillars() {
               className={`${pillar.span} group relative bg-black rounded-3xl overflow-hidden cursor-pointer min-h-[350px] lg:min-h-0 border border-white/10`}
             >
               {/* Background Photographic Layer */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-90"
-                style={{ backgroundImage: `url(${pillar.image})` }}
+              <AutoImageRotator 
+                images={pillar.images} 
+                className="absolute inset-0 z-0 opacity-70 group-hover:opacity-90 transition-opacity duration-500" 
+                imgClassName="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-110"
+                interval={4000 + (idx * 500)}
               />
               
               {/* Complex Gradient Overlays */}

@@ -5,12 +5,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Layers } from "lucide-react";
+import AutoImageRotator from "@/components/AutoImageRotator";
 
 const products = [
   {
     name: "Alloy Steel Wire Rods",
     grade: "SAE / IS Standards",
-    image: "https://images.unsplash.com/photo-1531315396756-905d68d21b56?q=80&w=1200&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1200&auto=format&fit=crop"
+    ],
     use: "Automotive springs, fasteners & high-strength bolts",
     specs: "Dia: 5.5mm – 25mm | Coil Wt: 1–2 MT",
     desc: "Alloy Steel Wire Rods are precision-rolled for demanding applications including suspension springs, engine fasteners, and cold-headed bolts. Available in a wide range of SAE/AISI grades sourced from SAIL, Tata, and JSW.",
@@ -18,7 +22,10 @@ const products = [
   {
     name: "Mild Steel Wire Rods",
     grade: "IS 2062 / SAE 1006–1018",
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1200&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1536647960714-469b8c0da9aa?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop"
+    ],
     use: "Nails, fencing, binding wire, barbed wire",
     specs: "Dia: 5.5mm – 14mm | C: <0.15%",
     desc: "Mild Steel Wire Rods are the backbone of the wire industry, used for drawing into nails, binding wire, GI wire, and barbed wire. Available in standard IS 2062 and low-carbon SAE 1006–1018 grades for easy forming.",
@@ -26,7 +33,10 @@ const products = [
   {
     name: "Stainless Steel Wire Rods",
     grade: "SS 304 / 316 / 410 / 430",
-    image: "https://images.unsplash.com/photo-1573408543610-8b0135e4e17f?q=80&w=1200&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1587293852726-694762cf7520?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop"
+    ],
     use: "Pharmaceutical, food-grade and marine applications",
     specs: "Dia: 5.5mm – 16mm | Finish: Bright Annealed",
     desc: "Stainless Steel Wire Rods offer superior corrosion resistance for use in pharmaceutical equipment, food processing machinery, marine fittings, and medical devices. Available in 304, 316, 410, and 430 grades with bright annealed finish.",
@@ -69,8 +79,11 @@ export default function WireRodsPage() {
               transition={{ duration: 0.7 }}
               className={`flex flex-col lg:flex-row items-center gap-10 ${idx % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
             >
-              <div className="w-full lg:w-2/5 rounded-2xl overflow-hidden aspect-[4/3] shadow-xl">
-                <img src={p.image} alt={p.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <div className="w-full lg:w-2/5 rounded-2xl overflow-hidden aspect-[4/3] shadow-xl relative">
+                <AutoImageRotator 
+                  images={p.images} 
+                  interval={4500 + idx * 500}
+                />
               </div>
               <div className="w-full lg:w-3/5">
                 <div className="text-[#3b82f6] text-[10px] font-black uppercase tracking-widest mb-2">{p.grade}</div>

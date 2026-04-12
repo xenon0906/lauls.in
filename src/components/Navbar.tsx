@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ProductCatalogGrid from "./products/ProductCatalogGrid";
 
 const navLinks = [
-  { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Logistics", href: "/logistics" },
   { name: "Distribution", href: "/distribution" },
@@ -18,6 +18,7 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isProductsHovered, setIsProductsHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,13 +47,35 @@ export default function Navbar() {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link
+            <div
               key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+              className="py-6"
+              onMouseEnter={() => link.name === "Products" && setIsProductsHovered(true)}
+              onMouseLeave={() => link.name === "Products" && setIsProductsHovered(false)}
             >
-              {link.name}
-            </Link>
+              <Link
+                href={link.href}
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+              >
+                {link.name}
+              </Link>
+
+              {/* Mega Menu Dropdown */}
+              {link.name === "Products" && (
+                <AnimatePresence>
+                  {isProductsHovered && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <ProductCatalogGrid />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              )}
+            </div>
           ))}
           {/* Phone & Mail quick icons */}
           <div className="flex items-center gap-2 border-l border-white/20 pl-5">

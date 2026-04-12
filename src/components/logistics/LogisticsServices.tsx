@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -128,9 +129,9 @@ export default function LogisticsServices() {
                 </div>
 
                 {/* Call to action */}
-                <button className="flex items-center gap-2 text-[#DCA54C] font-bold border-b-2 border-transparent hover:border-[#DCA54C] pb-1 transition-all w-max group">
+                <Link href="/logistics/details" className="flex items-center gap-2 text-[#DCA54C] font-bold border-b-2 border-transparent hover:border-[#DCA54C] pb-1 transition-all w-max group">
                   {service.link} <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
-                </button>
+                </Link>
               </motion.div>
             </div>
           ))}

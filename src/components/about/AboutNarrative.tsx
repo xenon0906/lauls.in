@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import AutoImageRotator from "../AutoImageRotator";
 
 const strengths = [
   { title: "Logistics", desc: "Pan India Warehouse" },
@@ -29,10 +30,14 @@ export default function AboutNarrative() {
           
           {/* Left Image */}
           <div className="relative rounded-2xl overflow-hidden aspect-[4/3] group shadow-2xl">
-            <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" 
-              alt="Industrial Operations"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            <AutoImageRotator 
+              images={[
+                 "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+                 "https://images.unsplash.com/photo-1536647960714-469b8c0da9aa?q=80&w=2070&auto=format&fit=crop",
+                 "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
+                 "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop"
+              ]}
+              interval={5000}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/80 to-transparent" />
             <div className="absolute bottom-8 left-8 right-8">
