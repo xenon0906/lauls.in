@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function LogisticsArticle() {
   return (
@@ -47,10 +48,11 @@ export default function LogisticsArticle() {
         </p>
 
         <div className="relative w-full aspect-video rounded-2xl overflow-hidden my-12 group">
-           <img 
-              src="https://images.unsplash.com/photo-1474408886716-087363cd4d77?q=80&w=2070&auto=format&fit=crop" 
+           <Image
+              src="/images/warehouse.jpg"
               alt="Train logistics"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              fill
+              className="object-cover transition-transform duration-1000 group-hover:scale-105"
            />
            <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl"></div>
         </div>

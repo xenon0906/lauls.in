@@ -22,7 +22,7 @@ const slides = [
     title: "Leading Ferro Alloy \nDistribution \nin Northern India",
     highlight: "Ferro Alloy",
     subtext: "Sole authorized distributor of TATA Steel Ferro Alloys & Minerals. Powering the steel industry with quality and reliability.",
-    image: "/hero/2.jpg",
+    image: "/images/hero-banner.jpg",
     stats: [
       { label: "Annual Distribution", value: "15K MT" },
       { label: "TATA Steel Partner", value: "Sole" },
@@ -86,8 +86,8 @@ export default function Hero() {
             style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
           />
           {/* Overlays optimized for better image visibility */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628]/95 lg:from-[#0A1628]/90 via-[#0A1628]/40 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/90 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-[#0A1628]/95 lg:from-[#0A1628]/90 via-[#0A1628]/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#0A1628]/90 via-transparent to-transparent" />
         </motion.div>
       </AnimatePresence>
 
@@ -200,7 +200,7 @@ export default function Hero() {
       </div>
 
       {/* Slide Indicators (Dots) - Much larger clickable area */}
-      <div className="absolute right-6 md:right-8 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-20">
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-row gap-4 z-20 md:flex-col md:bottom-auto md:left-auto md:translate-x-0 md:right-8 md:top-1/2 md:-translate-y-1/2">
         {slides.map((_, idx) => (
           <button
             key={idx}
@@ -208,13 +208,13 @@ export default function Hero() {
             className="group relative flex items-center justify-end py-4 px-2 cursor-pointer"
             aria-label={`Go to slide ${idx + 1}`}
           >
-            <span className={`absolute right-14 text-[10px] font-bold tracking-widest uppercase transition-all duration-300 whitespace-nowrap ${
+            <span className={`hidden md:block absolute right-14 text-[10px] font-bold tracking-widest uppercase transition-all duration-300 whitespace-nowrap ${
               currentSlide === idx ? "opacity-100 text-white translate-x-0" : "opacity-0 text-white/30 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-white/60"
             }`}>
               {idx === 0 ? "About Lauls" : idx === 1 ? "Steel Distribution" : idx === 2 ? "Logistics" : "Electric Truck"}
             </span>
-            <div className={`h-[3px] rounded-full transition-all duration-500 ${
-              currentSlide === idx ? "w-12 md:w-16 bg-highlight shadow-[0_0_8px_rgba(245,158,11,0.6)]" : "w-6 md:w-8 bg-white/30 group-hover:bg-white/60"
+            <div className={`w-[3px] md:w-auto md:h-[3px] rounded-full transition-all duration-500 ${
+              currentSlide === idx ? "h-12 md:h-auto md:w-16 bg-highlight shadow-[0_0_8px_rgba(245,158,11,0.6)]" : "h-6 md:h-auto md:w-8 bg-white/30 group-hover:bg-white/60"
             }`} />
           </button>
         ))}

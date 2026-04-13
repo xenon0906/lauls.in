@@ -7,9 +7,9 @@ export default function ContactHero() {
     <section className="relative w-full h-[60vh] md:h-[65vh] bg-[#0A1628] overflow-hidden flex items-center">
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop")' }}
+        style={{ backgroundImage: 'url("/images/business-goals.jpg")' }}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] via-[#0A1628]/40 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-[#0A1628] via-[#0A1628]/40 to-transparent" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col pt-10">
          <motion.div 

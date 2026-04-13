@@ -1,28 +1,19 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import LogisticsDetailsHero from "@/components/logistics/LogisticsDetailsHero";
-import LogisticsArticle from "@/components/logistics/LogisticsArticle";
-import LogisticsFleetGallery from "@/components/logistics/LogisticsFleetGallery";
-import AboutContact from "@/components/about/AboutContact";
+import type { Metadata } from "next";
+import LogisticsDetailsPage from "@/components/logistics/LogisticsDetailsPage";
 
-export default function LogisticsDetailsPage() {
-  return (
-    <main className="min-h-screen bg-white">
-      <Navbar />
-      
-      {/* 1. Immersive Hero detailing Fleet capability */}
-      <LogisticsDetailsHero />
+export const metadata: Metadata = {
+  title: "Logistics Operations Details — Lauls Ltd",
+  description:
+    "Detailed overview of Lauls Ltd's logistics capabilities including fleet management, warehousing operations, and supply chain solutions.",
+  openGraph: {
+    title: "Logistics Operations Details — Lauls Ltd",
+    description:
+      "Detailed overview of Lauls Ltd's logistics capabilities including fleet management and warehousing.",
+    url: "https://lauls.in/logistics/details",
+  },
+  alternates: { canonical: "https://lauls.in/logistics/details" },
+};
 
-      {/* 2. Narrative Prose / Blog Post Layout */}
-      <LogisticsArticle />
-
-      {/* 3. Visual Gallery of assets */}
-      <LogisticsFleetGallery />
-
-      {/* 4. Contact Form */}
-      <AboutContact />
-
-      <Footer />
-    </main>
-  );
+export default function Page() {
+  return <LogisticsDetailsPage />;
 }

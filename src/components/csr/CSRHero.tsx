@@ -9,10 +9,10 @@ export default function CSRHero() {
       {/* Immersive Background Layer - using a green/nature or community focused image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2070&auto=format&fit=crop")' }}
+        style={{ backgroundImage: 'url("/images/savan.jpg")' }}
       >
         {/* Dark Overlay matching Home/About Hero */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628]/90 via-[#0A1628]/60 to-[#0A1628]/80" />
+        <div className="absolute inset-0 bg-linear-to-br from-[#0A1628]/90 via-[#0A1628]/60 to-[#0A1628]/80" />
       </div>
 
       {/* Content Container */}

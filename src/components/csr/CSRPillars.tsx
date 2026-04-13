@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const initiatives = [
   {
     title: "Education & Skilling",
     subtitle: "Empowering the next generation",
     desc: "We fund and operate multiple rural schools and vocational training centers near our manufacturing hubs. By providing scholarships and modern technical skilling, we ensure local youths are prepared for high-tech industrial careers.",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200",
+    image: "/images/savera.png",
     chips: [
       { label: "Impact", value: "5,000+ Students Annually" },
       { label: "Focus", value: "STEM & Vocational" },
@@ -19,7 +20,7 @@ const initiatives = [
     title: "Environmental Sustainability",
     subtitle: "Aggressive decarbonization",
     desc: "Beyond strictly adhering to EPA regulations, Lauls Ltd is actively investing in captive solar power plants and large-scale afforestation drives to offset the carbon footprint of our steel operations.",
-    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200",
+    image: "/images/solar.jpg",
     chips: [
       { label: "Renewables", value: "25MW Captive Solar" },
       { label: "Ecology", value: "2M Trees Planted" },
@@ -30,7 +31,7 @@ const initiatives = [
     title: "Community Healthcare",
     subtitle: "Accessible medical infrastructure",
     desc: "We've established 4 primary healthcare centers and run regular mobile medical camps in remote mining regions, offering free diagnostics, maternal care, and essential medicines to underserved families.",
-    image: "https://images.unsplash.com/photo-1584515933617-56e6d11e8609?q=80&w=1200",
+    image: "/images/sewa.png",
     chips: [
       { label: "Facilities", value: "4 Primary Care Centers" },
       { label: "Outreach", value: "Monthly Health Camps" },
@@ -71,11 +72,12 @@ export default function CSRPillars() {
                 transition={{ duration: 0.7 }}
                 className="w-full lg:w-1/2"
               >
-                <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-[#0A1628]">
-                  <img 
+                <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden shadow-2xl bg-[#0A1628]">
+                  <Image
                     src={initiative.image}
                     alt={initiative.title}
-                    className="absolute inset-0 w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700"
+                    fill
+                    className="object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-[#0A1628]/10" />
                   <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-3xl pointer-events-none" />

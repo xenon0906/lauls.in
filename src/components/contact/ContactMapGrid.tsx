@@ -1,30 +1,31 @@
 "use client";
 
 import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 const locations = [
   {
     title: "Corporate Headquarters",
     description: "Plot No. 33 B Nit, Faridabad, Haryana - 121001, India",
-    mapImage: "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop", 
+    mapImage: "/images/stockyard.jpg",
     mapLink: "https://www.google.com/maps/search/33+B+Nit,+Faridabad"
   },
   {
     title: "Delhi Distribution Hub",
     description: "C-55/2, Wazirpur Industrial Area, New Delhi - 110052, India",
-    mapImage: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?q=80&w=800&auto=format&fit=crop", 
+    mapImage: "/images/warehouse.jpg",
     mapLink: "https://www.google.com/maps/search/Wazirpur+Industrial+Area,+New+Delhi"
   },
   {
     title: "Central Warehousing",
     description: "Plot No. 1401/2 & 1415, GIDC Industrial Estate, Palwal, Haryana, India",
-    mapImage: "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop",
+    mapImage: "/images/stockyard-lauls.jpg",
     mapLink: "https://www.google.com/maps/search/Palwal+Haryana"
   },
   {
     title: "Regional Sales Office",
     description: "1603 to 1605, Block - D, Westgate Highway, Ahmedabad, Gujarat - 380015, India",
-    mapImage: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?q=80&w=800&auto=format&fit=crop",
+    mapImage: "/images/trading.jpg",
     mapLink: "https://www.google.com/maps/search/Ahmedabad+Gujarat"
   }
 ];
@@ -41,10 +42,11 @@ export default function ContactMapGrid() {
           {locations.map((loc, idx) => (
              <div key={idx} className="group flex flex-col">
                 <div className="relative w-full h-[200px] bg-gray-100 overflow-hidden mb-6 border border-gray-100">
-                  <img 
-                    src={loc.mapImage} 
-                    alt={`Map of ${loc.title}`} 
-                    className="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:mix-blend-normal group-hover:scale-105 group-hover:opacity-100 transition-all duration-700" 
+                  <Image
+                    src={loc.mapImage}
+                    alt={`Map of ${loc.title}`}
+                    fill
+                    className="object-cover opacity-60 mix-blend-luminosity group-hover:mix-blend-normal group-hover:scale-105 group-hover:opacity-100 transition-all duration-700"
                   />
                   
                   {/* Overlay button */}

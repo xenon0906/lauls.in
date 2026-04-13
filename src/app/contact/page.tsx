@@ -1,30 +1,19 @@
-"use client";
+import type { Metadata } from "next";
+import ContactPage from "@/components/contact/ContactPage";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ContactHero from "@/components/contact/ContactHero";
-import ContactFormOverlay from "@/components/contact/ContactFormOverlay";
-import ContactDepartments from "@/components/contact/ContactDepartments";
-import ContactMapGrid from "@/components/contact/ContactMapGrid";
+export const metadata: Metadata = {
+  title: "Contact Us — Lauls Ltd",
+  description:
+    "Get in touch with Lauls Ltd. Visit us at 33-B, NIT, Faridabad or call +91-129-4098300. Steel distribution, logistics, and manufacturing inquiries.",
+  openGraph: {
+    title: "Contact Us — Lauls Ltd",
+    description:
+      "Get in touch with Lauls Ltd. Visit us at 33-B, NIT, Faridabad or call +91-129-4098300. Steel distribution, logistics, and manufacturing inquiries.",
+    url: "https://lauls.in/contact",
+  },
+  alternates: { canonical: "https://lauls.in/contact" },
+};
 
-export default function ContactPage() {
-  return (
-    <main className="min-h-screen bg-white">
-      <Navbar />
-      
-      {/* 1. Immersive Hero */}
-      <ContactHero />
-
-      {/* 2. Overlapping Split Layout */}
-      <ContactFormOverlay />
-
-      {/* 3. Departmental Contact Lines */}
-      <ContactDepartments />
-
-      {/* 4. Global Locations Grid */}
-      <ContactMapGrid />
-
-      <Footer />
-    </main>
-  );
+export default function Page() {
+  return <ContactPage />;
 }

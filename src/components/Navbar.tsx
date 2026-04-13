@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProductCatalogGrid from "./products/ProductCatalogGrid";
 
@@ -15,10 +16,38 @@ const navLinks = [
   { name: "CSR", href: "/csr" },
 ];
 
+const productCategories = [
+  { name: "Ferro Alloys", href: "/products/ferro-alloys" },
+  { name: "Wire Rods", href: "/products/wire-rods" },
+  { name: "Steel Rounds", href: "/products/steel-rounds" },
+  { name: "Precision Tubes", href: "/products/precision-tubes" },
+];
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isProductsHovered, setIsProductsHovered] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
+  const productsRef = useRef<HTMLDivElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openProducts = useCallback(() => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    setIsProductsOpen(true);
+  }, []);
+
+  const closeProductsDelayed = useCallback(() => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsProductsOpen(false);
+    }, 150);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,20 +57,53 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Scroll lock when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
+  const closeAll = useCallback(() => {
+    setIsMobileMenuOpen(false);
+    setIsProductsOpen(false);
+    setIsMobileProductsOpen(false);
+  }, []);
+
+  const handleProductsKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        setIsProductsOpen((prev) => !prev);
+      } else if (e.key === "Escape") {
+        setIsProductsOpen(false);
+      }
+    },
+    []
+  );
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "glass py-4" : "bg-transparent py-6"
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "glass py-4" : "bg-transparent py-6"
+      }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center font-display font-bold text-xl text-white">
-            L
-          </div>
-          <span className="font-display font-bold text-2xl tracking-tight text-white uppercase">
-            Lauls<span className="text-accent">Ltd</span>
-          </span>
+          <Image
+            src="/images/logo.png"
+            alt="Lauls Ltd"
+            width={144}
+            height={22}
+            priority
+            className="h-8 w-auto"
+          />
         </Link>
 
         {/* Desktop Links */}
@@ -49,28 +111,56 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <div
               key={link.name}
-              className="py-6"
-              onMouseEnter={() => link.name === "Products" && setIsProductsHovered(true)}
-              onMouseLeave={() => link.name === "Products" && setIsProductsHovered(false)}
+              ref={link.name === "Products" ? productsRef : undefined}
+              className="py-6 relative"
+              onMouseEnter={() =>
+                link.name === "Products" && openProducts()
+              }
+              onMouseLeave={() =>
+                link.name === "Products" && closeProductsDelayed()
+              }
             >
-              <Link
-                href={link.href}
-                className="text-sm font-medium text-white/80 hover:text-white transition-colors"
-              >
-                {link.name}
-              </Link>
+              {link.name === "Products" ? (
+                <button
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded={isProductsOpen}
+                  onKeyDown={handleProductsKeyDown}
+                  onClick={() => setIsProductsOpen((prev) => !prev)}
+                  className="text-sm font-medium text-white/80 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  {link.name}
+                  <ChevronDown
+                    size={14}
+                    className={`transition-transform duration-200 ${
+                      isProductsOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+              ) : (
+                <Link
+                  href={link.href}
+                  className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+                >
+                  {link.name}
+                </Link>
+              )}
 
               {/* Mega Menu Dropdown */}
               {link.name === "Products" && (
                 <AnimatePresence>
-                  {isProductsHovered && (
+                  {isProductsOpen && (
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <ProductCatalogGrid />
+                      <ProductCatalogGrid
+                        onClose={() => setIsProductsOpen(false)}
+                        onMouseEnter={openProducts}
+                        onMouseLeave={closeProductsDelayed}
+                      />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -84,14 +174,20 @@ export default function Navbar() {
               title="+91-129-4098300"
               className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all hover:scale-110 group"
             >
-              <Phone size={15} className="text-white/70 group-hover:text-white transition-colors" />
+              <Phone
+                size={15}
+                className="text-white/70 group-hover:text-white transition-colors"
+              />
             </a>
             <a
-              href="mailto:info@laulsltd.com"
-              title="info@laulsltd.com"
+              href="mailto:info@lauls.in"
+              title="info@lauls.in"
               className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all hover:scale-110 group"
             >
-              <Mail size={15} className="text-white/70 group-hover:text-white transition-colors" />
+              <Mail
+                size={15}
+                className="text-white/70 group-hover:text-white transition-colors"
+              />
             </a>
           </div>
           <Link
@@ -104,8 +200,10 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white min-w-11 min-h-11 flex items-center justify-center"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -115,26 +213,83 @@ export default function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+            ref={mobileMenuRef}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-primary border-b border-white/10 overflow-hidden"
+            role="menu"
           >
-            <div className="flex flex-col gap-4 p-6">
+            <div className="flex flex-col gap-1 p-6 max-h-[80vh] overflow-y-auto">
               {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-lg font-medium text-white/80 hover:text-white"
-                >
-                  {link.name}
-                </Link>
+                <div key={link.name}>
+                  {link.name === "Products" ? (
+                    <>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setIsMobileProductsOpen(!isMobileProductsOpen)
+                        }
+                        aria-expanded={isMobileProductsOpen}
+                        className="w-full flex items-center justify-between text-lg font-medium text-white/80 hover:text-white py-3 min-h-11"
+                      >
+                        <span>Products</span>
+                        <ChevronDown
+                          size={18}
+                          className={`transition-transform duration-200 ${
+                            isMobileProductsOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      <AnimatePresence>
+                        {isMobileProductsOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="pl-4 pb-2 space-y-1 border-l-2 border-accent/30 ml-2">
+                              {productCategories.map((cat) => (
+                                <Link
+                                  key={cat.name}
+                                  href={cat.href}
+                                  onClick={closeAll}
+                                  role="menuitem"
+                                  className="flex items-center py-2.5 text-base text-white/60 hover:text-accent transition-colors min-h-11"
+                                >
+                                  {cat.name}
+                                </Link>
+                              ))}
+                              <Link
+                                href="/products"
+                                onClick={closeAll}
+                                role="menuitem"
+                                className="flex items-center py-2.5 text-base text-accent font-semibold hover:text-white transition-colors min-h-11"
+                              >
+                                View All Products
+                              </Link>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      onClick={closeAll}
+                      role="menuitem"
+                      className="block text-lg font-medium text-white/80 hover:text-white py-3 min-h-11"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </div>
               ))}
               <Link
                 href="/contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-2 w-full py-3 bg-accent text-center text-white font-semibold rounded-xl"
+                onClick={closeAll}
+                className="mt-2 w-full py-3 bg-accent text-center text-white font-semibold rounded-xl min-h-11"
               >
                 Contact Us
               </Link>

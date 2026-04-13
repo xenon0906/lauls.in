@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Send } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutContact() {
   const [selectedInterest, setSelectedInterest] = useState<string | null>(null);
@@ -13,12 +14,13 @@ export default function AboutContact() {
           
           {/* Left Visual Area */}
           <div className="lg:w-1/2 relative min-h-[400px] lg:min-h-full">
-            <img 
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop" 
+            <Image
+              src="/images/business-goals.jpg"
               alt="Corporate Boardroom"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628]/90 via-[#0A1628]/60 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-r from-[#0A1628]/90 via-[#0A1628]/60 to-transparent" />
             <div className="absolute inset-0 p-12 flex flex-col justify-end lg:justify-center">
               <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-white/10 backdrop-blur-md rounded-full w-fit">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#DCA54C]" />

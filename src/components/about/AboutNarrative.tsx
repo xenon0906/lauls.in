@@ -29,17 +29,17 @@ export default function AboutNarrative() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Left Image */}
-          <div className="relative rounded-2xl overflow-hidden aspect-[4/3] group shadow-2xl">
-            <AutoImageRotator 
+          <div className="relative rounded-2xl overflow-hidden aspect-4/3 group shadow-2xl">
+            <AutoImageRotator
               images={[
-                 "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
-                 "https://images.unsplash.com/photo-1536647960714-469b8c0da9aa?q=80&w=2070&auto=format&fit=crop",
-                 "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
-                 "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop"
+                 "/images/manufacturing.jpg",
+                 "/images/stockyard.jpg",
+                 "/images/team-group-2.jpg",
+                 "/images/warehouse.jpg"
               ]}
               interval={5000}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/80 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-[#0A1628]/80 to-transparent" />
             <div className="absolute bottom-8 left-8 right-8">
               <p className="text-white text-lg font-medium leading-relaxed">
                 "We deliver the robust logistics and distribution networks that build the nation's infrastructure, ensuring uncompromising quality at every step."

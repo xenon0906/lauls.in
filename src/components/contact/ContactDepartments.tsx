@@ -12,8 +12,8 @@ export default function ContactDepartments() {
     },
     { 
       title: "GENERAL", 
-      value: "info@laulsltd.com", 
-      href: "mailto:info@laulsltd.com",
+      value: "info@lauls.in", 
+      href: "mailto:info@lauls.in",
       Icon: Mail 
     },
     { 

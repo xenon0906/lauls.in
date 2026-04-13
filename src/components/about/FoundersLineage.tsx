@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import { Crown, Heart, ChevronDown } from "lucide-react";
+import Image from "next/image";
 
 const founders = [
   {
@@ -10,7 +11,7 @@ const founders = [
     name: "Shri Girdhari Lal",
     role: "Patriarch & Visionary Founder",
     relation: "Grandfather Generation",
-    portrait: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=600&auto=format&fit=crop",
+    portrait: "/images/team-group.jpg",
     bio: "Shri Girdhari Lal laid the first stone of what would become a 90-year industrial dynasty. Starting with a small trading post in Northern India, he built the foundational values of integrity, reliability, and long-term partnerships that still guide the company today.",
     legacy: "Founder of the original trading house that seeded the Lauls enterprise.",
     accentColor: "#b45309",
@@ -21,7 +22,7 @@ const founders = [
     name: "Shri Madan Lal",
     role: "Industrial Pioneer & Builder",
     relation: "Father's Generation",
-    portrait: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop",
+    portrait: "/images/team-group-2.jpg",
     bio: "Inheriting a sturdy foundation, Shri Madan Lal fearlessly scaled the enterprise into steel trading and logistics. His visionary decision to partner with national railways and steel mills during India's industrialisation era transformed a regional firm into a trusted national operator.",
     legacy: "Expanded into steel and logistics, establishing government and railway partnerships.",
     accentColor: "#DCA54C",
@@ -32,7 +33,7 @@ const founders = [
     name: "The Present Directors",
     role: "Third Generation Leadership",
     relation: "Current Generation",
-    portrait: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop",
+    portrait: "/images/team-group.jpg",
     bio: "Carrying the torch forward, the third generation has modernised operations across EV logistics, digital supply chains, and global ferro alloy distribution — preserving the family's 90-year reputation while steering Lauls into the future of Indian industry.",
     legacy: "Leading sustainability, EV fleet expansion and pan-India distribution growth.",
     accentColor: "#0A1628",
@@ -107,12 +108,13 @@ export default function FoundersLineage() {
                       style={{ backgroundColor: founder.accentColor }}
                     />
                     <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-2xl border-4 border-white max-w-sm mx-auto">
-                      <img
+                      <Image
                         src={founder.portrait}
                         alt={founder.name}
-                        className="w-full h-full object-cover object-top"
+                        fill
+                        className="object-cover object-top"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/85 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-linear-to-t from-[#0A1628]/85 via-transparent to-transparent" />
 
                       {/* Era badge */}
                       <div className="absolute bottom-6 left-6 right-6">

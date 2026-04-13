@@ -91,9 +91,9 @@ export default function LogisticsPrecisionTubes() {
           >
             <div 
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop")' }}
+              style={{ backgroundImage: 'url("/images/manufacturing.jpg")' }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-primary/90 via-primary/20 to-transparent" />
             
             {/* Info overlay */}
             <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/5 backdrop-blur-md rounded-xl border border-white/10">

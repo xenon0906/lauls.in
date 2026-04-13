@@ -10,10 +10,10 @@ export default function DistributionHero() {
       {/* Immersive Background Layer */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1612660462967-bd1ec1b70176?q=80&w=2070&auto=format&fit=crop")' }}
+        style={{ backgroundImage: 'url("/images/trading.jpg")' }}
       >
         {/* Dark Overlay matching Home/About Hero */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628]/95 via-[#0A1628]/80 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-br from-[#0A1628]/95 via-[#0A1628]/80 to-transparent" />
       </div>
 
       {/* Content Container */}

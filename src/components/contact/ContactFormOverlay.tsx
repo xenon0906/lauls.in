@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ContactFormOverlay() {
   const [selectedInterest, setSelectedInterest] = useState<string | null>(null);
@@ -22,14 +23,15 @@ export default function ContactFormOverlay() {
                whileInView={{ y: 0, opacity: 1 }}
                viewport={{ once: true, margin: "-100px" }}
                transition={{ duration: 0.8, ease: "easeOut" }}
-               className="lg:w-1/2 relative rounded-3xl overflow-hidden shadow-2xl lg:mt-32 mt-12"
+               className="lg:w-1/2 relative rounded-3xl overflow-hidden shadow-2xl lg:mt-32 mt-12 min-h-[500px]"
              >
-                <img 
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop" 
+                <Image
+                  src="/images/stats-bg.jpg"
                   alt="Corporate Boardroom"
-                  className="w-full h-full object-cover min-h-[500px]"
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0A1628]/95 via-[#0A1628]/60 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t md:bg-linear-to-r from-[#0A1628]/95 via-[#0A1628]/60 to-transparent" />
                 <div className="absolute inset-0 p-10 md:p-12 flex flex-col justify-end lg:justify-center">
                   <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-white/10 backdrop-blur-md rounded-full w-fit">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#DCA54C]" />

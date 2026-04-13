@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 const products = [
   {
     title: "Ferro Alloys",
     subtitle: "High-strength alloys for steel production",
     desc: "Sourced globally and processed to exact metallurgical standards, our ferro alloys guarantee enhanced strength, de-oxidation, and alloying capabilities for specialized steel manufacturing.",
-    image: "https://images.unsplash.com/photo-1612660462967-bd1ec1b70176?q=80&w=1200",
+    image: "/images/manufacturing.jpg",
     chips: [
       { label: "Ferro Chrome", value: "HC, MC Grades" },
       { label: "Ferro Manganese", value: "Lumps & powder" },
@@ -19,7 +20,7 @@ const products = [
     title: "Steel Rounds",
     subtitle: "Alloy and mild steel rounds",
     desc: "Engineered for heavy-duty automotive and industrial machinery applications, our steel rounds offer superior machinability, grain consistency, and immense tensile strength.",
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1200",
+    image: "/images/trading.jpg",
     chips: [
       { label: "Alloy Steel", value: "SAE 4140, 4340" },
       { label: "Mild Steel", value: "IS 2062, ASTM A36" },
@@ -30,7 +31,7 @@ const products = [
     title: "Wire Rods",
     subtitle: "High tensile strength wire rods",
     desc: "Manufactured for precision forming processes. Excellent drawability and surface finish guarantee flawless execution in fastener production and heavy spring coiling.",
-    image: "https://images.unsplash.com/photo-1620023647414-04666f4fb76d?q=80&w=1200",
+    image: "/images/stockyard.jpg",
     chips: [
       { label: "Carbon / Alloy", value: "SAE 1010, IS 7904" },
       { label: "Size range", value: "5.5 mm — 14 mm" },
@@ -41,7 +42,7 @@ const products = [
     title: "Precision Tubes",
     subtitle: "ERW and CEW tubes for industrial use",
     desc: "State-of-the-art structural and mechanical precision tubes. Our CDW and CEW tubes offer exact geometric tolerances perfect for hydraulic cylinders and automotive chassis.",
-    image: "https://images.unsplash.com/photo-1587289895311-bf7fcbec3428?q=80&w=1200",
+    image: "/images/manufacturing.jpg",
     chips: [
       { label: "ERW Tubes", value: "IS 3601, ASTM A500" },
       { label: "Seamless", value: "ASTM A106, A53" },
@@ -82,11 +83,12 @@ export default function DistributionProducts() {
                 transition={{ duration: 0.7 }}
                 className="w-full lg:w-1/2"
               >
-                <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-[#0A1628]">
-                  <img 
+                <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden shadow-2xl bg-[#0A1628]">
+                  <Image
                     src={product.image}
                     alt={product.title}
-                    className="absolute inset-0 w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700"
+                    fill
+                    className="object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl pointer-events-none" />
                 </div>

@@ -4,10 +4,10 @@ import { ArrowUpRight } from "lucide-react";
 import AutoImageRotator from "../AutoImageRotator";
 
 const pillars = [
-  { num: "01", title: "Unyielding Quality", desc: "Every component undergoes rigorous ISO and testing standards.", images: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800", "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800", "https://images.unsplash.com/photo-1536647960714-469b8c0da9aa?q=80&w=800"], span: "lg:col-span-8 lg:row-span-1" },
-  { num: "02", title: "National Scale", desc: "Capabilities spanning across 12 strategic Indian distribution hubs.", images: ["https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800", "https://images.unsplash.com/photo-1565439390234-5858cf85aeb9?q=80&w=800"], span: "lg:col-span-4 lg:row-span-2" },
-  { num: "03", title: "EV Transport", desc: "Pioneering electric transport in heavy industrial logistics.", images: ["https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=800", "https://images.unsplash.com/photo-1595822526362-e1cbce516e81?q=80&w=800"], span: "lg:col-span-4 lg:row-span-1" },
-  { num: "04", title: "Client Partnership", desc: "We build tailored supply chains for enterprise needs.", images: ["https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800", "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=800"], span: "lg:col-span-4 lg:row-span-1" },
+  { num: "01", title: "Unyielding Quality", desc: "Every component undergoes rigorous ISO and testing standards.", images: ["/images/manufacturing.jpg", "/images/below-manufacturing.jpg", "/images/stockyard-lauls.jpg"], span: "lg:col-span-8 lg:row-span-1" },
+  { num: "02", title: "National Scale", desc: "Capabilities spanning across 12 strategic Indian distribution hubs.", images: ["/images/warehouse.jpg", "/images/stockyard.jpg"], span: "lg:col-span-4 lg:row-span-2" },
+  { num: "03", title: "EV Transport", desc: "Pioneering electric transport in heavy industrial logistics.", images: ["/images/trading.jpg", "/images/hero-banner.jpg"], span: "lg:col-span-4 lg:row-span-1" },
+  { num: "04", title: "Client Partnership", desc: "We build tailored supply chains for enterprise needs.", images: ["/images/team-group.jpg", "/images/business-goals.jpg"], span: "lg:col-span-4 lg:row-span-1" },
 ];
 
 export default function AboutPillars() {
@@ -48,7 +48,7 @@ export default function AboutPillars() {
               />
               
               {/* Complex Gradient Overlays */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/95 via-[#0A1628]/40 to-transparent transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-linear-to-t from-[#0A1628]/95 via-[#0A1628]/40 to-transparent transition-opacity duration-500" />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
 
               {/* Number Badge */}

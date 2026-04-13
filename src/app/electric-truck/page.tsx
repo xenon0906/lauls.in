@@ -1,26 +1,19 @@
-"use client";
+import type { Metadata } from "next";
+import EVPage from "@/components/electric-truck/EVPage";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import EVHero from "@/components/electric-truck/EVHero";
-import EVFleetDetails from "@/components/electric-truck/EVFleetDetails";
-import AboutContact from "@/components/about/AboutContact";
+export const metadata: Metadata = {
+  title: "Electric Truck Fleet — Lauls Ltd",
+  description:
+    "Pioneering sustainable logistics with electric truck fleet operations. Lauls Ltd's commitment to green transportation in heavy industrial logistics.",
+  openGraph: {
+    title: "Electric Truck Fleet — Lauls Ltd",
+    description:
+      "Pioneering sustainable logistics with electric truck fleet operations.",
+    url: "https://lauls.in/electric-truck",
+  },
+  alternates: { canonical: "https://lauls.in/electric-truck" },
+};
 
-export default function ElectricTruckPage() {
-  return (
-    <main className="min-h-screen bg-white">
-      <Navbar />
-      
-      {/* 1. Hero Section */}
-      <EVHero />
-
-      {/* 2. EV Details Layout */}
-      <EVFleetDetails />
-
-      {/* 3. Inquiry / Contact Form */}
-      <AboutContact />
-
-      <Footer />
-    </main>
-  );
+export default function Page() {
+  return <EVPage />;
 }

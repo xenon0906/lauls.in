@@ -1,68 +1,117 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useCallback } from "react";
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 
-const allProducts = [
-  // Ferro Alloys
-  { name: "Ferro Manganese", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=200&auto=format&fit=crop", href: "/products/ferro-alloys" },
-  { name: "Ferro Chrome", image: "https://images.unsplash.com/photo-1590487988256-9ed24133863e?q=80&w=200&auto=format&fit=crop", href: "/products/ferro-alloys" },
-  { name: "Ferro Silicon", image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=200&auto=format&fit=crop", href: "/products/ferro-alloys" },
-  { name: "Silico Manganese", image: "https://images.unsplash.com/photo-1536647960714-469b8c0da9aa?q=80&w=200&auto=format&fit=crop", href: "/products/ferro-alloys" },
-  
-  // Wire Rods
-  { name: "Alloy Steel Wire Rods", image: "https://images.unsplash.com/photo-1587293852726-694762cf7520?q=80&w=200&auto=format&fit=crop", href: "/products/wire-rods" },
-  { name: "Mild Steel Wire Rods", image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=200&auto=format&fit=crop", href: "/products/wire-rods" },
-  { name: "Stainless Steel Wire Rods", image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=200&auto=format&fit=crop", href: "/products/wire-rods" },
-
-  // Steel Rounds
-  { name: "Alloy Steel Rounds", image: "https://images.unsplash.com/photo-1621808003444-24eebacb5fb8?q=80&w=200&auto=format&fit=crop", href: "/products/steel-rounds" },
-  { name: "Mild Steel Rounds", image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=200&auto=format&fit=crop", href: "/products/steel-rounds" },
-
-  // Precision Tubes
-  { name: "ERW Steel Tubes", image: "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=200&auto=format&fit=crop", href: "/products/precision-tubes" },
-  { name: "Square & Rectangular Hollow Sections", image: "https://images.unsplash.com/photo-1565439390234-5858cf85aeb9?q=80&w=200&auto=format&fit=crop", href: "/products/precision-tubes" },
-  
-  // Add an extra to make 12 grid items nicely divisible by 2, 3, or 4
-  { name: "Custom Forged Ingots", image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=200&auto=format&fit=crop", href: "/contact" },
+const productCategories = [
+  {
+    category: "Ferro Alloys",
+    href: "/products/ferro-alloys",
+    items: ["Ferro Manganese", "Ferro Chrome", "Ferro Silicon", "Silico Manganese"],
+    accent: "bg-amber-500",
+  },
+  {
+    category: "Wire Rods",
+    href: "/products/wire-rods",
+    items: ["Alloy Steel Wire Rods", "Mild Steel Wire Rods", "Stainless Steel Wire Rods"],
+    accent: "bg-blue-500",
+  },
+  {
+    category: "Steel Rounds",
+    href: "/products/steel-rounds",
+    items: ["Alloy Steel Rounds", "Mild Steel Rounds"],
+    accent: "bg-emerald-500",
+  },
+  {
+    category: "Precision Tubes",
+    href: "/products/precision-tubes",
+    items: ["ERW Steel Tubes", "Square & Rectangular Sections"],
+    accent: "bg-purple-500",
+  },
 ];
 
-export default function ProductCatalogGrid() {
-  return (
-    <div className="absolute top-full left-0 w-full bg-[#18181A] pt-8 pb-12 border-t border-white/5 shadow-2xl z-50">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <Link href="/products" className="inline-flex items-center gap-2 mb-10 border-b border-white/10 pb-2 hover:border-[#DCA54C] transition-colors group">
-          <h2 className="text-2xl md:text-3xl font-display font-bold text-white group-hover:text-[#DCA54C] tracking-tight transition-colors">
-            View All Products
-          </h2>
-          <ChevronRight className="text-white mt-1 group-hover:text-[#DCA54C] transition-colors" size={28} />
-        </Link>
+interface ProductCatalogGridProps {
+  onClose?: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10">
-          {allProducts.map((product, idx) => (
-            <Link key={idx} href={product.href} className="flex flex-row items-center gap-6 group">
-               <motion.div 
-                 initial={{ opacity: 0, scale: 0.9 }}
-                 whileInView={{ opacity: 1, scale: 1 }}
-                 viewport={{ once: true }}
-                 transition={{ duration: 0.5, delay: idx * 0.05 }}
-                 className="relative shrink-0 w-20 h-20 rounded-md overflow-hidden ring-1 ring-white/10 group-hover:ring-[#DCA54C] transition-all"
-               >
-                 <img 
-                   src={product.image} 
-                   alt={product.name}
-                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
-                 />
-                 <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent" />
-               </motion.div>
-               <div className="flex-1">
-                 <h3 className="text-sm font-bold text-[#DCA54C] group-hover:text-white transition-colors leading-snug">
-                   {product.name}
-                 </h3>
-               </div>
+export default function ProductCatalogGrid({ onClose, onMouseEnter, onMouseLeave }: ProductCatalogGridProps) {
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key === "Escape") onClose?.();
+    },
+    [onClose]
+  );
+
+  return (
+    <div
+      role="menu"
+      aria-label="Product catalog"
+      onKeyDown={handleKeyDown}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      className="absolute top-full left-0 w-full z-40"
+    >
+      {/* Glass backdrop */}
+      <div className="backdrop-blur-2xl bg-[#0a1628]/90 border-t border-b border-white/[0.06] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)]">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 py-6">
+          {/* Category grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6">
+            {productCategories.map((cat) => (
+              <div key={cat.category} className="group/cat">
+                {/* Category header */}
+                <Link
+                  href={cat.href}
+                  onClick={() => onClose?.()}
+                  role="menuitem"
+                  className="flex items-center gap-2 mb-3 group/link"
+                >
+                  <span className={`w-1.5 h-1.5 rounded-full ${cat.accent} shrink-0`} />
+                  <span className="text-[11px] font-display font-bold text-white uppercase tracking-[0.15em] group-hover/link:text-accent transition-colors">
+                    {cat.category}
+                  </span>
+                  <ChevronRight size={12} className="text-white/20 group-hover/link:text-accent group-hover/link:translate-x-0.5 transition-all" />
+                </Link>
+
+                {/* Product items */}
+                <ul className="space-y-0.5 pl-3.5">
+                  {cat.items.map((item) => (
+                    <li key={item}>
+                      <Link
+                        href={cat.href}
+                        onClick={() => onClose?.()}
+                        role="menuitem"
+                        className="block py-1.5 text-[13px] text-white/45 hover:text-white transition-colors leading-snug"
+                      >
+                        {item}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom bar */}
+          <div className="mt-5 pt-4 border-t border-white/[0.05] flex items-center justify-between">
+            <Link
+              href="/products"
+              onClick={() => onClose?.()}
+              className="inline-flex items-center gap-1.5 text-[13px] text-white/50 hover:text-accent font-medium transition-colors group/all"
+            >
+              Browse all products
+              <ArrowRight size={13} className="group-hover/all:translate-x-0.5 transition-transform" />
             </Link>
-          ))}
+            <Link
+              href="/contact"
+              onClick={() => onClose?.()}
+              className="text-[12px] text-accent/60 hover:text-accent transition-colors"
+            >
+              Request a Quote &rarr;
+            </Link>
+          </div>
         </div>
       </div>
     </div>

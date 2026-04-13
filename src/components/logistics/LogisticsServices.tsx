@@ -3,13 +3,14 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const services = [
   {
     title: "Pan-India Dedicated Fleet",
     subtitle: "Heavy haulage across every state",
     desc: "Maintaining our own fleet of over 400 heavy commercial vehicles gives us complete control over supply chain timelines. We ensure zero third-party dependencies for enterprise critical cargo.",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200",
+    image: "/images/stockyard.jpg",
     chips: [
       { label: "Coverage", value: "All Indian States" },
       { label: "Cargo Types", value: "Bulk, Over-Dimensional" },
@@ -20,7 +21,7 @@ const services = [
     title: "Rail Freight Operations",
     subtitle: "Bulk material movement at scale",
     desc: "For unparalleled scale, Lauls Ltd operates dedicated railway sidings to mobilize tens of thousands of tons of raw material across the continent efficiently and affordably.",
-    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1200",
+    image: "/images/warehouse.jpg",
     chips: [
       { label: "Capacity", value: "Mass Bulk Freight" },
       { label: "Network", value: "Direct Port/Mill Connect" },
@@ -31,7 +32,7 @@ const services = [
     title: "Zero-Emission EV Transport",
     subtitle: "Pioneering green logistics",
     desc: "We are aggressively electrifying our last-mile and mid-range fleet, deploying state-of-the-art Heavy Electric Trucks to decarbonize supply chains for our ESG-conscious partners.",
-    image: "https://images.unsplash.com/photo-1621252179027-94459d278660?q=80&w=1200",
+    image: "/images/stockyard-lauls.jpg",
     chips: [
       { label: "Emissions", value: "Net-Zero Fleet" },
       { label: "Use Case", value: "Sustainable Mid-Mile" },
@@ -42,7 +43,7 @@ const services = [
     title: "Strategic Warehousing",
     subtitle: "12 high-capacity national hubs",
     desc: "Our interconnected warehouse network offers secure, massive-scale storage for steel and alloys, enabling direct JIT (Just-In-Time) supply models directly to automotive plants and construction zones.",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200", // Reusing warehouse vibe
+    image: "/images/warehouse.jpg",
     chips: [
       { label: "Facilities", value: "12 Distribution Hubs" },
       { label: "Services", value: "JIT, Inventory Management" },
@@ -83,11 +84,12 @@ export default function LogisticsServices() {
                 transition={{ duration: 0.7 }}
                 className="w-full lg:w-1/2"
               >
-                <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-[#0A1628]">
-                  <img 
+                <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden shadow-2xl bg-[#0A1628]">
+                  <Image
                     src={service.image}
                     alt={service.title}
-                    className="absolute inset-0 w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700"
+                    fill
+                    className="object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl pointer-events-none" />
                 </div>

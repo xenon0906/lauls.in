@@ -9,11 +9,11 @@ export default function AboutHero() {
       <div className="absolute inset-0 z-0">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop)` }}
+          style={{ backgroundImage: `url(/images/hero-banner.jpg)` }}
         />
         {/* Dark Overlays optimized for text legibility */}
-        <div className="absolute inset-x-0 inset-y-0 bg-gradient-to-r from-[#0A1628] lg:from-[#0A1628]/95 via-[#0A1628]/50 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#0A1628] via-[#0A1628]/40 to-transparent" />
+        <div className="absolute inset-x-0 inset-y-0 bg-linear-to-r from-[#0A1628] lg:from-[#0A1628]/95 via-[#0A1628]/50 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-linear-to-t from-[#0A1628] via-[#0A1628]/40 to-transparent" />
       </div>
 
       {/* Main Content Area */}

@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const evDetails = [
   {
     title: "Heavy Haulage Capabilities",
     subtitle: "Built for industrial payloads",
     desc: "Our EV fleet isn't restricted to light delivery. We deploy heavy-duty multi-axle electric rigs designed specifically for transporting steel coils, ferro alloys, and massive infrastructural components with identical reliability to diesel counterparts.",
-    image: "https://images.unsplash.com/photo-1519003722216-16eed37d4576?q=80&w=1200", 
+    image: "https://images.unsplash.com/photo-1519003722216-16eed37d4576?q=80&w=1200&auto=format&fit=crop",
     chips: [
       { label: "Capacity", value: "Up to 40T Gross" },
       { label: "Torque", value: "Instant Hub Torque" },
@@ -19,7 +20,7 @@ const evDetails = [
     title: "Decarbonized Supply Chains",
     subtitle: "Scope 3 Emission Reduction",
     desc: "By integrating our electric fleet into your logistics network, Lauls Ltd directly and drastically reduces your corporate Scope 3 emissions. Track your exact carbon offset through our rigorous, transparent ESG reporting.",
-    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200", // Nature/Road
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop",
     chips: [
       { label: "Impact", value: "Zero Scope 1 Emissions" },
       { label: "Reporting", value: "Real-time ESG Dashboards" },
@@ -30,7 +31,7 @@ const evDetails = [
     title: "Smart Charging Network",
     subtitle: "Eliminating range anxiety",
     desc: "We own and operate an expansive proprietary network of high-speed DC fast chargers across key industrial corridors. Our rigorous telemetry systems predict optimal charging stops, ensuring your supply chain never halts.",
-    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938cb?q=80&w=1200", // EV Charger
+    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938cb?q=80&w=1200&auto=format&fit=crop",
     chips: [
       { label: "Infrastructure", value: "120kW+ DC Fast Chargers" },
       { label: "Telemetry", value: "AI-Routed Checkpoints" },
@@ -59,30 +60,32 @@ export default function EVFleetDetails() {
         {/* Alternating Row Layout */}
         <div className="flex flex-col gap-24 lg:gap-32">
           {evDetails.map((detail, idx) => (
-            <div 
+            <div
               key={idx}
               className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-24 ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
             >
               {/* Image Side */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: idx % 2 === 0 ? -40 : 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.7 }}
                 className="w-full lg:w-1/2"
               >
-                <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-[#0A1628]">
-                  <img 
+                <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden shadow-2xl bg-[#0A1628]">
+                  <Image
                     src={detail.image}
                     alt={detail.title}
-                    className="absolute inset-0 w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl pointer-events-none" />
                 </div>
               </motion.div>
 
               {/* Text / Details Side */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: idx % 2 === 0 ? 40 : -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -97,7 +100,7 @@ export default function EVFleetDetails() {
                 <h3 className="text-3xl md:text-5xl font-display font-bold text-[#0A1628] mb-4">
                   {detail.title}
                 </h3>
-                
+
                 <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-6">
                   {detail.subtitle}
                 </h4>
@@ -106,7 +109,7 @@ export default function EVFleetDetails() {
                   {detail.desc}
                 </p>
 
-                {/* Highly visible specs block */}
+                {/* Specs block */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                   {detail.chips.map((chip, i) => (
                     <div key={i} className="flex flex-col bg-gray-50 rounded-xl p-5 border border-gray-100">

@@ -31,7 +31,7 @@ export default function Heritage() {
 
           <div className="space-y-8">
             <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent flex-shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
                 <BadgeCheck size={24} />
               </div>
               <div>
@@ -41,7 +41,7 @@ export default function Heritage() {
             </div>
 
             <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent flex-shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
                 <ShieldCheck size={24} />
               </div>
               <div>
@@ -51,7 +51,7 @@ export default function Heritage() {
             </div>
 
             <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent flex-shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
                 <Globe size={24} />
               </div>
               <div>
@@ -87,13 +87,13 @@ export default function Heritage() {
               >
                 <AutoImageRotator
                   images={[
-                    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1565439390234-5858cf85aeb9?q=80&w=2070&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=2070&auto=format&fit=crop"
+                    "/images/stockyard.jpg",
+                    "/images/warehouse.jpg",
+                    "/images/stockyard-lauls.jpg"
                   ]}
                   interval={4000}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-primary/90 via-primary/20 to-transparent" />
                 <div className="absolute bottom-5 left-6 lg:bottom-6 lg:left-8">
                   <span className="text-white font-display font-bold text-xl lg:text-2xl drop-shadow-md">Logistics</span>
                 </div>
@@ -108,13 +108,13 @@ export default function Heritage() {
               >
                 <AutoImageRotator
                   images={[
-                    "https://images.unsplash.com/photo-1590487988256-9ed24133863e?q=80&w=2070&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1621808003444-24eebacb5fb8?q=80&w=2070&auto=format&fit=crop"
+                    "/images/manufacturing.jpg",
+                    "/images/below-manufacturing.jpg",
+                    "/images/stats-bg.jpg"
                   ]}
                   interval={4500}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-primary/90 via-primary/20 to-transparent" />
                 <div className="absolute bottom-5 left-6 lg:bottom-6 lg:left-8">
                   <span className="text-white font-display font-bold text-xl lg:text-2xl drop-shadow-md">Precision Tubes</span>
                 </div>
@@ -130,13 +130,13 @@ export default function Heritage() {
               >
                 <AutoImageRotator
                   images={[
-                    "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1536647960714-469b8c0da9aa?q=80&w=2070&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
+                    "/images/trading.jpg",
+                    "/images/business-goals.jpg",
+                    "/images/stats-bg.jpg"
                   ]}
                   interval={5000}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-primary/90 via-primary/20 to-transparent" />
                 <div className="absolute bottom-5 left-6 lg:bottom-6 lg:left-8">
                   <span className="text-white font-display font-bold text-xl lg:text-2xl drop-shadow-md">Ferro Alloys</span>
                 </div>
@@ -150,13 +150,13 @@ export default function Heritage() {
               >
                 <AutoImageRotator
                   images={[
-                    "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2069&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1587293852726-694762cf7520?q=80&w=2070&auto=format&fit=crop"
+                    "/images/stockyard-lauls.jpg",
+                    "/images/business-goals.jpg",
+                    "/images/warehouse.jpg"
                   ]}
                   interval={5500}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-primary/90 via-primary/20 to-transparent" />
                 <div className="absolute bottom-5 left-6 lg:bottom-6 lg:left-8">
                   <span className="text-white font-display font-bold text-xl lg:text-2xl drop-shadow-md">Steel Distribution</span>
                 </div>

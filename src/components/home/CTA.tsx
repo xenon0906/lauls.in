@@ -73,18 +73,18 @@ export default function CTA() {
         {/* Right Image Block */}
         <div className="lg:col-span-5 flex justify-end">
           <div className="relative w-full max-w-[450px] aspect-square lg:h-[450px] rounded-2xl overflow-hidden group">
-             <AutoImageRotator 
+             <AutoImageRotator
                images={[
-                 "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
-                 "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop",
-                 "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2069&auto=format&fit=crop",
-                 "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop"
+                 "/images/hero-banner.jpg",
+                 "/images/banner-main.jpg",
+                 "/images/trading.jpg",
+                 "/images/stockyard.jpg"
                ]}
                interval={4500}
              />
              
              {/* Gradient for stats visibility */}
-             <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/95 via-[#0A1628]/40 to-transparent pointer-events-none" />
+             <div className="absolute inset-0 bg-linear-to-t from-[#0A1628]/95 via-[#0A1628]/40 to-transparent pointer-events-none" />
              
              {/* Bottom overlaid content */}
              <div className="absolute inset-x-0 bottom-0 p-8 flex flex-col gap-6">
@@ -105,7 +105,7 @@ export default function CTA() {
                
                <div className="inline-flex items-center gap-2 bg-[#253A5A]/80 backdrop-blur-md px-4 py-2 rounded-lg border border-white/5 w-fit">
                  <Mail size={14} className="text-[#3b82f6]" />
-                 <span className="text-white text-xs font-medium tracking-wider">info@laulsltd.com</span>
+                 <span className="text-white text-xs font-medium tracking-wider">info@lauls.in</span>
                </div>
              </div>
           </div>

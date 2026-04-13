@@ -9,24 +9,19 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
              <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center font-display font-bold text-xl text-white">
-                L
-              </div>
-              <span className="font-display font-bold text-2xl tracking-tight text-white uppercase">
-                Lauls<span className="text-accent">Ltd</span>
-              </span>
+              <img src="/images/logo.png" alt="Lauls Ltd" width={144} height={22} className="h-8 w-auto" />
             </Link>
             <p className="text-white/40 text-sm leading-relaxed">
               Engineering the backbone of Indian Railways for over 90 years. A legacy of precision, trust, and industrial excellence since 1933.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-accent hover:border-accent transition-all">
+              <a href="https://lauls.in" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-accent hover:border-accent transition-all">
                 <Globe size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-accent hover:border-accent transition-all">
+              <a href="mailto:info@lauls.in" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-accent hover:border-accent transition-all">
                 <Mail size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-accent hover:border-accent transition-all">
+              <a href="tel:+911294098300" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-accent hover:border-accent transition-all">
                 <Phone size={18} />
               </a>
             </div>
@@ -58,10 +53,17 @@ export default function Footer() {
           <div>
             <h4 className="font-display font-bold text-white mb-6 uppercase tracking-widest text-xs">Our Services</h4>
             <ul className="space-y-4">
-              {["Railway Components", "Steel Warehousing", "Rail Handling", "Ferro Alloys", "Logistics", "Castings"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-white/40 hover:text-accent text-sm transition-colors">
-                    {item}
+              {[
+                { name: "Railway Components", href: "/products" },
+                { name: "Steel Warehousing", href: "/logistics" },
+                { name: "Rail Handling", href: "/logistics" },
+                { name: "Ferro Alloys", href: "/products/ferro-alloys" },
+                { name: "Logistics", href: "/logistics" },
+                { name: "Distribution", href: "/distribution" },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-white/40 hover:text-accent text-sm transition-colors">
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -73,15 +75,15 @@ export default function Footer() {
             <h4 className="font-display font-bold text-white mb-6 uppercase tracking-widest text-xs">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex gap-4">
-                <MapPin className="text-accent flex-shrink-0" size={18} />
+                <MapPin className="text-accent shrink-0" size={18} />
                 <span className="text-white/40 text-sm">33-B, NIT, Faridabad, Haryana, India</span>
               </li>
               <li className="flex gap-4">
-                <Phone className="text-accent flex-shrink-0" size={18} />
+                <Phone className="text-accent shrink-0" size={18} />
                 <span className="text-white/40 text-sm">+91-129-4098300</span>
               </li>
               <li className="flex gap-4">
-                <Mail className="text-accent flex-shrink-0" size={18} />
+                <Mail className="text-accent shrink-0" size={18} />
                 <span className="text-white/40 text-sm">info@lauls.in</span>
               </li>
             </ul>

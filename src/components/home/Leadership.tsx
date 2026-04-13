@@ -4,13 +4,14 @@ import { useState } from "react";
 import SectionWrapper from "../SectionWrapper";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, ChevronRight, User } from "lucide-react";
+import Image from "next/image";
 
 const leaders = [
   {
     id: "visionaries",
     name: "Mr. SR Laul & Late Shri CS Gupta",
     role: "Founding Visionaries",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
+    image: "/images/team-group.jpg",
     bio: "The visionary founders who laid the foundation of Lauls Ltd. in 1933. Mr. SR Laul and Late Shri CS Gupta brought together decades of industrial expertise to create a company that would become a cornerstone of India's railway manufacturing and logistics landscape.",
     achievements: [
       "Established Lauls Ltd. in 1933",
@@ -23,7 +24,7 @@ const leaders = [
     id: "abhay",
     name: "Mr. Abhay Sagar Gupta",
     role: "Director In-Charge",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop",
+    image: "/images/abhay-gupta-new.jpg",
     bio: "With over 30 years of leadership, Mr. Abhay Sagar Gupta has steer Lauls Ltd through various phases of growth and diversification. His strategic vision has been instrumental in securing key partnerships with Indian Railways and TATA Steel.",
     achievements: [
       "30+ Years active leadership",
@@ -36,7 +37,7 @@ const leaders = [
     id: "sudhir",
     name: "Mr. Sudhir Gupta",
     role: "Director, Manufacturing & Trading",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/sudhir-gupta.jpg",
     bio: "Focuses on the technical excellence and supply chain efficiency of our manufacturing units and trading operations.",
     achievements: [
       "Manufacturing Excellence",
@@ -49,7 +50,7 @@ const leaders = [
     id: "kanishk",
     name: "Mr. Kanishk Sagar Gupta",
     role: "Director, Logistics",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop",
+    image: "/images/kanishk-gupta-new.jpg",
     bio: "Mechanical Engineer from University of Nottingham. Specializes in mechanical excellence in logistics and warehousing operations.",
     achievements: [
       "Logistics Automation",
@@ -62,7 +63,7 @@ const leaders = [
     id: "atirav",
     name: "Mr. Atirav Sagar Gupta",
     role: "Director, Operations & HR",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop",
+    image: "/images/atirav-gupta-new.jpg",
     bio: "Educated at IHL Lausanne, Switzerland. Focuses on operational efficiency and modern HR practices.",
     achievements: [
       "Operational Scaling",
@@ -99,8 +100,8 @@ export default function Leadership() {
                   : "bg-white border-transparent hover:border-accent/30"
               }`}
             >
-              <div className="w-14 h-14 rounded-full overflow-hidden bg-primary/10 flex-shrink-0">
-                <img src={leader.image} alt={leader.name} className="w-full h-full object-cover" />
+              <div className="w-14 h-14 rounded-full overflow-hidden bg-primary/10 shrink-0">
+                <Image src={leader.image} alt={leader.name} width={56} height={56} className="object-cover" />
               </div>
               <div>
                 <h4 className={`font-display font-bold text-sm md:text-base ${activeLeader.id === leader.id ? "text-primary" : "text-primary/70"}`}>
@@ -126,12 +127,14 @@ export default function Leadership() {
             >
               {/* Photo */}
               <div className="md:w-5/12 relative aspect-[4/5] md:aspect-auto">
-                <img 
-                  src={activeLeader.image} 
-                  alt={activeLeader.name} 
-                  className="absolute inset-0 w-full h-full object-cover"
+                <Image
+                  src={activeLeader.image}
+                  alt={activeLeader.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent md:hidden" />
+                <div className="absolute inset-0 bg-linear-to-t from-primary/60 to-transparent md:hidden" />
               </div>
 
               {/* Data */}

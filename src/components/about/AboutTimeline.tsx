@@ -2,27 +2,28 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 const milestones = [
   { 
     year: "1994", 
     title: "Foundation", 
     desc: "Established as a single logistics hub in New Delhi, beginning our journey in industrial infrastructure.", 
-    image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?q=80&w=800&auto=format&fit=crop",
+    image: "/images/manufacturing.jpg",
     accent: "#0A1628"
   },
   { 
     year: "2005", 
     title: "First Plant", 
     desc: "Expanded into heavy alloy steel distribution, becoming a key TATA associated supplier across India.", 
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop",
+    image: "/images/stockyard.jpg",
     accent: "#0A1628"
   },
   { 
     year: "2012", 
     title: "WAREX Gold", 
     desc: "Achieved WAREX Gold certification, cementing as an approved vendor for critical supply chains.", 
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop",
+    image: "/images/warehouse.jpg",
     accent: "#0A1628"
   },
   { 
@@ -30,7 +31,7 @@ const milestones = [
     title: "Global Expansion", 
     point: true, 
     desc: "Launching EV-powered fleet and expanding our global logistics, fulfilling massive national contracts.", 
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop",
+    image: "/images/trading.jpg",
     accent: "#DCA54C"
   },
 ];
@@ -82,11 +83,12 @@ function TimelineCard({ ms, idx }: { ms: typeof milestones[0]; idx: number }) {
       <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow max-w-[250px]">{ms.desc}</p>
       
       {/* Card Image with hover reveal */}
-      <div className="w-full h-[140px] rounded-xl overflow-hidden mt-auto border border-gray-100 shadow-sm group-hover:shadow-xl transition-shadow duration-500">
-        <img 
+      <div className="w-full h-[140px] rounded-xl overflow-hidden mt-auto border border-gray-100 shadow-sm group-hover:shadow-xl transition-shadow duration-500 relative">
+        <Image
           src={ms.image}
           alt={ms.title}
-          className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+          fill
+          className="object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
         />
       </div>
     </motion.div>
@@ -129,7 +131,7 @@ export default function AboutTimeline() {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, ease: "easeInOut" }}
-              className="h-full bg-gradient-to-r from-[#DCA54C]/30 via-[#DCA54C] to-[#DCA54C]/30 origin-left"
+              className="h-full bg-linear-to-r from-[#DCA54C]/30 via-[#DCA54C] to-[#DCA54C]/30 origin-left"
             />
           </div>
 

@@ -1,30 +1,19 @@
-"use client";
+import type { Metadata } from "next";
+import LogisticsPage from "@/components/logistics/LogisticsPage";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import LogisticsHero from "@/components/logistics/LogisticsHero";
-import LogisticsServices from "@/components/logistics/LogisticsServices";
-import LogisticsPrecisionTubes from "@/components/logistics/LogisticsPrecisionTubes";
-import AboutContact from "@/components/about/AboutContact";
+export const metadata: Metadata = {
+  title: "Logistics & Warehousing — Lauls Ltd",
+  description:
+    "ISO-certified logistics and warehousing solutions. Operating TATA Steel stockyards with WAREX GOLD certified warehouses across Northern India.",
+  openGraph: {
+    title: "Logistics & Warehousing — Lauls Ltd",
+    description:
+      "ISO-certified logistics and warehousing solutions. Operating TATA Steel stockyards across Northern India.",
+    url: "https://lauls.in/logistics",
+  },
+  alternates: { canonical: "https://lauls.in/logistics" },
+};
 
-export default function LogisticsPage() {
-  return (
-    <main className="min-h-screen bg-white">
-      <Navbar />
-      
-      {/* 1. Hero Section */}
-      <LogisticsHero />
-
-      {/* 2. Operations / Services Layout */}
-      <LogisticsServices />
-
-      {/* 2.5 Precision Tubes Specialized Section */}
-      <LogisticsPrecisionTubes />
-
-      {/* 3. Inquiry / Contact Form */}
-      <AboutContact />
-
-      <Footer />
-    </main>
-  );
+export default function Page() {
+  return <LogisticsPage />;
 }

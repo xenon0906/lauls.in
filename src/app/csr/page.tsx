@@ -1,26 +1,19 @@
-"use client";
+import type { Metadata } from "next";
+import CSRPage from "@/components/csr/CSRPage";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import CSRHero from "@/components/csr/CSRHero";
-import CSRPillars from "@/components/csr/CSRPillars";
-import AboutContact from "@/components/about/AboutContact";
+export const metadata: Metadata = {
+  title: "CSR Initiatives — Lauls Ltd",
+  description:
+    "Lauls Ltd's corporate social responsibility initiatives in education (SAVERA), healthcare (SEWA), and environmental sustainability.",
+  openGraph: {
+    title: "CSR Initiatives — Lauls Ltd",
+    description:
+      "Lauls Ltd's corporate social responsibility initiatives in education, healthcare, and sustainability.",
+    url: "https://lauls.in/csr",
+  },
+  alternates: { canonical: "https://lauls.in/csr" },
+};
 
-export default function CSRPage() {
-  return (
-    <main className="min-h-screen bg-white">
-      <Navbar />
-      
-      {/* 1. Hero Section */}
-      <CSRHero />
-
-      {/* 2. Initiatives Layout */}
-      <CSRPillars />
-
-      {/* 3. Inquiry / Contact Form */}
-      <AboutContact />
-
-      <Footer />
-    </main>
-  );
+export default function Page() {
+  return <CSRPage />;
 }

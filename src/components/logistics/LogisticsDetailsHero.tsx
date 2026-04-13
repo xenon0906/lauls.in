@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Clock, Calendar, Share2 } from "lucide-react";
+import Image from "next/image";
 
 export default function LogisticsDetailsHero() {
   return (
@@ -58,10 +59,11 @@ export default function LogisticsDetailsHero() {
         className="max-w-6xl mx-auto px-6 md:px-12"
       >
         <div className="relative w-full aspect-[21/9] md:aspect-[3/1] rounded-3xl overflow-hidden shadow-2xl bg-[#0A1628]">
-          <img 
-            src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2070&auto=format&fit=crop"
-            alt="Lauls Fleet Cover" 
-            className="absolute inset-0 w-full h-full object-cover object-center opacity-90"
+          <Image
+            src="/images/stockyard-lauls.jpg"
+            alt="Lauls Fleet Cover"
+            fill
+            className="object-cover object-center opacity-90"
           />
         </div>
       </motion.div>

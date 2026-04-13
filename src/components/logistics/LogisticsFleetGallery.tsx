@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function LogisticsFleetGallery() {
   const images = [
-    { src: "https://images.unsplash.com/photo-1519003722216-16eed37d4576?q=80&w=2070&auto=format&fit=crop", label: "Road Logistics", href: "/logistics" },
-    { src: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop", label: "Rail Freight", href: "/logistics" },
-    { src: "https://images.unsplash.com/photo-1621252179027-94459d278660?q=80&w=2070&auto=format&fit=crop", label: "Electric Fleet", href: "/logistics" },
-    { src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop", label: "Warehousing Hubs", href: "/logistics" }
+    { src: "/images/stockyard.jpg", label: "Road Logistics", href: "/logistics" },
+    { src: "/images/warehouse.jpg", label: "Rail Freight", href: "/logistics" },
+    { src: "/images/manufacturing.jpg", label: "Electric Fleet", href: "/logistics" },
+    { src: "/images/trading.jpg", label: "Warehousing Hubs", href: "/logistics" }
   ];
 
   return (
@@ -24,12 +25,13 @@ export default function LogisticsFleetGallery() {
                 transition={{ duration: 0.8, delay: idx * 0.2 }}
                 className="w-full h-full rounded-2xl overflow-hidden"
               >
-                <img 
-                  src={img.src} 
-                  alt={img.label} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                <Image
+                  src={img.src}
+                  alt={img.label}
+                  fill
+                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/90 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#0A1628]/90 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute bottom-8 left-6 md:left-8">
                   <span className="text-white font-display font-bold text-xl md:text-2xl tracking-tight drop-shadow-lg">
                     {img.label}

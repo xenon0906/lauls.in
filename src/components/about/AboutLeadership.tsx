@@ -2,43 +2,44 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const executives = [
-  { 
-    id: "anand",
-    name: "Anand Kumar Mishra", 
-    role: "Managing Director", 
-    image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1000&auto=format&fit=crop",
-    quote: "We don't just engineer logistics — we engineer the confidence that keeps India moving forward.",
-    bio: "With over 30 years of experience in heavy infrastructure, Mr. Mishra has transformed Lauls Ltd from a regional player into a nationally recognized conglomerate spanning four heavy business verticals.",
+  {
+    id: "abhay",
+    name: "Mr. Abhay Sagar Gupta",
+    role: "Director In-Charge",
+    image: "/images/abhay-gupta-new.jpg",
+    quote: "Our strength lies in building enduring partnerships and delivering consistent value across every vertical we operate in.",
+    bio: "With over 30 years of leadership, Mr. Abhay Sagar Gupta has steered Lauls Ltd through various phases of growth and diversification. His strategic vision has been instrumental in securing key partnerships with Indian Railways and TATA Steel.",
     stats: ["30+ Yrs Exp", "Visionary", "Strategy"]
   },
-  { 
-    id: "rajesh",
-    name: "Rajesh Verma", 
-    role: "Head of Operations", 
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop",
-    quote: "Efficiency is the lifeblood of our supply chain. We treat every delivery as mission-critical.",
-    bio: "Rajesh drives excellence in logistics operations across India. With 20+ years of experience in industrial management, he ensures flawless execution of heavy drop-shipments and fleet sustainability.",
-    stats: ["20+ Yrs Exp", "Logistics", "Operations"]
+  {
+    id: "sudhir",
+    name: "Mr. Sudhir Gupta",
+    role: "Director, Manufacturing & Trading",
+    image: "/images/sudhir-gupta.jpg",
+    quote: "Technical excellence and supply chain efficiency are the pillars on which our manufacturing and trading operations stand.",
+    bio: "Focuses on the technical excellence and supply chain efficiency of our manufacturing units and trading operations.",
+    stats: ["Manufacturing Excellence", "Trading Operations", "Supply Chain"]
   },
-  { 
-    id: "priya",
-    name: "Priya Sharma", 
-    role: "Head of Distribution & Quality", 
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop",
-    quote: "Standardization isn't enough; we aim to redefine what quality means in the steel sector.",
-    bio: "Priya oversees all critical engineering standards across our alloy steel distribution network, ensuring rigid compliance with ISO standards and TATA structural tolerances.",
-    stats: ["ISO Auditing", "TATA Standards", "Metallurgy"]
+  {
+    id: "kanishk",
+    name: "Mr. Kanishk Sagar Gupta",
+    role: "Director, Logistics",
+    image: "/images/kanishk-gupta-new.jpg",
+    quote: "Precision in logistics and warehousing is what transforms a supply chain into a competitive advantage.",
+    bio: "Mechanical Engineer from University of Nottingham. Specializes in mechanical excellence in logistics and warehousing operations.",
+    stats: ["Logistics Automation", "Warehousing", "Fleet Mgmt"]
   },
-  { 
-    id: "sunil",
-    name: "Sunil Patel", 
-    role: "Head of EV Technology", 
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop",
-    quote: "The future of heavy transport relies entirely on sustainable, data-driven electric fleets.",
-    bio: "Sunil spearheads the technological transition of our logistics arm, focusing on integrating electric trucks and advanced algorithmic routing into our massive pan-India operational grid.",
-    stats: ["EV Transition", "Algorithmic Routing", "Sustainability"]
+  {
+    id: "atirav",
+    name: "Mr. Atirav Sagar Gupta",
+    role: "Director, Operations & HR",
+    image: "/images/atirav-gupta-new.jpg",
+    quote: "Operational efficiency paired with a strong people-first culture is the foundation of sustainable growth.",
+    bio: "Educated at IHL Lausanne, Switzerland. Focuses on operational efficiency and modern HR practices.",
+    stats: ["Operations", "HR Culture", "International"]
   },
 ];
 
@@ -78,12 +79,13 @@ export default function AboutLeadership() {
               className="flex flex-col lg:flex-row"
             >
               <div className="lg:w-2/5 h-[400px] lg:h-[500px] relative">
-                <img 
-                  src={activeLeader.image} 
-                  alt={activeLeader.name} 
-                  className="w-full h-full object-cover"
+                <Image
+                  src={activeLeader.image}
+                  alt={activeLeader.name}
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+                <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 to-transparent p-8">
                   <h3 className="text-white font-display font-bold text-2xl">{activeLeader.name}</h3>
                   <p className="text-[#DCA54C] text-sm uppercase tracking-widest font-bold mt-1">{activeLeader.role}</p>
                 </div>
@@ -130,12 +132,13 @@ export default function AboutLeadership() {
                 className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col group cursor-pointer hover:border-[#DCA54C]/50 transition-colors"
               >
                 <div className="h-[250px] relative overflow-hidden">
-                  <img 
-                    src={member.image} 
+                  <Image
+                    src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0A1628]/90 to-transparent p-6">
+                  <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-[#0A1628]/90 to-transparent p-6">
                     <h4 className="text-white font-display font-bold text-xl">{member.name}</h4>
                     <p className="text-white/70 text-xs uppercase tracking-widest font-bold mt-1">{member.role}</p>
                   </div>
