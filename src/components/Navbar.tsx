@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef, useMemo } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
@@ -28,8 +28,6 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
-  const productsRef = useRef<HTMLDivElement>(null);
-  const mobileMenuRef = useRef<HTMLDivElement>(null);
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const openProducts = useCallback(() => {
@@ -40,7 +38,7 @@ export default function Navbar() {
   const closeProductsDelayed = useCallback(() => {
     hoverTimeoutRef.current = setTimeout(() => {
       setIsProductsOpen(false);
-    }, 150);
+    }, 200);
   }, []);
 
   useEffect(() => {
@@ -57,16 +55,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll lock when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    return () => { document.body.style.overflow = ""; };
   }, [isMobileMenuOpen]);
 
   const closeAll = useCallback(() => {
@@ -75,17 +70,14 @@ export default function Navbar() {
     setIsMobileProductsOpen(false);
   }, []);
 
-  const handleProductsKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        setIsProductsOpen((prev) => !prev);
-      } else if (e.key === "Escape") {
-        setIsProductsOpen(false);
-      }
-    },
-    []
-  );
+  const handleProductsKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setIsProductsOpen((prev) => !prev);
+    } else if (e.key === "Escape") {
+      setIsProductsOpen(false);
+    }
+  }, []);
 
   return (
     <nav
@@ -111,14 +103,9 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <div
               key={link.name}
-              ref={link.name === "Products" ? productsRef : undefined}
-              className="py-6 relative"
-              onMouseEnter={() =>
-                link.name === "Products" && openProducts()
-              }
-              onMouseLeave={() =>
-                link.name === "Products" && closeProductsDelayed()
-              }
+              className="py-6"
+              onMouseEnter={() => link.name === "Products" && openProducts()}
+              onMouseLeave={() => link.name === "Products" && closeProductsDelayed()}
             >
               {link.name === "Products" ? (
                 <button
@@ -145,49 +132,24 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               )}
-
-              {/* Mega Menu Dropdown */}
-              {link.name === "Products" && (
-                <AnimatePresence>
-                  {isProductsOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <ProductCatalogGrid
-                        onClose={() => setIsProductsOpen(false)}
-                        onMouseEnter={openProducts}
-                        onMouseLeave={closeProductsDelayed}
-                      />
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              )}
             </div>
           ))}
-          {/* Phone & Mail quick icons */}
+
+          {/* Phone & Mail */}
           <div className="flex items-center gap-2 border-l border-white/20 pl-5">
             <a
               href="tel:+911294098300"
               title="+91-129-4098300"
               className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all hover:scale-110 group"
             >
-              <Phone
-                size={15}
-                className="text-white/70 group-hover:text-white transition-colors"
-              />
+              <Phone size={15} className="text-white/70 group-hover:text-white transition-colors" />
             </a>
             <a
               href="mailto:info@lauls.in"
               title="info@lauls.in"
               className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all hover:scale-110 group"
             >
-              <Mail
-                size={15}
-                className="text-white/70 group-hover:text-white transition-colors"
-              />
+              <Mail size={15} className="text-white/70 group-hover:text-white transition-colors" />
             </a>
           </div>
           <Link
@@ -209,11 +171,26 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* === DESKTOP MEGA MENU — rendered as direct child of <nav> === */}
+      <AnimatePresence>
+        {isProductsOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -4 }}
+            transition={{ duration: 0.15 }}
+            onMouseEnter={openProducts}
+            onMouseLeave={closeProductsDelayed}
+          >
+            <ProductCatalogGrid onClose={() => setIsProductsOpen(false)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* === MOBILE MENU === */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            ref={mobileMenuRef}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -227,9 +204,7 @@ export default function Navbar() {
                     <>
                       <button
                         type="button"
-                        onClick={() =>
-                          setIsMobileProductsOpen(!isMobileProductsOpen)
-                        }
+                        onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
                         aria-expanded={isMobileProductsOpen}
                         className="w-full flex items-center justify-between text-lg font-medium text-white/80 hover:text-white py-3 min-h-11"
                       >
