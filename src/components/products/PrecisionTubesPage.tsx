@@ -11,7 +11,7 @@ const products = [
   {
     name: "ERW Steel Tubes",
     grade: "IS 1239 / IS 3601 / ASTM A513",
-    images: ["/images/manufacturing.jpg", "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=800&auto=format&fit=crop"],
+    images: ["/images/IMG_9988.JPG", "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=800&auto=format&fit=crop"],
     use: "Structural, mechanical & automotive tube applications",
     specs: "OD: 15mm – 168mm | WT: 1.6mm – 8mm",
     desc: "Electric Resistance Welded (ERW) Steel Tubes are manufactured under rigorous quality controls and are the industry standard for structural, mechanical, and automotive applications. Lauls supplies ERW tubes conforming to IS 1239, IS 3601, and ASTM A513 standards.",
@@ -19,7 +19,7 @@ const products = [
   {
     name: "Square & Rectangular Hollow Sections",
     grade: "IS 4923",
-    images: ["/images/below-manufacturing.jpg", "https://images.unsplash.com/photo-1565439390234-5858cf85aeb9?q=80&w=800&auto=format&fit=crop"],
+    images: ["/images/IMG_9988.JPG", "https://images.unsplash.com/photo-1565439390234-5858cf85aeb9?q=80&w=800&auto=format&fit=crop"],
     use: "Fabrication, furniture & construction frames",
     specs: "Size: 20×20 – 150×150mm | WT: 1.6–6mm",
     desc: "Square and Rectangular Hollow Sections (SHS/RHS) are the preferred structural shape for modern construction, industrial frames, furniture, and gates. All our hollow sections comply with IS 4923 and are available in a wide range of sizes and wall thicknesses.",
@@ -32,10 +32,16 @@ export default function PrecisionTubesPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/images/manufacturing.jpg")' }} />
+      <section className="relative min-h-[100svh] flex items-center overflow-hidden">
+        <Image
+          src="/images/IMG_9988.JPG"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-linear-to-br from-[#0A1628]/97 via-[#0A1628]/80 to-transparent" />
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-32 pb-16">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-32 pb-20">
           <Link href="/products" className="inline-flex items-center gap-2 text-[#DCA54C] text-xs font-bold uppercase tracking-widest mb-6 hover:text-white transition-colors">
             <ArrowLeft size={14} /> Back to Products
           </Link>
@@ -43,10 +49,10 @@ export default function PrecisionTubesPage() {
             <Cylinder size={12} className="text-purple-400" />
             <span className="text-purple-300 text-[10px] font-black uppercase tracking-widest">Steel Distribution</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-display font-black text-white leading-tight mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-white leading-tight mb-4">
             Precision <span className="text-purple-400">Tubes</span>
           </h1>
-          <p className="text-white/70 text-lg font-light max-w-2xl">ERW steel tubes built for India's toughest conditions. Manufactured under rigorous standards and supplied to auto, construction, and infrastructure sectors.</p>
+          <p className="text-white/70 text-lg font-light max-w-2xl">ERW steel tubes built for India&apos;s toughest conditions. Manufactured under rigorous standards and supplied to auto, construction, and infrastructure sectors.</p>
         </div>
       </section>
 

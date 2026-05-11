@@ -1,18 +1,17 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
 import AutoImageRotator from "../AutoImageRotator";
 
 const pillars = [
-  { num: "01", title: "Unyielding Quality", desc: "Every component undergoes rigorous ISO and testing standards.", images: ["/images/manufacturing.jpg", "/images/below-manufacturing.jpg", "/images/stockyard-lauls.jpg"], span: "lg:col-span-8 lg:row-span-1" },
-  { num: "02", title: "National Scale", desc: "Capabilities spanning across 12 strategic Indian distribution hubs.", images: ["/images/warehouse.jpg", "/images/stockyard.jpg"], span: "lg:col-span-4 lg:row-span-2" },
-  { num: "03", title: "EV Transport", desc: "Pioneering electric transport in heavy industrial logistics.", images: ["/images/trading.jpg", "/images/hero-banner.jpg"], span: "lg:col-span-4 lg:row-span-1" },
-  { num: "04", title: "Client Partnership", desc: "We build tailored supply chains for enterprise needs.", images: ["/images/team-group.jpg", "/images/business-goals.jpg"], span: "lg:col-span-4 lg:row-span-1" },
+  { num: "01", title: "Unyielding Quality", desc: "Every component undergoes rigorous ISO and testing standards.", images: ["/images/IMG_9884.JPG", "/images/IMG_9888.JPG"], span: "lg:col-span-8 lg:row-span-1" },
+  { num: "02", title: "National Scale", desc: "Capabilities spanning across 12 strategic Indian distribution hubs.", images: ["/images/IMG_9974.JPG", "/images/IMG_9916.JPG"], span: "lg:col-span-4 lg:row-span-2" },
+  { num: "03", title: "EV Transport", desc: "Pioneering electric transport in heavy industrial logistics.", images: ["/images/IMG_0033.JPG", "/images/IMG_9858.JPG"], span: "lg:col-span-4 lg:row-span-1" },
+  { num: "04", title: "Client Partnership", desc: "We build tailored supply chains for enterprise needs.", images: ["/images/IMG_9901.JPG", "/images/IMG_9864.JPG"], span: "lg:col-span-4 lg:row-span-1" },
 ];
 
 export default function AboutPillars() {
   return (
-    <section className="bg-[#0A1628] py-32 w-full relative overflow-hidden">
+    <section className="bg-[#0A1628] py-20 w-full relative overflow-hidden">
       {/* Background Architectural Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 

@@ -9,7 +9,7 @@ const evDetails = [
     title: "Heavy Haulage Capabilities",
     subtitle: "Built for industrial payloads",
     desc: "Our EV fleet isn't restricted to light delivery. We deploy heavy-duty multi-axle electric rigs designed specifically for transporting steel coils, ferro alloys, and massive infrastructural components with identical reliability to diesel counterparts.",
-    image: "https://images.unsplash.com/photo-1519003722216-16eed37d4576?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/IMG_9993.JPG",
     chips: [
       { label: "Capacity", value: "Up to 40T Gross" },
       { label: "Torque", value: "Instant Hub Torque" },
@@ -20,7 +20,7 @@ const evDetails = [
     title: "Decarbonized Supply Chains",
     subtitle: "Scope 3 Emission Reduction",
     desc: "By integrating our electric fleet into your logistics network, Lauls Ltd directly and drastically reduces your corporate Scope 3 emissions. Track your exact carbon offset through our rigorous, transparent ESG reporting.",
-    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/IMG_9974.JPG",
     chips: [
       { label: "Impact", value: "Zero Scope 1 Emissions" },
       { label: "Reporting", value: "Real-time ESG Dashboards" },
@@ -31,7 +31,7 @@ const evDetails = [
     title: "Smart Charging Network",
     subtitle: "Eliminating range anxiety",
     desc: "We own and operate an expansive proprietary network of high-speed DC fast chargers across key industrial corridors. Our rigorous telemetry systems predict optimal charging stops, ensuring your supply chain never halts.",
-    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938cb?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/IMG_9978.JPG",
     chips: [
       { label: "Infrastructure", value: "120kW+ DC Fast Chargers" },
       { label: "Telemetry", value: "AI-Routed Checkpoints" },

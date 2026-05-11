@@ -1,13 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ContactHero() {
   return (
     <section className="relative w-full h-[60vh] md:h-[65vh] bg-[#0A1628] overflow-hidden flex items-center">
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay"
-        style={{ backgroundImage: 'url("/images/business-goals.jpg")' }}
+      <Image
+        src="/images/business-goals.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover object-center opacity-40 mix-blend-overlay"
       />
       <div className="absolute inset-0 bg-linear-to-t from-[#0A1628] via-[#0A1628]/40 to-transparent" />
       
@@ -24,7 +28,7 @@ export default function ContactHero() {
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-black text-white mb-6 tracking-tight">Contact Us</h1>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl font-light leading-relaxed">
-              We are ready to build India's future together. Connect with our dedicated departments for logistics, distribution, and manufacturing inquiries.
+              We are ready to build India&apos;s future together. Connect with our dedicated departments for logistics, distribution, and manufacturing inquiries.
             </p>
          </motion.div>
       </div>

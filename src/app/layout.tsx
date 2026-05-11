@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/hero-banner.jpg",
+        url: "/images/IMG_9916.JPG",
         width: 1200,
         height: 630,
         alt: "Lauls Ltd — Industrial operations since 1933",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "Lauls Ltd — India's Trusted Industrial Partner Since 1933",
     description:
       "Sole authorized TATA Steel Ferro Alloys distributor. Logistics, railway manufacturing & distribution since 1933.",
-    images: ["/images/hero-banner.jpg"],
+    images: ["/images/IMG_9916.JPG"],
   },
   robots: {
     index: true,
@@ -122,7 +122,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${outfit.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-primary text-body relative group">
+      <body className="min-h-full flex flex-col bg-primary text-body relative group overflow-x-hidden">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdString }}

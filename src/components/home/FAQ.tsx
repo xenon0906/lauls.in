@@ -57,7 +57,7 @@ export default function FAQ() {
             <div className="w-10 h-10 bg-[#F4F7FB] rounded-lg flex items-center justify-center text-accent mb-6">
               <Mail size={20} />
             </div>
-            <h4 className="font-display font-bold text-primary mb-2 text-lg">Can't find your answer?</h4>
+            <h4 className="font-display font-bold text-primary mb-2 text-lg">Can&apos;t find your answer?</h4>
             <p className="text-primary/50 text-xs mb-8 leading-relaxed">Our team is ready to help with any specific questions about our railway manufacturing, logistics, or trading services.</p>
             
             <div className="flex gap-3">

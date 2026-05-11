@@ -38,7 +38,7 @@ export default function ContactFormOverlay() {
                     <span className="text-white font-display font-medium uppercase tracking-widest text-[10px]">Get in Touch</span>
                   </div>
                   <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-tight drop-shadow-md">
-                    Let's Build India's <br /> <span className="text-[#DCA54C]">Future Together.</span>
+                    Let&apos;s Build India&apos;s <br /> <span className="text-[#DCA54C]">Future Together.</span>
                   </h2>
                   <p className="text-white/70 max-w-md leading-relaxed font-light drop-shadow">
                     Whether you need expansive logistics solutions, zero-emission electric trucks, or reliable steel and alloy distribution — we are ready to partner.

@@ -6,10 +6,10 @@ import Image from "next/image";
 
 export default function LogisticsFleetGallery() {
   const images = [
-    { src: "/images/stockyard.jpg", label: "Road Logistics", href: "/logistics" },
-    { src: "/images/warehouse.jpg", label: "Rail Freight", href: "/logistics" },
-    { src: "/images/manufacturing.jpg", label: "Electric Fleet", href: "/logistics" },
-    { src: "/images/trading.jpg", label: "Warehousing Hubs", href: "/logistics" }
+    { src: "/images/IMG_9993.JPG", label: "Road Logistics", href: "/logistics" },
+    { src: "/images/IMG_9978.JPG", label: "Rail Freight", href: "/logistics" },
+    { src: "/images/IMG_9974.JPG", label: "Electric Fleet", href: "/logistics" },
+    { src: "/images/IMG_9962.JPG", label: "Warehousing Hubs", href: "/logistics" }
   ];
 
   return (
@@ -29,6 +29,7 @@ export default function LogisticsFleetGallery() {
                   src={img.src}
                   alt={img.label}
                   fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-[#0A1628]/90 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />

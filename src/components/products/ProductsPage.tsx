@@ -19,7 +19,7 @@ const productCategories = [
       "Lauls is a primary distributor of ferro alloys sourced directly from top-tier smelters. Our ferro alloys are used in producing high-grade, specialty steels and are supplied to Indian and global steel mills with rigorous quality assurance.",
     accent: "#DCA54C",
     bgGradient: "from-amber-50 to-white",
-    image: "/images/manufacturing.jpg",
+    image: "/images/IMG_9956.JPG",
     products: [
       {
         name: "Ferro Manganese",
@@ -56,7 +56,7 @@ const productCategories = [
       "Our wire rod inventory spans an extensive range of grades suited for fasteners, springs, tyre cords, welding wires, and cold heading applications. All stock is sourced from Sail, Tata, and JSW mills.",
     accent: "#3b82f6",
     bgGradient: "from-blue-50 to-white",
-    image: "/images/manufacturing.jpg",
+    image: "/images/IMG_9988.JPG",
     products: [
       {
         name: "Alloy Steel Wire Rods",
@@ -87,7 +87,7 @@ const productCategories = [
       "Lauls supplies forged and rolled steel rounds across a wide diameter spectrum. Our rounds are the choice of engineering firms, auto-component manufacturers and defence contractors for critical load-bearing applications.",
     accent: "#10b981",
     bgGradient: "from-emerald-50 to-white",
-    image: "/images/stockyard.jpg",
+    image: "/images/IMG_9944.JPG",
     products: [
       {
         name: "Alloy Steel Rounds",
@@ -112,7 +112,7 @@ const productCategories = [
       "Our ERW (Electric Resistance Welded) steel tubes are manufactured under rigorous conditions and supplied to auto, construction, and infrastructure sectors. All tubes comply with IS / ASTM / DIN standards.",
     accent: "#8b5cf6",
     bgGradient: "from-purple-50 to-white",
-    image: "/images/below-manufacturing.jpg",
+    image: "/images/IMG_9988.JPG",
     products: [
       {
         name: "ERW Steel Tubes",
@@ -166,6 +166,7 @@ function CategorySection({ cat, idx }: { cat: typeof productCategories[0]; idx: 
                 src={cat.image}
                 alt={cat.category}
                 fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-linear-to-t from-[#0A1628]/80 to-transparent" />
@@ -240,14 +241,17 @@ export default function ProductsPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("/images/manufacturing.jpg")' }}
+      <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
+        <Image
+          src="/images/IMG_9988.JPG"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-linear-to-br from-[#0A1628]/97 via-[#0A1628]/80 to-transparent" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 text-center pt-28 pb-16">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 text-center pt-28 pb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -261,7 +265,7 @@ export default function ProductsPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight mb-6 tracking-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight mb-6 tracking-tight"
           >
             Our Industrial<br />
             <span className="text-[#DCA54C]">Product Range</span>
@@ -277,27 +281,24 @@ export default function ProductsPage() {
             products directly from primary mills across India.
           </motion.p>
 
-          {/* Category Quick-Jump */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-wrap justify-center gap-3"
-          >
-            {productCategories.map((cat) => {
-              const Icon = cat.icon;
-              return (
-                <a
-                  key={cat.id}
-                  href={`#${cat.id}`}
-                  className="flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white text-xs font-bold hover:bg-white/20 hover:border-white/40 transition-all backdrop-blur-sm"
-                >
-                  <Icon size={12} />
-                  {cat.category}
-                </a>
-              );
-            })}
-          </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-[#0A1628] border-t border-white/10 py-5 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-3">
+          {productCategories.map((cat) => {
+            const Icon = cat.icon;
+            return (
+              <a
+                key={cat.id}
+                href={`#${cat.id}`}
+                className="flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white text-xs font-bold hover:bg-white/20 hover:border-white/40 transition-all backdrop-blur-sm"
+              >
+                <Icon size={12} />
+                {cat.category}
+              </a>
+            );
+          })}
         </div>
       </section>
 

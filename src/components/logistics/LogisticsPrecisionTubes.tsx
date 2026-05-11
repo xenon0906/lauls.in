@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { MoveRight, PackageSearch, ShieldCheck, Factory } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const features = [
   {
@@ -89,9 +90,12 @@ export default function LogisticsPrecisionTubes() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
             className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group"
           >
-            <div 
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: 'url("/images/manufacturing.jpg")' }}
+            <Image
+              src="/images/IMG_9988.JPG"
+              alt=""
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-linear-to-t from-primary/90 via-primary/20 to-transparent" />
             

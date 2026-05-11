@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 const partners = [
   { name: "Indian Railways", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/IRLogo.svg/1200px-IRLogo.svg.png" },
   { name: "TATA Steel", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Tata_Steel_Logo.svg/1200px-Tata_Steel_Logo.svg.png" },

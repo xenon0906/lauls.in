@@ -39,7 +39,7 @@ export default function LogisticsOperations() {
             Multi-Modal Specializations
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed font-light">
-            We don't just move cargo; we architect supply chains. Explore the distinct operational divisions that make Lauls Ltd a leader in industrial transport.
+            We don&apos;t just move cargo; we architect supply chains. Explore the distinct operational divisions that make Lauls Ltd a leader in industrial transport.
           </p>
         </div>
 

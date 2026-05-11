@@ -11,7 +11,7 @@ const products = [
   {
     name: "Alloy Steel Rounds",
     grade: "EN8 / EN19 / EN24 / EN31 / EN36",
-    images: ["/images/stockyard.jpg", "https://images.unsplash.com/photo-1621808003444-24eebacb5fb8?q=80&w=800&auto=format&fit=crop"],
+    images: ["/images/IMG_9993.JPG", "https://images.unsplash.com/photo-1621808003444-24eebacb5fb8?q=80&w=800&auto=format&fit=crop"],
     use: "Gears, axles, shafts, tooling & dies",
     specs: "Dia: 20mm – 500mm | Length: 3–7m",
     desc: "Alloy Steel Rounds are the material of choice for heavy-duty engineering applications requiring high strength, toughness, and wear resistance. Lauls stocks a full range of EN-grade alloy rounds for immediate supply to auto-component and defence manufacturers.",
@@ -19,7 +19,7 @@ const products = [
   {
     name: "Mild Steel Rounds",
     grade: "IS 2062 E250 / E350",
-    images: ["/images/manufacturing.jpg", "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop"],
+    images: ["/images/IMG_9988.JPG", "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop"],
     use: "General engineering, construction & fabrication",
     specs: "Dia: 6mm – 250mm | Length: 3–12m",
     desc: "Mild Steel Rounds are the most versatile construction and fabrication material in any industrial setting. Our IS 2062 rounds come in E250 and E350 grades, ideal for structural steel work, machine bases, and general engineering components.",
@@ -32,10 +32,16 @@ export default function SteelRoundsPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/images/stockyard.jpg")' }} />
+      <section className="relative min-h-[100svh] flex items-center overflow-hidden">
+        <Image
+          src="/images/IMG_9944.JPG"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-linear-to-br from-[#0A1628]/97 via-[#0A1628]/80 to-transparent" />
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-32 pb-16">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-32 pb-20">
           <Link href="/products" className="inline-flex items-center gap-2 text-[#DCA54C] text-xs font-bold uppercase tracking-widest mb-6 hover:text-white transition-colors">
             <ArrowLeft size={14} /> Back to Products
           </Link>
@@ -43,7 +49,7 @@ export default function SteelRoundsPage() {
             <Circle size={12} className="text-emerald-400" />
             <span className="text-emerald-300 text-[10px] font-black uppercase tracking-widest">Steel Distribution</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-display font-black text-white leading-tight mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-white leading-tight mb-4">
             Steel <span className="text-emerald-400">Rounds</span>
           </h1>
           <p className="text-white/70 text-lg font-light max-w-2xl">High-strength forged and rolled steel rounds in a wide diameter range. Trusted by auto-component manufacturers, defence contractors, and heavy engineering firms.</p>

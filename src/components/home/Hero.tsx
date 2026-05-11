@@ -2,15 +2,16 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Play, ArrowRight, ChevronDown, Mail } from "lucide-react";
+import { ArrowRight, ChevronDown, Mail } from "lucide-react";
 import Link from 'next/link';
+import Image from "next/image";
 
 const slides = [
   {
     title: "About Lauls: \n90 Years of \nExcellence",
     highlight: "90 Years",
     subtext: "Founded in 1933, Lauls Ltd. has evolved from a trading house into Northern India's leading industrial conglomerate across steel, logistics, and manufacturing.",
-    image: "/hero/1.jpg",
+    image: "/images/IMG_9999.JPG",
     stats: [
       { label: "Projects", value: "500+" },
       { label: "Clients", value: "150+" },
@@ -22,7 +23,7 @@ const slides = [
     title: "Leading Ferro Alloy \nDistribution \nin Northern India",
     highlight: "Ferro Alloy",
     subtext: "Sole authorized distributor of TATA Steel Ferro Alloys & Minerals. Powering the steel industry with quality and reliability.",
-    image: "/images/hero-banner.jpg",
+    image: "/images/IMG_9988.JPG",
     stats: [
       { label: "Annual Distribution", value: "15K MT" },
       { label: "TATA Steel Partner", value: "Sole" },
@@ -34,7 +35,7 @@ const slides = [
     title: "World-Class \nLogistics & \nWarehousing",
     highlight: "Logistics",
     subtext: "Operating TATA Steel stockyards with WAREX GOLD certification. Precision in handling, safety in transportation.",
-    image: "/hero/3.jpg",
+    image: "/images/IMG_9974.JPG",
     stats: [
       { label: "Steel Handling", value: "1M MT" },
       { label: "Warehousing", value: "Certified Gold" },
@@ -46,7 +47,7 @@ const slides = [
     title: "Pioneering \nSustainable \nElectric Trucking",
     highlight: "Electric Trucking",
     subtext: "Transitioning to a greener future with our electric truck fleet. Logistics engineered for sustainability and efficiency.",
-    image: "/hero/4.jpg",
+    image: "/images/IMG_9993.JPG",
     stats: [
       { label: "Zero Emission", value: "100%" },
       { label: "Sustainable", value: "Eco-Friendly" },
@@ -78,13 +79,22 @@ export default function Hero() {
           transition={{ duration: 1.2, ease: "easeInOut" }}
           className="absolute inset-0 z-0"
         >
-          <motion.div 
+          <motion.div
             initial={{ scale: 1.15 }}
             animate={{ scale: 1 }}
             transition={{ duration: 7, ease: "linear" }}
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
-          />
+            className="absolute inset-0"
+          >
+            <Image
+              src={slides[currentSlide].image}
+              alt=""
+              fill
+              priority={currentSlide === 0}
+              sizes="100vw"
+              quality={90}
+              className="object-cover object-center"
+            />
+          </motion.div>
           {/* Overlays optimized for better image visibility */}
           <div className="absolute inset-0 bg-linear-to-r from-[#0A1628]/95 lg:from-[#0A1628]/90 via-[#0A1628]/40 to-transparent" />
           <div className="absolute inset-0 bg-linear-to-t from-[#0A1628]/90 via-transparent to-transparent" />

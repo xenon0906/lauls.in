@@ -6,24 +6,24 @@ import Image from "next/image";
 
 const milestones = [
   { 
-    year: "1994", 
+    year: "1933",
     title: "Foundation", 
-    desc: "Established as a single logistics hub in New Delhi, beginning our journey in industrial infrastructure.", 
-    image: "/images/manufacturing.jpg",
+    desc: "Began as a trusted industrial trading house, setting the groundwork for a multi-generation infrastructure enterprise.",
+    image: "/images/IMG_9877.JPG",
     accent: "#0A1628"
   },
   { 
     year: "2005", 
     title: "First Plant", 
     desc: "Expanded into heavy alloy steel distribution, becoming a key TATA associated supplier across India.", 
-    image: "/images/stockyard.jpg",
+    image: "/images/IMG_9944.JPG",
     accent: "#0A1628"
   },
   { 
     year: "2012", 
     title: "WAREX Gold", 
     desc: "Achieved WAREX Gold certification, cementing as an approved vendor for critical supply chains.", 
-    image: "/images/warehouse.jpg",
+    image: "/images/IMG_9844.JPG",
     accent: "#0A1628"
   },
   { 
@@ -31,7 +31,7 @@ const milestones = [
     title: "Global Expansion", 
     point: true, 
     desc: "Launching EV-powered fleet and expanding our global logistics, fulfilling massive national contracts.", 
-    image: "/images/trading.jpg",
+    image: "/images/IMG_0028.JPG",
     accent: "#DCA54C"
   },
 ];
@@ -88,6 +88,7 @@ function TimelineCard({ ms, idx }: { ms: typeof milestones[0]; idx: number }) {
           src={ms.image}
           alt={ms.title}
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           className="object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
         />
       </div>

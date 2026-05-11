@@ -1,15 +1,27 @@
+"use client";
+
 import Link from "next/link";
-import { Globe, Mail, Phone, MapPin, MessageSquare } from "lucide-react";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { Globe, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (pathname === href) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
   return (
     <footer className="bg-primary pt-20 pb-10 px-6 md:px-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
           <div className="space-y-6">
-             <Link href="/" className="flex items-center gap-2">
-              <img src="/images/logo.png" alt="Lauls Ltd" width={144} height={22} className="h-8 w-auto" />
+             <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center gap-2">
+              <Image src="/images/logo.png" alt="Lauls Ltd" width={144} height={32} className="h-8 w-auto" />
             </Link>
             <p className="text-white/40 text-sm leading-relaxed">
               Engineering the backbone of Indian Railways for over 90 years. A legacy of precision, trust, and industrial excellence since 1933.
@@ -41,7 +53,7 @@ export default function Footer() {
                 { name: "CSR", href: "/csr" }
               ].map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-white/40 hover:text-highlight text-sm transition-colors">
+                  <Link href={item.href} onClick={(e) => handleLinkClick(e, item.href)} className={`text-sm transition-colors ${pathname === item.href ? 'text-highlight' : 'text-white/40 hover:text-highlight'}`}>
                     {item.name}
                   </Link>
                 </li>
@@ -62,7 +74,7 @@ export default function Footer() {
                 { name: "Distribution", href: "/distribution" },
               ].map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-white/40 hover:text-accent text-sm transition-colors">
+                  <Link href={item.href} onClick={(e) => handleLinkClick(e, item.href)} className={`text-sm transition-colors ${pathname === item.href ? 'text-accent' : 'text-white/40 hover:text-accent'}`}>
                     {item.name}
                   </Link>
                 </li>

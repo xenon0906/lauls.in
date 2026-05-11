@@ -1,7 +1,6 @@
 "use client";
 
 import SectionWrapper from "../SectionWrapper";
-import { ArrowUpRight } from "lucide-react";
 import AutoImageRotator from "../AutoImageRotator";
 
 const services = [
@@ -9,7 +8,7 @@ const services = [
     title: "Logistics",
     badge: "Supply Chain",
     description: "End-to-end logistics solutions, ensuring reliable supply chains and operational efficiency for massive industrial cargo.",
-    images: ["/images/stockyard.jpg", "/images/warehouse.jpg"],
+    images: ["/images/IMG_9993.JPG", "/images/IMG_9978.JPG"],
     tags: ["Pan India", "Warehouse", "Handling"],
     gridSpan: "lg:col-span-6 lg:row-span-1"
   },
@@ -17,7 +16,7 @@ const services = [
     title: "Precision Tubes",
     badge: "Specialized",
     description: "Dedicated handling and storage for specialized precision pipes avoiding defects.",
-    images: ["/images/manufacturing.jpg", "/images/below-manufacturing.jpg"],
+    images: ["/images/IMG_9988.JPG", "/images/IMG_9956.JPG"],
     tags: ["Zero Defect", "Tube Division"],
     gridSpan: "lg:col-span-6 lg:row-span-1"
   },
@@ -25,7 +24,7 @@ const services = [
     title: "Electric Trucks",
     badge: "Eco-Fleet",
     description: "Pioneering sustainable transport with our fleet of electric trucks, reducing carbon footprints in heavy industry.",
-    images: ["/images/banner-1.jpg", "/images/banner-2.jpg"],
+    images: ["/images/IMG_9974.JPG", "/images/IMG_9993.JPG"],
     tags: ["Zero Emission", "Sustainable", "Future Ready"],
     gridSpan: "lg:col-span-6 lg:row-span-1"
   },
@@ -33,7 +32,7 @@ const services = [
     title: "Fe Alloy Distribution",
     badge: "15K MT Annual",
     description: "Sole authorized distributor of TATA Steel Ferro Alloys & Minerals.",
-    images: ["/images/trading.jpg", "/images/stats-bg.jpg"],
+    images: ["/images/IMG_9939.JPG", "/images/trading.jpg"],
     tags: ["TATA Steel", "Authorized"],
     gridSpan: "lg:col-span-3 lg:row-span-1"
   },
@@ -41,7 +40,7 @@ const services = [
     title: "Alloy Steel Distribution",
     badge: "TATA Partner",
     description: "Extensive stockyards distributing heavy alloy steel, precision tubes, and rounds.",
-    images: ["/images/stockyard-lauls.jpg", "/images/business-goals.jpg"],
+    images: ["/images/IMG_9944.JPG", "/images/IMG_9988.JPG"],
     tags: ["Steel Rounds", "Precision"],
     gridSpan: "lg:col-span-3 lg:row-span-1"
   }
@@ -73,6 +72,7 @@ export default function Pillars() {
               images={service.images} 
               className="absolute inset-0 z-0 opacity-100" 
               imgClassName="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-110"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               interval={4000 + (idx * 500)}
             />
             

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AutoImageRotator from "@/components/AutoImageRotator";
@@ -12,8 +13,7 @@ const products = [
     name: "Alloy Steel Wire Rods",
     grade: "SAE / IS Standards",
     images: [
-      "/images/manufacturing.jpg",
-      "/images/below-manufacturing.jpg"
+      "/images/IMG_9988.JPG"
     ],
     use: "Automotive springs, fasteners & high-strength bolts",
     specs: "Dia: 5.5mm – 25mm | Coil Wt: 1–2 MT",
@@ -23,8 +23,8 @@ const products = [
     name: "Mild Steel Wire Rods",
     grade: "IS 2062 / SAE 1006–1018",
     images: [
-      "/images/manufacturing.jpg",
-      "/images/stockyard.jpg"
+      "/images/IMG_9988.JPG",
+      "/images/IMG_9993.JPG"
     ],
     use: "Nails, fencing, binding wire, barbed wire",
     specs: "Dia: 5.5mm – 14mm | C: <0.15%",
@@ -34,7 +34,7 @@ const products = [
     name: "Stainless Steel Wire Rods",
     grade: "SS 304 / 316 / 410 / 430",
     images: [
-      "/images/manufacturing.jpg",
+      "/images/IMG_9988.JPG",
       "/images/trading.jpg"
     ],
     use: "Pharmaceutical, food-grade and marine applications",
@@ -49,10 +49,16 @@ export default function WireRodsPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/images/manufacturing.jpg")' }} />
+      <section className="relative min-h-[100svh] flex items-center overflow-hidden">
+        <Image
+          src="/images/IMG_9988.JPG"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-linear-to-br from-[#0A1628]/97 via-[#0A1628]/80 to-transparent" />
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-32 pb-16">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-32 pb-20">
           <Link href="/products" className="inline-flex items-center gap-2 text-[#DCA54C] text-xs font-bold uppercase tracking-widest mb-6 hover:text-white transition-colors">
             <ArrowLeft size={14} /> Back to Products
           </Link>
@@ -60,10 +66,10 @@ export default function WireRodsPage() {
             <Layers size={12} className="text-blue-400" />
             <span className="text-blue-300 text-[10px] font-black uppercase tracking-widest">Steel Distribution</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-display font-black text-white leading-tight mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-white leading-tight mb-4">
             Wire <span className="text-[#3b82f6]">Rods</span>
           </h1>
-          <p className="text-white/70 text-lg font-light max-w-2xl">Rolled to precision from India's leading mills. Stocked across all major grades and diameters for immediate dispatch to wire drawers, fastener manufacturers, and fabricators.</p>
+          <p className="text-white/70 text-lg font-light max-w-2xl">Rolled to precision from India&apos;s leading mills. Stocked across all major grades and diameters for immediate dispatch to wire drawers, fastener manufacturers, and fabricators.</p>
         </div>
       </section>
 
@@ -83,6 +89,7 @@ export default function WireRodsPage() {
                 <AutoImageRotator
                   images={p.images}
                   interval={4500 + idx * 500}
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                 />
               </div>
               <div className="w-full lg:w-3/5">

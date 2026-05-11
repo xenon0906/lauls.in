@@ -11,7 +11,7 @@ const products = [
   {
     name: "Ferro Manganese",
     grade: "HC / MC / LC",
-    images: ["/images/manufacturing.jpg", "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop"],
+    images: ["/images/IMG_9988.JPG", "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop"],
     use: "Deoxidiser & desulphuriser in steel production",
     specs: "Mn: 60–75% | C: 0.1–7%",
     desc: "Ferro Manganese is essential in steel manufacturing as a deoxidiser and desulphuriser. Lauls sources HC, MC, and LC grades from premium smelters to serve diverse steel mill specifications.",
@@ -27,7 +27,7 @@ const products = [
   {
     name: "Ferro Silicon",
     grade: "FeSi 45 / 65 / 75",
-    images: ["/images/stockyard.jpg", "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop"],
+    images: ["/images/IMG_9993.JPG", "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop"],
     use: "Strengthening and deoxidising steel & cast iron",
     specs: "Si: 45–75% | Al: <2%",
     desc: "Ferro Silicon is used as both a deoxidising and alloying agent. It improves the strength, elasticity, and corrosion resistance of steel and cast iron, available in FeSi 45, 65, and 75 grades.",
@@ -35,7 +35,7 @@ const products = [
   {
     name: "Silico Manganese",
     grade: "Standard / High-Grade",
-    images: ["/images/stockyard-lauls.jpg", "https://images.unsplash.com/photo-1536647960714-469b8c0da9aa?q=80&w=800&auto=format&fit=crop"],
+    images: ["/images/IMG_9993.JPG", "https://images.unsplash.com/photo-1536647960714-469b8c0da9aa?q=80&w=800&auto=format&fit=crop"],
     use: "Combined deoxidiser and alloying element",
     specs: "Mn: 60–68% | Si: 14–20%",
     desc: "Silico Manganese is a combined deoxidiser and alloying agent used widely in structural steel production. It simultaneously provides deoxidising and manganese-alloying benefits, reducing costs versus separate additions.",
@@ -48,10 +48,16 @@ export default function FerroAlloysPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/images/manufacturing.jpg")' }} />
+      <section className="relative min-h-[100svh] flex items-center overflow-hidden">
+        <Image
+          src="/images/IMG_9988.JPG"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-linear-to-br from-[#0A1628]/97 via-[#0A1628]/80 to-transparent" />
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-32 pb-16">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-32 pb-20">
           <Link href="/products" className="inline-flex items-center gap-2 text-[#DCA54C] text-xs font-bold uppercase tracking-widest mb-6 hover:text-white transition-colors">
             <ArrowLeft size={14} /> Back to Products
           </Link>
@@ -59,10 +65,10 @@ export default function FerroAlloysPage() {
             <FlaskConical size={12} className="text-[#DCA54C]" />
             <span className="text-[#DCA54C] text-[10px] font-black uppercase tracking-widest">Steel Distribution</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-display font-black text-white leading-tight mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-white leading-tight mb-4">
             Ferro <span className="text-[#DCA54C]">Alloys</span>
           </h1>
-          <p className="text-white/70 text-lg font-light max-w-2xl">Precision-grade ferro alloys sourced directly from India's top smelters. Supplied to steel mills across Northern India with complete mill test certificates.</p>
+          <p className="text-white/70 text-lg font-light max-w-2xl">Precision-grade ferro alloys sourced directly from India&apos;s top smelters. Supplied to steel mills across Northern India with complete mill test certificates.</p>
         </div>
       </section>
 

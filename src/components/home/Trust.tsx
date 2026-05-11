@@ -26,7 +26,7 @@ export default function Trust() {
       <div className="relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
-            Trusted by India's Leading <br />
+            Trusted by India&apos;s Leading <br />
             <span className="text-highlight">Railways & Steel Industries</span>
           </h2>
           <p className="text-white/40 max-w-xl mx-auto">
@@ -56,7 +56,7 @@ export default function Trust() {
           {certs.map((cert, idx) => (
             <div key={idx} className="flex flex-col items-center justify-center p-6 bg-white/5 border border-white/10 rounded-2xl group hover:border-highlight/50 transition-all">
               <div className="w-16 h-16 mb-4 flex items-center justify-center filter grayscale group-hover:grayscale-0 transition-all">
-                {/* Fallback to text if icon doesn't load or use a generic styled badge */}
+                {/* Fallback to text if icon does not load or use a generic styled badge */}
                 <div className="w-12 h-12 rounded-full border-2 border-highlight flex items-center justify-center font-display font-bold text-highlight text-xs text-center p-1 leading-none">
                   GOLD <br/> SEAL
                 </div>

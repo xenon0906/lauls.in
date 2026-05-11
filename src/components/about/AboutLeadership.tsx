@@ -63,7 +63,7 @@ export default function AboutLeadership() {
             The People Behind the Legacy
           </h2>
           <p className="text-gray-500">
-            Visionary leaders driving Lauls Ltd's mission to strengthen India's infrastructure.
+            Visionary leaders driving Lauls Ltd&apos;s mission to strengthen India&apos;s infrastructure.
           </p>
         </div>
 
@@ -92,7 +92,7 @@ export default function AboutLeadership() {
               </div>
               <div className="lg:w-3/5 bg-[#0A1628] p-10 lg:p-16 flex flex-col justify-center">
                 <h4 className="text-2xl md:text-3xl font-display font-bold text-white mb-6 leading-relaxed">
-                  "{activeLeader.quote}"
+                  &quot;{activeLeader.quote}&quot;
                 </h4>
                 <p className="text-white/60 mb-10 leading-relaxed font-light">
                   {activeLeader.bio}

@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { MapPin, Target, Network, Phone, ExternalLink } from "lucide-react";
 
 export default function ContactLocations() {

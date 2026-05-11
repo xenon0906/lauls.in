@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface AutoImageRotatorProps {
   images: string[];
   interval?: number;
   className?: string;
   imgClassName?: string;
+  sizes?: string;
 }
 
 export default function AutoImageRotator({
@@ -15,6 +17,7 @@ export default function AutoImageRotator({
   interval = 5000,
   className = "absolute inset-0",
   imgClassName = "object-cover w-full h-full transition-transform duration-700 group-hover:scale-110",
+  sizes = "100vw",
 }: AutoImageRotatorProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -31,16 +34,23 @@ export default function AutoImageRotator({
   return (
     <div className={`overflow-hidden ${className}`}>
       <AnimatePresence>
-        <motion.img
+        <motion.div
           key={currentIndex}
-          src={images[currentIndex]}
-          alt="Rotator slide"
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 1, transition: { duration: 1.2 } }} // stays behind until unmount
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          className={`absolute inset-0 ${imgClassName}`}
-        />
+          className="absolute inset-0"
+        >
+          <Image
+            src={images[currentIndex]}
+            alt="Industrial operations"
+            fill
+            sizes={sizes}
+            quality={90}
+            className={imgClassName}
+          />
+        </motion.div>
       </AnimatePresence>
     </div>
   );

@@ -14,7 +14,7 @@ export default function CTA() {
           <div className="mb-6 inline-flex">
             <span className="px-4 py-1.5 bg-[#1B2F4D] rounded-full text-accent font-display font-medium uppercase tracking-[0.1em] text-[10px] flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-              LET'S BUILD TOGETHER
+              LET&apos;S BUILD TOGETHER
             </span>
           </div>
           
@@ -75,12 +75,12 @@ export default function CTA() {
           <div className="relative w-full max-w-[450px] aspect-square lg:h-[450px] rounded-2xl overflow-hidden group">
              <AutoImageRotator
                images={[
-                 "/images/hero-banner.jpg",
-                 "/images/banner-main.jpg",
-                 "/images/trading.jpg",
-                 "/images/stockyard.jpg"
+                 "/images/IMG_9916.JPG",
+                 "/images/IMG_9988.JPG",
+                 "/images/IMG_9993.JPG"
                ]}
                interval={4500}
+               sizes="(max-width: 1024px) 100vw, 450px"
              />
              
              {/* Gradient for stats visibility */}

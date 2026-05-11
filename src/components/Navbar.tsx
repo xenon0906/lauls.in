@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
@@ -29,6 +30,15 @@ export default function Navbar() {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pathname = usePathname();
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (pathname === href) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
+  };
 
   const openProducts = useCallback(() => {
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
@@ -87,7 +97,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center gap-2">
           <Image
             src="/images/logo.png"
             alt="Lauls Ltd"
@@ -127,7 +137,8 @@ export default function Navbar() {
               ) : (
                 <Link
                   href={link.href}
-                  className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+                  onClick={(e) => handleLinkClick(e, link.href)}
+                  className={`text-sm font-medium transition-colors ${pathname === link.href ? 'text-accent' : 'text-white/80 hover:text-white'}`}
                 >
                   {link.name}
                 </Link>
@@ -154,6 +165,7 @@ export default function Navbar() {
           </div>
           <Link
             href="/contact"
+            onClick={(e) => handleLinkClick(e, "/contact")}
             className="px-6 py-2.5 bg-accent hover:bg-accent/90 text-white text-sm font-semibold rounded-full transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-accent/25"
           >
             Contact Us
@@ -229,16 +241,22 @@ export default function Navbar() {
                                 <Link
                                   key={cat.name}
                                   href={cat.href}
-                                  onClick={closeAll}
+                                  onClick={(e) => {
+                                    handleLinkClick(e, cat.href);
+                                    closeAll();
+                                  }}
                                   role="menuitem"
-                                  className="flex items-center py-2.5 text-base text-white/60 hover:text-accent transition-colors min-h-11"
+                                  className={`flex items-center py-2.5 text-base transition-colors min-h-11 ${pathname === cat.href ? 'text-accent' : 'text-white/60 hover:text-accent'}`}
                                 >
                                   {cat.name}
                                 </Link>
                               ))}
                               <Link
                                 href="/products"
-                                onClick={closeAll}
+                                onClick={(e) => {
+                                  handleLinkClick(e, "/products");
+                                  closeAll();
+                                }}
                                 role="menuitem"
                                 className="flex items-center py-2.5 text-base text-accent font-semibold hover:text-white transition-colors min-h-11"
                               >
@@ -252,9 +270,12 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={link.href}
-                      onClick={closeAll}
+                      onClick={(e) => {
+                        handleLinkClick(e, link.href);
+                        closeAll();
+                      }}
                       role="menuitem"
-                      className="block text-lg font-medium text-white/80 hover:text-white py-3 min-h-11"
+                      className={`block text-lg font-medium py-3 min-h-11 ${pathname === link.href ? 'text-accent' : 'text-white/80 hover:text-white'}`}
                     >
                       {link.name}
                     </Link>
@@ -263,7 +284,10 @@ export default function Navbar() {
               ))}
               <Link
                 href="/contact"
-                onClick={closeAll}
+                onClick={(e) => {
+                  handleLinkClick(e, "/contact");
+                  closeAll();
+                }}
                 className="mt-2 w-full py-3 bg-accent text-center text-white font-semibold rounded-xl min-h-11"
               >
                 Contact Us

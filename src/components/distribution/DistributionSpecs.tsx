@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 const specs = [
   { product: "Ferro Chrome", grades: ["HC", "MC"], size: "10-150 mm lumps", app: "Stainless steel making", finish: "As-cast" },
   { product: "Ferro Manganese", grades: ["HC", "MC", "LC"], size: "25-150 mm lumps", app: "Deoxidizing and alloying", finish: "As-cast" },

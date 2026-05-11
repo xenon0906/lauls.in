@@ -26,7 +26,7 @@ export default function Heritage() {
           </h2>
 
           <p className="text-primary/60 text-lg leading-relaxed mb-10 max-w-xl">
-            Founded in 1933, Lauls Ltd. has grown from a regional enterprise into one of India's most respected names in railway manufacturing, warehousing, and ferrous alloy trading. Our commitment to quality and innovation drives everything we do.
+            Founded in 1933, Lauls Ltd. has grown from a regional enterprise into one of India&apos;s most respected names in railway manufacturing, warehousing, and ferrous alloy trading. Our commitment to quality and innovation drives everything we do.
           </p>
 
           <div className="space-y-8">

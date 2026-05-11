@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 const products = [
@@ -9,7 +9,7 @@ const products = [
     title: "Ferro Alloys",
     subtitle: "High-strength alloys for steel production",
     desc: "Sourced globally and processed to exact metallurgical standards, our ferro alloys guarantee enhanced strength, de-oxidation, and alloying capabilities for specialized steel manufacturing.",
-    image: "/images/manufacturing.jpg",
+    image: "/images/IMG_9988.JPG",
     chips: [
       { label: "Ferro Chrome", value: "HC, MC Grades" },
       { label: "Ferro Manganese", value: "Lumps & powder" },
@@ -20,7 +20,7 @@ const products = [
     title: "Steel Rounds",
     subtitle: "Alloy and mild steel rounds",
     desc: "Engineered for heavy-duty automotive and industrial machinery applications, our steel rounds offer superior machinability, grain consistency, and immense tensile strength.",
-    image: "/images/trading.jpg",
+    image: "/images/IMG_9944.JPG",
     chips: [
       { label: "Alloy Steel", value: "SAE 4140, 4340" },
       { label: "Mild Steel", value: "IS 2062, ASTM A36" },
@@ -31,7 +31,7 @@ const products = [
     title: "Wire Rods",
     subtitle: "High tensile strength wire rods",
     desc: "Manufactured for precision forming processes. Excellent drawability and surface finish guarantee flawless execution in fastener production and heavy spring coiling.",
-    image: "/images/stockyard.jpg",
+    image: "/images/IMG_9993.JPG",
     chips: [
       { label: "Carbon / Alloy", value: "SAE 1010, IS 7904" },
       { label: "Size range", value: "5.5 mm — 14 mm" },
@@ -42,7 +42,7 @@ const products = [
     title: "Precision Tubes",
     subtitle: "ERW and CEW tubes for industrial use",
     desc: "State-of-the-art structural and mechanical precision tubes. Our CDW and CEW tubes offer exact geometric tolerances perfect for hydraulic cylinders and automotive chassis.",
-    image: "/images/manufacturing.jpg",
+    image: "/images/IMG_9988.JPG",
     chips: [
       { label: "ERW Tubes", value: "IS 3601, ASTM A500" },
       { label: "Seamless", value: "ASTM A106, A53" },
@@ -88,6 +88,7 @@ export default function DistributionProducts() {
                     src={product.image}
                     alt={product.title}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl pointer-events-none" />

@@ -10,7 +10,7 @@ const services = [
     title: "Pan-India Dedicated Fleet",
     subtitle: "Heavy haulage across every state",
     desc: "Maintaining our own fleet of over 400 heavy commercial vehicles gives us complete control over supply chain timelines. We ensure zero third-party dependencies for enterprise critical cargo.",
-    image: "/images/stockyard.jpg",
+    image: "/images/IMG_9993.JPG",
     chips: [
       { label: "Coverage", value: "All Indian States" },
       { label: "Cargo Types", value: "Bulk, Over-Dimensional" },
@@ -21,7 +21,7 @@ const services = [
     title: "Rail Freight Operations",
     subtitle: "Bulk material movement at scale",
     desc: "For unparalleled scale, Lauls Ltd operates dedicated railway sidings to mobilize tens of thousands of tons of raw material across the continent efficiently and affordably.",
-    image: "/images/warehouse.jpg",
+    image: "/images/IMG_9978.JPG",
     chips: [
       { label: "Capacity", value: "Mass Bulk Freight" },
       { label: "Network", value: "Direct Port/Mill Connect" },
@@ -32,7 +32,7 @@ const services = [
     title: "Zero-Emission EV Transport",
     subtitle: "Pioneering green logistics",
     desc: "We are aggressively electrifying our last-mile and mid-range fleet, deploying state-of-the-art Heavy Electric Trucks to decarbonize supply chains for our ESG-conscious partners.",
-    image: "/images/stockyard-lauls.jpg",
+    image: "/images/IMG_9974.JPG",
     chips: [
       { label: "Emissions", value: "Net-Zero Fleet" },
       { label: "Use Case", value: "Sustainable Mid-Mile" },
@@ -43,7 +43,7 @@ const services = [
     title: "Strategic Warehousing",
     subtitle: "12 high-capacity national hubs",
     desc: "Our interconnected warehouse network offers secure, massive-scale storage for steel and alloys, enabling direct JIT (Just-In-Time) supply models directly to automotive plants and construction zones.",
-    image: "/images/warehouse.jpg",
+    image: "/images/IMG_9962.JPG",
     chips: [
       { label: "Facilities", value: "12 Distribution Hubs" },
       { label: "Services", value: "JIT, Inventory Management" },
@@ -89,6 +89,7 @@ export default function LogisticsServices() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl pointer-events-none" />

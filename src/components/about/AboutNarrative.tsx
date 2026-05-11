@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import AutoImageRotator from "../AutoImageRotator";
 
 const strengths = [
@@ -32,17 +31,17 @@ export default function AboutNarrative() {
           <div className="relative rounded-2xl overflow-hidden aspect-4/3 group shadow-2xl">
             <AutoImageRotator
               images={[
-                 "/images/manufacturing.jpg",
-                 "/images/stockyard.jpg",
-                 "/images/team-group-2.jpg",
-                 "/images/warehouse.jpg"
+                 "/images/IMG_9860.JPG",
+                 "/images/IMG_9870.JPG",
+                 "/images/IMG_9956.JPG",
+                 "/images/IMG_9892.JPG"
               ]}
               interval={5000}
             />
             <div className="absolute inset-0 bg-linear-to-t from-[#0A1628]/80 to-transparent" />
             <div className="absolute bottom-8 left-8 right-8">
               <p className="text-white text-lg font-medium leading-relaxed">
-                "We deliver the robust logistics and distribution networks that build the nation's infrastructure, ensuring uncompromising quality at every step."
+                &quot;We deliver the robust logistics and distribution networks that build the nation&apos;s infrastructure, ensuring uncompromising quality at every step.&quot;
               </p>
             </div>
           </div>
@@ -51,10 +50,10 @@ export default function AboutNarrative() {
           <div>
             <div className="mb-12">
               <p className="text-gray-600 leading-relaxed mb-6">
-                In 1994, Lauls Ltd began as a single distribution hub in New Delhi with a bold vision: to become the backbone of India's developing infrastructure ecosystem. What started as a modest operation has grown into a <strong className="text-[#0A1628]">multi-disciplinary conglomerate</strong> spanning four critical business verticals.
+                Lauls Ltd grew from a focused industrial distribution base with a bold vision: to become the backbone of India&apos;s developing infrastructure ecosystem. What started as a modest operation has grown into a <strong className="text-[#0A1628]">multi-disciplinary conglomerate</strong> spanning four critical business verticals.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Over three decades, we've earned the trust of major industrial sectors, steel manufacturers, and logistics enterprises. Our continuous pursuit of excellence isn't just a tagline — it's proof of our relentless commitment to quality, precision, and reliability in every service we deliver.
+                Over three decades, we&apos;ve earned the trust of major industrial sectors, steel manufacturers, and logistics enterprises. Our continuous pursuit of excellence isn&apos;t just a tagline — it&apos;s proof of our relentless commitment to quality, precision, and reliability in every service we deliver.
               </p>
             </div>
 

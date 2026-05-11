@@ -3,7 +3,7 @@
 import { useState } from "react";
 import SectionWrapper from "../SectionWrapper";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, ChevronRight, User } from "lucide-react";
+import { CheckCircle2, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 const leaders = [
@@ -152,7 +152,7 @@ export default function Leadership() {
                 <p className="text-primary/50 font-medium mb-8">{activeLeader.role}</p>
                 
                 <p className="text-primary/70 text-base leading-relaxed mb-8 italic">
-                  "{activeLeader.bio}"
+                  &quot;{activeLeader.bio}&quot;
                 </p>
 
                 <div className="space-y-4 mb-10">
