@@ -11,7 +11,7 @@ const products = [
   {
     name: "Ferro Manganese",
     grade: "HC / MC / LC",
-    images: ["/images/IMG_9988.JPG", "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop"],
+    images: ["/images/products/ferro_manganese_1778571486667.png", "/images/products/ferro_chrome_1778571501692.png"],
     use: "Deoxidiser & desulphuriser in steel production",
     specs: "Mn: 60–75% | C: 0.1–7%",
     desc: "Ferro Manganese is essential in steel manufacturing as a deoxidiser and desulphuriser. Lauls sources HC, MC, and LC grades from premium smelters to serve diverse steel mill specifications.",
@@ -19,7 +19,7 @@ const products = [
   {
     name: "Ferro Chrome",
     grade: "HC / MC / LC",
-    images: ["/images/trading.jpg", "https://images.unsplash.com/photo-1590487988256-9ed24133863e?q=80&w=800&auto=format&fit=crop"],
+    images: ["/images/products/ferro_chrome_1778571501692.png", "/images/products/ferro_silicon_1778571520226.png"],
     use: "Essential for stainless and alloy steel production",
     specs: "Cr: 50–70% | C: 0.03–8%",
     desc: "Ferro Chrome is the primary source of chromium in stainless and alloy steels, providing corrosion resistance, hardness, and high-temperature strength. We supply multiple grades to suit your specific alloying requirements.",
@@ -27,7 +27,7 @@ const products = [
   {
     name: "Ferro Silicon",
     grade: "FeSi 45 / 65 / 75",
-    images: ["/images/IMG_9993.JPG", "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop"],
+    images: ["/images/products/ferro_silicon_1778571520226.png", "/images/products/ferro_manganese_1778571486667.png"],
     use: "Strengthening and deoxidising steel & cast iron",
     specs: "Si: 45–75% | Al: <2%",
     desc: "Ferro Silicon is used as both a deoxidising and alloying agent. It improves the strength, elasticity, and corrosion resistance of steel and cast iron, available in FeSi 45, 65, and 75 grades.",
@@ -35,7 +35,7 @@ const products = [
   {
     name: "Silico Manganese",
     grade: "Standard / High-Grade",
-    images: ["/images/IMG_9993.JPG", "https://images.unsplash.com/photo-1536647960714-469b8c0da9aa?q=80&w=800&auto=format&fit=crop"],
+    images: ["/images/products/silico_manganese_1778571539533.png", "/images/products/ferro_silicon_1778571520226.png"],
     use: "Combined deoxidiser and alloying element",
     specs: "Mn: 60–68% | Si: 14–20%",
     desc: "Silico Manganese is a combined deoxidiser and alloying agent used widely in structural steel production. It simultaneously provides deoxidising and manganese-alloying benefits, reducing costs versus separate additions.",
@@ -50,7 +50,7 @@ export default function FerroAlloysPage() {
       {/* Hero */}
       <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <Image
-          src="/images/IMG_9988.JPG"
+          src="/images/products/ferro_chrome_1778571501692.png"
           alt=""
           fill
           sizes="100vw"

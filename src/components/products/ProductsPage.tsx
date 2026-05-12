@@ -26,24 +26,28 @@ const productCategories = [
         grade: "HC / MC / LC",
         use: "Deoxidiser & desulphuriser in steel production",
         specs: "Mn: 60–75% | C: 0.1–7%",
+        thumbnail: "/images/products/ferro_manganese_1778571486667.png",
       },
       {
         name: "Ferro Chrome",
         grade: "HC / MC / LC",
         use: "Essential for stainless and alloy steel production",
         specs: "Cr: 50–70% | C: 0.03–8%",
+        thumbnail: "/images/products/ferro_chrome_1778571501692.png",
       },
       {
         name: "Ferro Silicon",
         grade: "FeSi 45 / 65 / 75",
         use: "Strengthening and deoxidising steel & cast iron",
         specs: "Si: 45–75% | Al: <2%",
+        thumbnail: "/images/products/ferro_silicon_1778571520226.png",
       },
       {
         name: "Silico Manganese",
         grade: "Standard / High-Grade",
         use: "Combined deoxidiser and alloying element",
         specs: "Mn: 60–68% | Si: 14–20%",
+        thumbnail: "/images/products/silico_manganese_1778571539533.png",
       },
     ],
   },
@@ -63,18 +67,21 @@ const productCategories = [
         grade: "SAE / IS Standards",
         use: "Automotive springs, fasteners & high-strength bolts",
         specs: "Dia: 5.5mm – 25mm | Coil Wt: 1–2 MT",
+        thumbnail: "/images/products/alloy_wire_rods_1778571554783.png",
       },
       {
         name: "Mild Steel Wire Rods",
         grade: "IS 2062 / SAE 1006–1018",
         use: "Nails, fencing, binding wire, barbed wire",
         specs: "Dia: 5.5mm – 14mm | C: <0.15%",
+        thumbnail: "/images/products/mild_wire_rods_1778571571818.png",
       },
       {
         name: "Stainless Steel Wire Rods",
         grade: "SS 304 / 316 / 410 / 430",
         use: "Pharmaceutical, food-grade and marine applications",
         specs: "Dia: 5.5mm – 16mm | Finish: Bright Annealed",
+        thumbnail: "/images/products/stainless_wire_rods_1778571588871.png",
       },
     ],
   },
@@ -94,12 +101,14 @@ const productCategories = [
         grade: "EN8 / EN19 / EN24 / EN31 / EN36",
         use: "Gears, axles, shafts, tooling & dies",
         specs: "Dia: 20mm – 500mm | Length: 3–7m",
+        thumbnail: "/images/products/alloy_steel_rounds_1778571606218.png",
       },
       {
         name: "Mild Steel Rounds",
         grade: "IS 2062 E250 / E350",
         use: "General engineering, construction & fabrication",
         specs: "Dia: 6mm – 250mm | Length: 3–12m",
+        thumbnail: "/images/products/mild_steel_rounds_1778571621519.png",
       },
     ],
   },
@@ -119,24 +128,40 @@ const productCategories = [
         grade: "IS 1239 / IS 3601 / ASTM A513",
         use: "Structural, mechanical & automotive tube applications",
         specs: "OD: 15mm – 168mm | WT: 1.6mm – 8mm",
+        thumbnail: "/images/products/erw_steel_tubes_1778571635920.png",
       },
       {
         name: "Square & Rectangular Hollow Sections",
         grade: "IS 4923",
         use: "Fabrication, furniture & construction frames",
         specs: "Size: 20×20 – 150×150mm | WT: 1.6–6mm",
+        thumbnail: "/images/products/hollow_sections_1778571651283.png",
       },
     ],
   },
 ];
 
-function ProductCard({ p }: { p: { name: string; grade: string; use: string; specs: string }; accent: string }) {
+function ProductCard({ p }: { p: { name: string; grade: string; use: string; specs: string; thumbnail?: string }; accent: string }) {
   return (
-    <div className="p-5 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md hover:border-gray-200 transition-all">
-      <div className="font-display font-bold text-[#0A1628] text-base mb-1">{p.name}</div>
-      <div className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3">{p.grade}</div>
-      <p className="text-gray-500 text-xs leading-relaxed mb-3">{p.use}</p>
-      <div className="text-[10px] font-mono text-gray-400 bg-gray-50 border border-gray-100 rounded-lg px-3 py-2">{p.specs}</div>
+    <div className="flex flex-col sm:flex-row gap-6 p-5 sm:p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl hover:border-gray-200 transition-all duration-300">
+      {p.thumbnail && (
+        <div className="w-full sm:w-48 aspect-[4/3] relative shrink-0 rounded-xl overflow-hidden border border-gray-100 group">
+          <Image
+            src={p.thumbnail}
+            alt={p.name}
+            fill
+            sizes="(max-width: 640px) 100vw, 192px"
+            quality={90}
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+        </div>
+      )}
+      <div className="flex-1 flex flex-col justify-center">
+        <div className="font-display font-bold text-[#0A1628] text-base mb-1">{p.name}</div>
+        <div className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3">{p.grade}</div>
+        <p className="text-gray-500 text-xs leading-relaxed mb-3">{p.use}</p>
+        <div className="text-[10px] font-mono text-gray-400 bg-gray-50 border border-gray-100 rounded-lg px-3 py-2 mt-auto self-start">{p.specs}</div>
+      </div>
     </div>
   );
 }

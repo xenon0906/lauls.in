@@ -13,7 +13,8 @@ const products = [
     name: "Alloy Steel Wire Rods",
     grade: "SAE / IS Standards",
     images: [
-      "/images/IMG_9988.JPG"
+      "/images/products/alloy_wire_rods_1778571554783.png",
+      "/images/products/mild_wire_rods_1778571571818.png"
     ],
     use: "Automotive springs, fasteners & high-strength bolts",
     specs: "Dia: 5.5mm – 25mm | Coil Wt: 1–2 MT",
@@ -23,8 +24,8 @@ const products = [
     name: "Mild Steel Wire Rods",
     grade: "IS 2062 / SAE 1006–1018",
     images: [
-      "/images/IMG_9988.JPG",
-      "/images/IMG_9993.JPG"
+      "/images/products/mild_wire_rods_1778571571818.png",
+      "/images/products/alloy_wire_rods_1778571554783.png"
     ],
     use: "Nails, fencing, binding wire, barbed wire",
     specs: "Dia: 5.5mm – 14mm | C: <0.15%",
@@ -34,8 +35,8 @@ const products = [
     name: "Stainless Steel Wire Rods",
     grade: "SS 304 / 316 / 410 / 430",
     images: [
-      "/images/IMG_9988.JPG",
-      "/images/trading.jpg"
+      "/images/products/stainless_wire_rods_1778571588871.png",
+      "/images/products/alloy_wire_rods_1778571554783.png"
     ],
     use: "Pharmaceutical, food-grade and marine applications",
     specs: "Dia: 5.5mm – 16mm | Finish: Bright Annealed",
@@ -51,7 +52,7 @@ export default function WireRodsPage() {
       {/* Hero */}
       <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <Image
-          src="/images/IMG_9988.JPG"
+          src="/images/products/alloy_wire_rods_1778571554783.png"
           alt=""
           fill
           sizes="100vw"

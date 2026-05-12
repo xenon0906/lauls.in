@@ -2,6 +2,7 @@
 
 import { useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const productCategories = [
@@ -9,35 +10,35 @@ const productCategories = [
     category: "Ferro Alloys",
     href: "/products/ferro-alloys",
     items: [
-      "Ferro Manganese",
-      "Ferro Chrome",
-      "Ferro Silicon",
-      "Silico Manganese",
+      { name: "Ferro Manganese", image: "/images/products/ferro_manganese_1778571486667.png" },
+      { name: "Ferro Chrome", image: "/images/products/ferro_chrome_1778571501692.png" },
+      { name: "Ferro Silicon", image: "/images/products/ferro_silicon_1778571520226.png" },
+      { name: "Silico Manganese", image: "/images/products/silico_manganese_1778571539533.png" },
     ],
   },
   {
     category: "Wire Rods",
     href: "/products/wire-rods",
     items: [
-      "Alloy Steel Wire Rods",
-      "Mild Steel Wire Rods",
-      "Stainless Steel Wire Rods",
+      { name: "Alloy Steel Wire Rods", image: "/images/products/alloy_wire_rods_1778571554783.png" },
+      { name: "Mild Steel Wire Rods", image: "/images/products/mild_wire_rods_1778571571818.png" },
+      { name: "Stainless Steel Wire Rods", image: "/images/products/stainless_wire_rods_1778571588871.png" },
     ],
   },
   {
     category: "Steel Rounds",
     href: "/products/steel-rounds",
     items: [
-      "Alloy Steel Rounds",
-      "Mild Steel Rounds",
+      { name: "Alloy Steel Rounds", image: "/images/products/alloy_steel_rounds_1778571606218.png" },
+      { name: "Mild Steel Rounds", image: "/images/products/mild_steel_rounds_1778571621519.png" },
     ],
   },
   {
     category: "Precision Tubes",
     href: "/products/precision-tubes",
     items: [
-      "ERW Steel Tubes",
-      "Square & Rectangular Sections",
+      { name: "ERW Steel Tubes", image: "/images/products/erw_steel_tubes_1778571635920.png" },
+      { name: "Square & Rectangular Sections", image: "/images/products/hollow_sections_1778571651283.png" },
     ],
   },
 ];
@@ -80,16 +81,26 @@ export default function ProductCatalogGrid({ onClose }: ProductCatalogGridProps)
                 </Link>
 
                 {/* Product list */}
-                <div className="space-y-1 pl-3">
+                <div className="space-y-3 pl-3">
                   {cat.items.map((item) => (
                     <Link
-                      key={item}
+                      key={item.name}
                       href={cat.href}
                       onClick={() => onClose?.()}
                       role="menuitem"
-                      className="block py-1.5 text-[13px] text-white/40 hover:text-white hover:translate-x-1 transition-all duration-200"
+                      className="group/item flex items-center gap-3 py-1.5 text-[13px] text-white/50 hover:text-white transition-all duration-300"
                     >
-                      {item}
+                      <div className="relative w-16 h-10 rounded-md overflow-hidden border border-white/10 group-hover/item:border-[#DCA54C]/50 transition-colors shrink-0">
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          fill
+                          sizes="32px"
+                          quality={60}
+                          className="object-cover"
+                        />
+                      </div>
+                      <span className="group-hover/item:translate-x-1 transition-transform">{item.name}</span>
                     </Link>
                   ))}
                 </div>
