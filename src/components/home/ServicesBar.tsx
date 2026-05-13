@@ -13,12 +13,12 @@ import Link from "next/link";
 
 const services = [
   { name: "Steel Trading", icon: <Settings size={30} strokeWidth={1.5} />, href: "/distribution" },
-  { name: "Logistics", icon: <Truck size={30} strokeWidth={1.5} />, href: "/logistics" },
+  { name: "EV Logistics", icon: <Truck size={30} strokeWidth={1.5} />, href: "/logistics" },
   { name: "Warehouse", icon: <Warehouse size={30} strokeWidth={1.5} />, href: "/logistics" },
-  { name: "Ferro Alloys", icon: <Fuel size={30} strokeWidth={1.5} />, href: "/products#ferro-alloys" },
-  { name: "Steel Rounds", icon: <CircleDot size={30} strokeWidth={1.5} />, href: "/products#steel-rounds" },
-  { name: "Wire Rods", icon: <Layers size={30} strokeWidth={1.5} />, href: "/products#wire-rods" },
-  { name: "Precision Tubes", icon: <Cog size={30} strokeWidth={1.5} />, href: "/products#precision-tubes" },
+  { name: "Ferro Alloys", icon: <Fuel size={30} strokeWidth={1.5} />, href: "/products/ferro-alloys" },
+  { name: "Industrial Steel", icon: <CircleDot size={30} strokeWidth={1.5} />, href: "/products/steel-rounds" },
+  { name: "EV Wire Solutions", icon: <Layers size={30} strokeWidth={1.5} />, href: "/products/wire-rods" },
+  { name: "Precision Tubes", icon: <Cog size={30} strokeWidth={1.5} />, href: "/products/precision-tubes" },
 ];
 
 export default function ServicesBar() {

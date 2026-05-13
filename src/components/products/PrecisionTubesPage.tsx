@@ -11,7 +11,7 @@ const products = [
   {
     name: "ERW Steel Tubes",
     grade: "IS 1239 / IS 3601 / ASTM A513",
-    images: ["/images/products/erw_steel_tubes_1778571635920.png", "/images/products/hollow_sections_1778571651283.png"],
+    image: "/images/products/precision_tubes_erw.png",
     use: "Structural, mechanical & automotive tube applications",
     specs: "OD: 15mm – 168mm | WT: 1.6mm – 8mm",
     desc: "Electric Resistance Welded (ERW) Steel Tubes are manufactured under rigorous quality controls and are the industry standard for structural, mechanical, and automotive applications. Lauls supplies ERW tubes conforming to IS 1239, IS 3601, and ASTM A513 standards.",
@@ -19,7 +19,7 @@ const products = [
   {
     name: "Square & Rectangular Hollow Sections",
     grade: "IS 4923",
-    images: ["/images/products/hollow_sections_1778571651283.png", "/images/products/erw_steel_tubes_1778571635920.png"],
+    image: "/images/products/precision_tubes_erw.png",
     use: "Fabrication, furniture & construction frames",
     specs: "Size: 20×20 – 150×150mm | WT: 1.6–6mm",
     desc: "Square and Rectangular Hollow Sections (SHS/RHS) are the preferred structural shape for modern construction, industrial frames, furniture, and gates. All our hollow sections comply with IS 4923 and are available in a wide range of sizes and wall thicknesses.",
@@ -34,8 +34,8 @@ export default function PrecisionTubesPage() {
       {/* Hero */}
       <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <Image
-          src="/images/products/erw_steel_tubes_1778571635920.png"
-          alt=""
+          src="/images/products/precision_tubes_erw.png"
+          alt="Precision Tubes"
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -68,13 +68,8 @@ export default function PrecisionTubesPage() {
               transition={{ duration: 0.7 }}
               className={`flex flex-col lg:flex-row items-center gap-10 ${idx % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
             >
-              <div className="w-full lg:w-2/5 rounded-2xl overflow-hidden aspect-4/3 shadow-xl relative flex">
-                <div className="w-1/2 relative">
-                  <Image src={p.images[0]} alt={p.name} fill sizes="(max-width: 1024px) 50vw, 20vw" className="object-cover hover:scale-105 transition-transform duration-700" />
-                </div>
-                <div className="w-1/2 relative">
-                  <Image src={p.images[1]} alt={`${p.name} detail`} fill sizes="(max-width: 1024px) 50vw, 20vw" className="object-cover hover:scale-105 transition-transform duration-700" />
-                </div>
+              <div className="w-full lg:w-2/5 rounded-2xl overflow-hidden aspect-4/3 shadow-xl relative">
+                <Image src={p.image} alt={p.name} fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="w-full lg:w-3/5">
                 <div className="text-purple-600 text-[10px] font-black uppercase tracking-widest mb-2">{p.grade}</div>
@@ -82,8 +77,8 @@ export default function PrecisionTubesPage() {
                 <p className="text-gray-600 font-light leading-relaxed mb-6">{p.desc}</p>
                 <div className="font-mono text-xs text-gray-500 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3 mb-6">{p.specs}</div>
                 <div className="text-sm text-gray-500 mb-8 italic">Used for: {p.use}</div>
-                <Link href="/contact#contact-form" className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700 transition-all text-sm shadow-lg">
-                  Request Quote <ArrowRight size={14} />
+                <Link href={`/contact?product=${encodeURIComponent(p.name)}&intent=quote#contact-form`} className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700 transition-all text-sm shadow-lg">
+                  Get a Quote Today <ArrowRight size={14} />
                 </Link>
               </div>
             </motion.div>

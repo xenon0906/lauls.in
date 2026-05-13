@@ -8,27 +8,27 @@ import Image from "next/image";
 
 const slides = [
   {
-    title: "About Lauls: \n90 Years of \nExcellence",
-    highlight: "90 Years",
-    subtext: "Founded in 1933, Lauls Ltd. has evolved from a trading house into Northern India's leading industrial conglomerate across steel, logistics, and manufacturing.",
-    image: "/lauls image/Screenshot 2026-05-12 at 8.02.05 PM.png",
+    title: "Powering the \nEV Supply Chain \n& Industrial Steel",
+    highlight: "EV Supply Chain",
+    subtext: "Northern India's leading industrial conglomerate. Delivering precision wire rods, round wire solutions, and advanced steel manufacturing since 1933.",
+    image: "/images/products/wire_rods_coils.png",
     stats: [
       { label: "Projects", value: "500+" },
       { label: "Clients", value: "150+" },
-      { label: "Countries", value: "12" },
+      { label: "EV Partners", value: "12+" },
       { label: "Years", value: "90+" },
     ]
   },
   {
-    title: "Leading Ferro Alloy \nDistribution \nin Northern India",
-    highlight: "Ferro Alloy",
-    subtext: "Sole authorized distributor of TATA Steel Ferro Alloys & Minerals. Powering the steel industry with quality and reliability.",
-    image: "/lauls image/Screenshot 2026-05-12 at 8.23.33 PM.png",
+    title: "Advanced \nWire Rod \nSolutions",
+    highlight: "Wire Rod",
+    subtext: "Premium alloy steel wire rods and round wire solutions engineered for modern manufacturing, including EV components and high-strength fasteners.",
+    image: "/images/products/mild_wire_rods.png",
     stats: [
       { label: "Annual Distribution", value: "15K MT" },
-      { label: "TATA Steel Partner", value: "Sole" },
-      { label: "Market Presence", value: "North India" },
-      { label: "Experience", value: "30+ Yrs" },
+      { label: "Wire Rod Grades", value: "SAE/IS" },
+      { label: "Market Presence", value: "Global" },
+      { label: "Experience", value: "90+ Yrs" },
     ]
   },
   {
@@ -68,7 +68,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-[100dvh] min-h-[750px] overflow-hidden bg-primary flex flex-col pt-24 pb-8">
+    <section className="relative w-full min-h-[100dvh] overflow-hidden bg-primary flex flex-col pt-24 pb-8">
       {/* Background Image Slider */}
       <AnimatePresence mode="wait">
         <motion.div

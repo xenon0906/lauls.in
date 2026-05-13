@@ -11,7 +11,7 @@ const products = [
   {
     name: "Alloy Steel Rounds",
     grade: "EN8 / EN19 / EN24 / EN31 / EN36",
-    images: ["/images/products/alloy_steel_rounds_1778571606218.png", "/images/products/mild_steel_rounds_1778571621519.png"],
+    image: "/images/products/steel_rounds_stacked.png",
     use: "Gears, axles, shafts, tooling & dies",
     specs: "Dia: 20mm – 500mm | Length: 3–7m",
     desc: "Alloy Steel Rounds are the material of choice for heavy-duty engineering applications requiring high strength, toughness, and wear resistance. Lauls stocks a full range of EN-grade alloy rounds for immediate supply to auto-component and defence manufacturers.",
@@ -19,7 +19,7 @@ const products = [
   {
     name: "Mild Steel Rounds",
     grade: "IS 2062 E250 / E350",
-    images: ["/images/products/mild_steel_rounds_1778571621519.png", "/images/products/alloy_steel_rounds_1778571606218.png"],
+    image: "/images/products/steel_rounds_stacked.png",
     use: "General engineering, construction & fabrication",
     specs: "Dia: 6mm – 250mm | Length: 3–12m",
     desc: "Mild Steel Rounds are the most versatile construction and fabrication material in any industrial setting. Our IS 2062 rounds come in E250 and E350 grades, ideal for structural steel work, machine bases, and general engineering components.",
@@ -34,8 +34,8 @@ export default function SteelRoundsPage() {
       {/* Hero */}
       <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <Image
-          src="/images/products/alloy_steel_rounds_1778571606218.png"
-          alt=""
+          src="/images/products/steel_rounds_stacked.png"
+          alt="Steel Rounds"
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -68,13 +68,8 @@ export default function SteelRoundsPage() {
               transition={{ duration: 0.7 }}
               className={`flex flex-col lg:flex-row items-center gap-10 ${idx % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
             >
-              <div className="w-full lg:w-2/5 rounded-2xl overflow-hidden aspect-4/3 shadow-xl relative flex">
-                <div className="w-1/2 relative">
-                  <Image src={p.images[0]} alt={p.name} fill sizes="(max-width: 1024px) 50vw, 20vw" className="object-cover hover:scale-105 transition-transform duration-700" />
-                </div>
-                <div className="w-1/2 relative">
-                  <Image src={p.images[1]} alt={`${p.name} detail`} fill sizes="(max-width: 1024px) 50vw, 20vw" className="object-cover hover:scale-105 transition-transform duration-700" />
-                </div>
+              <div className="w-full lg:w-2/5 rounded-2xl overflow-hidden aspect-4/3 shadow-xl relative">
+                <Image src={p.image} alt={p.name} fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="w-full lg:w-3/5">
                 <div className="text-emerald-600 text-[10px] font-black uppercase tracking-widest mb-2">{p.grade}</div>
@@ -82,8 +77,8 @@ export default function SteelRoundsPage() {
                 <p className="text-gray-600 font-light leading-relaxed mb-6">{p.desc}</p>
                 <div className="font-mono text-xs text-gray-500 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3 mb-6">{p.specs}</div>
                 <div className="text-sm text-gray-500 mb-8 italic">Used for: {p.use}</div>
-                <Link href="/contact#contact-form" className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-700 transition-all text-sm shadow-lg">
-                  Request Quote <ArrowRight size={14} />
+                <Link href={`/contact?product=${encodeURIComponent(p.name)}&intent=quote#contact-form`} className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-700 transition-all text-sm shadow-lg">
+                  Get a Quote Today <ArrowRight size={14} />
                 </Link>
               </div>
             </motion.div>

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function CSRHero() {
   return (
-    <section className="relative w-full h-[100svh] min-h-[700px] flex flex-col justify-center overflow-hidden">
+    <section className="relative w-full min-h-[100svh] flex flex-col justify-center overflow-hidden">
       {/* Immersive Background Layer - using a green/nature or community focused image */}
       <div className="absolute inset-0">
         <Image

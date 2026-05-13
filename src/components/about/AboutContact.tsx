@@ -1,12 +1,98 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { Send } from "lucide-react";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
+
+function ContactFormInner() {
+  const searchParams = useSearchParams();
+  const [selectedInterest, setSelectedInterest] = useState<string | null>(null);
+  const [message, setMessage] = useState<string>("");
+
+  useEffect(() => {
+    const product = searchParams.get("product");
+    const intent = searchParams.get("intent");
+
+    if (product) {
+      // Try to match product to interests, or default to specific based on keywords
+      const pLower = product.toLowerCase();
+      if (pLower.includes("wire") || pLower.includes("alloy")) {
+        setSelectedInterest("Wire Rods");
+      } else if (pLower.includes("tube") || pLower.includes("precision")) {
+        setSelectedInterest("Precision Tubes");
+      } else if (pLower.includes("logistics")) {
+        setSelectedInterest("Logistics");
+      } else if (pLower.includes("truck")) {
+        setSelectedInterest("Electric Trucks");
+      } else {
+        setSelectedInterest("Alloy Steel Distribution");
+      }
+
+      if (intent === "quote") {
+        setMessage(`Hello, I'm interested in getting a quote for ${product} for my industrial applications. Could you please provide more information?`);
+      }
+    }
+  }, [searchParams]);
+
+  return (
+    <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+         <div className="space-y-2">
+           <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Full Name</label>
+           <input type="text" className="w-full pb-2 border-b border-gray-200 focus:border-[#DCA54C] outline-none transition-colors text-[#0A1628] bg-transparent" placeholder="John Doe" />
+         </div>
+         <div className="space-y-2">
+           <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Email Address</label>
+           <input type="email" className="w-full pb-2 border-b border-gray-200 focus:border-[#DCA54C] outline-none transition-colors text-[#0A1628] bg-transparent" placeholder="john@company.com" />
+         </div>
+      </div>
+
+      <div className="space-y-2 pt-2">
+        <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Company</label>
+        <input type="text" className="w-full pb-2 border-b border-gray-200 focus:border-[#DCA54C] outline-none transition-colors text-[#0A1628] bg-transparent" placeholder="Your Organizations Name" />
+      </div>
+
+      <div className="space-y-4 pt-4">
+        <label className="text-xs font-bold text-gray-500 uppercase tracking-wider block">Interested In</label>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {['Logistics', 'Electric Trucks', 'Fe Alloy Distribution', 'Alloy Steel Distribution', 'Precision Tubes', 'Wire Rods'].map((item) => (
+            <label 
+              key={item} 
+              onClick={() => setSelectedInterest(item)}
+              className={`flex items-center gap-3 p-4 border rounded-xl cursor-pointer transition-colors ${selectedInterest === item ? 'border-[#DCA54C] bg-[#DCA54C]/5 shadow-sm' : 'border-gray-100 bg-gray-50/50 hover:border-[#DCA54C]/50'}`}
+            >
+              <div className={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${selectedInterest === item ? 'border-[#DCA54C]' : 'border-gray-300'}`}>
+                 {selectedInterest === item && <div className="w-2 h-2 rounded-full bg-[#DCA54C]" />}
+              </div>
+              <span className={`text-sm font-medium transition-colors ${selectedInterest === item ? 'text-[#0A1628]' : 'text-gray-600'}`}>{item}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-2 pt-4">
+        <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Message</label>
+         <textarea 
+           rows={3} 
+           value={message}
+           onChange={(e) => setMessage(e.target.value)}
+           className="w-full pb-2 border-b border-gray-200 focus:border-[#DCA54C] outline-none transition-colors text-[#0A1628] bg-transparent resize-none" 
+           placeholder="Tell us about your requirements..."
+         />
+      </div>
+
+      <div className="pt-6">
+        <button type="submit" className="w-full py-4 bg-[#DCA54C] text-[#0A1628] font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-[#c5923b] transition-all shadow-xl shadow-[#DCA54C]/20">
+          <Send size={18} />
+          Send Inquiry
+        </button>
+      </div>
+    </form>
+  );
+}
 
 export default function AboutContact() {
-  const [selectedInterest, setSelectedInterest] = useState<string | null>(null);
-
   return (
     <section id="contact-form" className="bg-white py-24 w-full">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -37,53 +123,9 @@ export default function AboutContact() {
 
           {/* Right Form Area */}
           <div className="lg:w-1/2 p-10 md:p-16 bg-white">
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                 <div className="space-y-2">
-                   <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Full Name</label>
-                   <input type="text" className="w-full pb-2 border-b border-gray-200 focus:border-[#DCA54C] outline-none transition-colors text-[#0A1628] bg-transparent" placeholder="John Doe" />
-                 </div>
-                 <div className="space-y-2">
-                   <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Email Address</label>
-                   <input type="email" className="w-full pb-2 border-b border-gray-200 focus:border-[#DCA54C] outline-none transition-colors text-[#0A1628] bg-transparent" placeholder="john@company.com" />
-                 </div>
-              </div>
-
-              <div className="space-y-2 pt-2">
-                <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Company</label>
-                <input type="text" className="w-full pb-2 border-b border-gray-200 focus:border-[#DCA54C] outline-none transition-colors text-[#0A1628] bg-transparent" placeholder="Your Organizations Name" />
-              </div>
-
-              <div className="space-y-4 pt-4">
-                <label className="text-xs font-bold text-gray-500 uppercase tracking-wider block">Interested In</label>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {['Logistics', 'Electric Trucks', 'Fe Alloy Distribution', 'Alloy Steel Distribution', 'Precision Tubes', 'Wire Rods'].map((item) => (
-                    <label 
-                      key={item} 
-                      onClick={() => setSelectedInterest(item)}
-                      className={`flex items-center gap-3 p-4 border rounded-xl cursor-pointer transition-colors ${selectedInterest === item ? 'border-[#DCA54C] bg-[#DCA54C]/5 shadow-sm' : 'border-gray-100 bg-gray-50/50 hover:border-[#DCA54C]/50'}`}
-                    >
-                      <div className={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${selectedInterest === item ? 'border-[#DCA54C]' : 'border-gray-300'}`}>
-                         {selectedInterest === item && <div className="w-2 h-2 rounded-full bg-[#DCA54C]" />}
-                      </div>
-                      <span className={`text-sm font-medium transition-colors ${selectedInterest === item ? 'text-[#0A1628]' : 'text-gray-600'}`}>{item}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-2 pt-4">
-                <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Message</label>
-                 <textarea rows={3} className="w-full pb-2 border-b border-gray-200 focus:border-[#DCA54C] outline-none transition-colors text-[#0A1628] bg-transparent resize-none" placeholder="Tell us about your requirements..."></textarea>
-              </div>
-
-              <div className="pt-6">
-                <button type="submit" className="w-full py-4 bg-[#DCA54C] text-[#0A1628] font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-[#c5923b] transition-all shadow-xl shadow-[#DCA54C]/20">
-                  <Send size={18} />
-                  Send Inquiry
-                </button>
-              </div>
-            </form>
+            <Suspense fallback={<div className="h-full flex items-center justify-center text-gray-500">Loading form...</div>}>
+              <ContactFormInner />
+            </Suspense>
           </div>
 
         </div>

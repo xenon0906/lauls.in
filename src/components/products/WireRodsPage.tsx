@@ -13,8 +13,8 @@ const products = [
     name: "Alloy Steel Wire Rods",
     grade: "SAE / IS Standards",
     images: [
-      "/images/products/alloy_wire_rods_1778571554783.png",
-      "/images/products/mild_wire_rods_1778571571818.png"
+      "/images/products/wire_rods_coils.png",
+      "/images/products/mild_wire_rods.png"
     ],
     use: "Automotive springs, fasteners & high-strength bolts",
     specs: "Dia: 5.5mm – 25mm | Coil Wt: 1–2 MT",
@@ -24,8 +24,8 @@ const products = [
     name: "Mild Steel Wire Rods",
     grade: "IS 2062 / SAE 1006–1018",
     images: [
-      "/images/products/mild_wire_rods_1778571571818.png",
-      "/images/products/alloy_wire_rods_1778571554783.png"
+      "/images/products/mild_wire_rods.png",
+      "/images/products/wire_rods_coils.png"
     ],
     use: "Nails, fencing, binding wire, barbed wire",
     specs: "Dia: 5.5mm – 14mm | C: <0.15%",
@@ -35,8 +35,8 @@ const products = [
     name: "Stainless Steel Wire Rods",
     grade: "SS 304 / 316 / 410 / 430",
     images: [
-      "/images/products/stainless_wire_rods_1778571588871.png",
-      "/images/products/alloy_wire_rods_1778571554783.png"
+      "/images/products/stainless_wire_rods.png",
+      "/images/products/wire_rods_coils.png"
     ],
     use: "Pharmaceutical, food-grade and marine applications",
     specs: "Dia: 5.5mm – 16mm | Finish: Bright Annealed",
@@ -52,8 +52,8 @@ export default function WireRodsPage() {
       {/* Hero */}
       <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <Image
-          src="/images/products/alloy_wire_rods_1778571554783.png"
-          alt=""
+          src="/images/products/wire_rods_coils.png"
+          alt="Wire Rods Coils"
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -101,8 +101,8 @@ export default function WireRodsPage() {
                 <p className="text-gray-600 font-light leading-relaxed mb-6">{p.desc}</p>
                 <div className="font-mono text-xs text-gray-500 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3 mb-6">{p.specs}</div>
                 <div className="text-sm text-gray-500 mb-8 italic">Used for: {p.use}</div>
-                <Link href="/contact#contact-form" className="inline-flex items-center gap-2 px-6 py-3 bg-[#3b82f6] text-white font-bold rounded-lg hover:bg-blue-700 transition-all text-sm shadow-lg">
-                  Request Quote <ArrowRight size={14} />
+                <Link href={`/contact?product=${encodeURIComponent(p.name)}&intent=quote#contact-form`} className="inline-flex items-center gap-2 px-6 py-3 bg-[#3b82f6] text-white font-bold rounded-lg hover:bg-blue-700 transition-all text-sm shadow-lg">
+                  Get a Quote Today <ArrowRight size={14} />
                 </Link>
               </div>
             </motion.div>

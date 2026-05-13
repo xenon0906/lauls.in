@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import HomePage from "@/components/home/HomePage";
 
 export const metadata: Metadata = {
-  title: "Lauls Ltd — TATA Steel Authorized Ferro Alloys Distributors Since 1933",
+  title: "Lauls Ltd | EV Wire Solutions, Round Wire Manufacturers & Industrial Steel",
   description:
-    "90+ years of excellence in Railway Manufacturing, Warehousing & Logistics, and Ferro Alloys Trading. Sole authorized TATA Steel distributor in Northern India.",
+    "Leading EV wire solutions and round wire manufacturers in India since 1933. Specialized in alloy steel wire rods, industrial steel manufacturing, and EV supply chain solutions.",
   openGraph: {
-    title: "Lauls Ltd — TATA Steel Authorized Ferro Alloys Distributors Since 1933",
+    title: "Lauls Ltd | EV Wire Solutions & Industrial Steel Manufacturing",
     description:
-      "90+ years of excellence in Railway Manufacturing, Warehousing & Logistics, and Ferro Alloys Trading.",
+      "Leading EV wire solutions and round wire manufacturers in India since 1933. Specialized in alloy steel wire rods, industrial steel manufacturing, and EV supply chain solutions.",
     url: "https://lauls.in",
   },
   alternates: { canonical: "https://lauls.in" },

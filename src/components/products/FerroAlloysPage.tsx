@@ -11,7 +11,7 @@ const products = [
   {
     name: "Ferro Manganese",
     grade: "HC / MC / LC",
-    images: ["/images/products/ferro_manganese_1778571486667.png", "/images/products/ferro_chrome_1778571501692.png"],
+    image: "/images/products/ferro_alloys_raw.png",
     use: "Deoxidiser & desulphuriser in steel production",
     specs: "Mn: 60–75% | C: 0.1–7%",
     desc: "Ferro Manganese is essential in steel manufacturing as a deoxidiser and desulphuriser. Lauls sources HC, MC, and LC grades from premium smelters to serve diverse steel mill specifications.",
@@ -19,7 +19,7 @@ const products = [
   {
     name: "Ferro Chrome",
     grade: "HC / MC / LC",
-    images: ["/images/products/ferro_chrome_1778571501692.png", "/images/products/ferro_silicon_1778571520226.png"],
+    image: "/images/products/ferro_alloys_raw.png",
     use: "Essential for stainless and alloy steel production",
     specs: "Cr: 50–70% | C: 0.03–8%",
     desc: "Ferro Chrome is the primary source of chromium in stainless and alloy steels, providing corrosion resistance, hardness, and high-temperature strength. We supply multiple grades to suit your specific alloying requirements.",
@@ -27,7 +27,7 @@ const products = [
   {
     name: "Ferro Silicon",
     grade: "FeSi 45 / 65 / 75",
-    images: ["/images/products/ferro_silicon_1778571520226.png", "/images/products/ferro_manganese_1778571486667.png"],
+    image: "/images/products/ferro_alloys_raw.png",
     use: "Strengthening and deoxidising steel & cast iron",
     specs: "Si: 45–75% | Al: <2%",
     desc: "Ferro Silicon is used as both a deoxidising and alloying agent. It improves the strength, elasticity, and corrosion resistance of steel and cast iron, available in FeSi 45, 65, and 75 grades.",
@@ -35,7 +35,7 @@ const products = [
   {
     name: "Silico Manganese",
     grade: "Standard / High-Grade",
-    images: ["/images/products/silico_manganese_1778571539533.png", "/images/products/ferro_silicon_1778571520226.png"],
+    image: "/images/products/ferro_alloys_raw.png",
     use: "Combined deoxidiser and alloying element",
     specs: "Mn: 60–68% | Si: 14–20%",
     desc: "Silico Manganese is a combined deoxidiser and alloying agent used widely in structural steel production. It simultaneously provides deoxidising and manganese-alloying benefits, reducing costs versus separate additions.",
@@ -50,8 +50,8 @@ export default function FerroAlloysPage() {
       {/* Hero */}
       <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <Image
-          src="/images/products/ferro_chrome_1778571501692.png"
-          alt=""
+          src="/images/products/ferro_alloys_raw.png"
+          alt="Raw Ferro Alloys"
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -84,13 +84,8 @@ export default function FerroAlloysPage() {
               transition={{ duration: 0.7 }}
               className={`flex flex-col lg:flex-row items-center gap-10 ${idx % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
             >
-              <div className="w-full lg:w-2/5 rounded-2xl overflow-hidden aspect-4/3 shadow-xl relative flex">
-                <div className="w-1/2 relative">
-                  <Image src={p.images[0]} alt={p.name} fill sizes="(max-width: 1024px) 50vw, 20vw" className="object-cover hover:scale-105 transition-transform duration-700" />
-                </div>
-                <div className="w-1/2 relative">
-                  <Image src={p.images[1]} alt={`${p.name} detail`} fill sizes="(max-width: 1024px) 50vw, 20vw" className="object-cover hover:scale-105 transition-transform duration-700" />
-                </div>
+              <div className="w-full lg:w-2/5 rounded-2xl overflow-hidden aspect-4/3 shadow-xl relative">
+                <Image src={p.image} alt={p.name} fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="w-full lg:w-3/5">
                 <div className="text-[#DCA54C] text-[10px] font-black uppercase tracking-widest mb-2">{p.grade}</div>
@@ -98,8 +93,8 @@ export default function FerroAlloysPage() {
                 <p className="text-gray-600 font-light leading-relaxed mb-6">{p.desc}</p>
                 <div className="font-mono text-xs text-gray-500 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3 mb-6">{p.specs}</div>
                 <div className="text-sm text-gray-500 mb-8 italic">Used for: {p.use}</div>
-                <Link href="/contact#contact-form" className="inline-flex items-center gap-2 px-6 py-3 bg-[#DCA54C] text-[#0A1628] font-bold rounded-lg hover:bg-[#c5923b] transition-all text-sm shadow-lg">
-                  Request Quote <ArrowRight size={14} />
+                <Link href={`/contact?product=${encodeURIComponent(p.name)}&intent=quote#contact-form`} className="inline-flex items-center gap-2 px-6 py-3 bg-[#DCA54C] text-[#0A1628] font-bold rounded-lg hover:bg-[#c5923b] transition-all text-sm shadow-lg">
+                  Get a Quote Today <ArrowRight size={14} />
                 </Link>
               </div>
             </motion.div>

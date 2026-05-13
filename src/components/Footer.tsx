@@ -24,7 +24,7 @@ export default function Footer() {
               <Image src="/images/logo.png" alt="Lauls Ltd" width={144} height={32} className="h-8 w-auto" />
             </Link>
             <p className="text-white/40 text-sm leading-relaxed">
-              Engineering the backbone of Indian Railways for over 90 years. A legacy of precision, trust, and industrial excellence since 1933.
+              Engineering the backbone of Indian Railways and powering the EV supply chain. A legacy of precision wire rods, trust, and industrial steel excellence since 1933.
             </p>
             <div className="flex gap-4">
               <a href="https://lauls.in" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-accent hover:border-accent transition-all">
@@ -66,12 +66,12 @@ export default function Footer() {
             <h4 className="font-display font-bold text-white mb-6 uppercase tracking-widest text-xs">Our Services</h4>
             <ul className="space-y-4">
               {[
-                { name: "Railway Components", href: "/products" },
-                { name: "Steel Warehousing", href: "/logistics" },
-                { name: "Rail Handling", href: "/logistics" },
+                { name: "EV Wire Solutions", href: "/products/wire-rods" },
+                { name: "Industrial Steel", href: "/products/steel-rounds" },
+                { name: "Precision Tubes", href: "/products/precision-tubes" },
                 { name: "Ferro Alloys", href: "/products/ferro-alloys" },
-                { name: "Logistics", href: "/logistics" },
-                { name: "Distribution", href: "/distribution" },
+                { name: "EV Logistics", href: "/logistics" },
+                { name: "Steel Distribution", href: "/distribution" },
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} onClick={(e) => handleLinkClick(e, item.href)} className={`text-sm transition-colors ${pathname === item.href ? 'text-accent' : 'text-white/40 hover:text-accent'}`}>
@@ -102,11 +102,26 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Embedded CTA */}
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-md">
+          <div>
+            <h4 className="text-xl font-display font-bold text-white mb-2">Ready to discuss your requirements?</h4>
+            <p className="text-white/60 text-sm">Get in touch with our experts for custom industrial and EV supply chain solutions.</p>
+          </div>
+          <Link href="/contact" className="px-6 py-3 bg-highlight text-[#0A1628] font-bold rounded-lg hover:bg-[#c5923b] transition-all text-sm whitespace-nowrap shadow-lg">
+            Request Industrial Consultation
+          </Link>
+        </div>
+
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-white/20 text-xs">
             © {new Date().getFullYear()} Lauls Ltd. All Rights Reserved. | Est. 1933
           </p>
-          <div className="flex gap-8">
+          <div className="flex gap-8 items-center">
+            <a href="https://wick.co.in" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-accent text-xs transition-colors flex items-center gap-1.5 font-medium">
+              Powered by Wick Network
+            </a>
+            <span className="text-white/10 text-xs">|</span>
             <Link href="#" className="text-white/20 hover:text-white text-xs transition-colors">Privacy Policy</Link>
             <Link href="#" className="text-white/20 hover:text-white text-xs transition-colors">Terms of Service</Link>
           </div>

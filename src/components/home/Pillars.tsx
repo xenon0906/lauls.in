@@ -46,11 +46,11 @@ export default function Pillars() {
           {/* 3. Machine Card (Tall, spans 2 rows) */}
           <div className="col-span-1 lg:row-span-2 bg-white rounded-[3rem] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.06)] overflow-hidden flex flex-col relative z-20 hover:-translate-y-2 transition-transform duration-500 border border-white/60 h-full min-h-[480px]">
             <div className="h-[280px] lg:h-[360px] relative w-full border-b border-gray-50">
-              <Image src="/lauls image/image copy.png" fill className="object-cover" alt="Steel Rounds" />
+              <Image src="/images/products/steel_rounds_stacked.png" fill className="object-cover" alt="Steel Rounds" />
             </div>
             <div className="p-8 lg:p-10 flex-1 flex flex-col justify-center bg-white relative z-10">
-              <h3 className="text-2xl font-bold text-[#0A1628] mb-2">Steel Rounds</h3>
-              <p className="text-gray-600 text-base">Extensive stockyards distributing heavy alloy steel, precision tubes, and rounds.</p>
+              <h3 className="text-2xl font-bold text-[#0A1628] mb-2">Industrial Steel</h3>
+              <p className="text-gray-600 text-base">Extensive stockyards distributing heavy alloy steel rounds for manufacturing.</p>
             </div>
           </div>
 
@@ -69,7 +69,7 @@ export default function Pillars() {
           {/* 5. Highway Trucks */}
           <div className="col-span-1 bg-white rounded-[3rem] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.06)] overflow-hidden flex flex-col relative z-20 hover:-translate-y-2 transition-transform duration-500 border border-white/60 h-full min-h-[360px]">
             <div className="h-[200px] lg:h-[220px] relative w-full border-b border-gray-50">
-              <Image src="/lauls image/image.png" fill className="object-cover" alt="Ferro Alloys" />
+              <Image src="/images/products/ferro_alloys_raw.png" fill className="object-cover" alt="Ferro Alloys" />
             </div>
             <div className="p-8 flex-1 flex flex-col justify-center bg-white">
               <h3 className="text-xl font-bold text-[#0A1628] mb-2">Ferro Alloys</h3>
@@ -83,19 +83,19 @@ export default function Pillars() {
               <Image src="/lauls image/image copy 4.png" fill className="object-cover" alt="Electric Truck" />
             </div>
             <div className="p-8 flex-1 flex flex-col justify-center bg-white">
-              <h3 className="text-xl font-bold text-[#0A1628] mb-2">Electric Truck</h3>
-              <p className="text-gray-600 text-sm">Fleet-wide integration of distinct, sustainable transport solutions.</p>
+              <h3 className="text-xl font-bold text-[#0A1628] mb-2">EV Logistics</h3>
+              <p className="text-gray-600 text-sm">Sustainable transport solutions leveraging zero-emission EV fleets.</p>
             </div>
           </div>
 
           {/* 7. Meeting */}
           <div className="col-span-1 bg-white rounded-[3rem] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.06)] overflow-hidden flex flex-col relative z-20 hover:-translate-y-2 transition-transform duration-500 border border-white/60 h-full min-h-[360px]">
             <div className="h-[200px] lg:h-[220px] relative w-full border-b border-gray-50">
-              <Image src="/lauls image/image copy 5.png" fill className="object-cover" alt="Wire Rods" />
+              <Image src="/images/products/wire_rods_coils.png" fill className="object-cover" alt="Wire Rods" />
             </div>
             <div className="p-8 flex-1 flex flex-col justify-center bg-white">
-              <h3 className="text-xl font-bold text-[#0A1628] mb-2">Wire Rods</h3>
-              <p className="text-gray-600 text-sm">High-grade mild and stainless-steel wire for precise drawing and fabrication.</p>
+              <h3 className="text-xl font-bold text-[#0A1628] mb-2">EV Wire Solutions</h3>
+              <p className="text-gray-600 text-sm">High-grade alloy steel wire rods engineered for EV supply chain components.</p>
             </div>
           </div>
 

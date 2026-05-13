@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import FloatingContact from "@/components/FloatingContact";
+import WhatsAppFloatingCTA from "@/components/WhatsAppFloatingCTA";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,30 +17,27 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL("https://lauls.in"),
   title:
-    "Lauls Ltd — TATA Steel Authorized Ferro Alloys Distributors | Logistics & Railway Manufacturing Since 1933",
+    "Lauls Ltd | EV Wire Solutions, Round Wire Manufacturers & Industrial Steel",
   description:
-    "Lauls Ltd is Northern India's trusted industrial partner since 1933. Sole authorized distributor of TATA Steel Ferro Alloys & Minerals, ISO-certified logistics provider operating TATA Steel stockyards, and RDSO-approved railway track fastener manufacturer in Faridabad.",
+    "Leading EV wire solutions and round wire manufacturers in India since 1933. Specialized in alloy steel wire rods, industrial steel manufacturing, and EV supply chain solutions.",
   keywords: [
-    "lauls ltd",
-    "lauls limited",
-    "tata steel ferro alloys distributor",
-    "tata steel stockyard faridabad",
-    "northern india steel logistics",
-    "railway track fastener manufacturer",
+    "EV wire solutions",
+    "round wire manufacturers",
+    "alloy steel wire rods",
+    "industrial steel manufacturing",
+    "infrastructure steel solutions",
+    "EV supply chain manufacturing",
+    "industrial wire rod suppliers",
+    "sustainable steel manufacturing India",
     "ferro alloys distributor india",
-    "steel handling faridabad",
     "RDSO approved manufacturer",
-    "fishplate manufacturer india",
-    "elastic rail clips",
-    "SGCI inserts",
-    "WAREX GOLD warehouse",
-    "iron and steel logistics",
     "tata steel authorized dealer",
+    "lauls ltd"
   ],
   openGraph: {
-    title: "Lauls Ltd — India's Trusted Industrial Partner Since 1933",
+    title: "Lauls Ltd | EV Wire Solutions & Industrial Steel Manufacturing",
     description:
-      "Sole authorized TATA Steel Ferro Alloys distributor in Northern India. Operating stockyards, manufacturing railway track fasteners, and distributing ferro alloys since 1933.",
+      "Leading EV wire solutions and round wire manufacturers in India since 1933. Specialized in alloy steel wire rods, industrial steel manufacturing, and EV supply chain solutions.",
     url: "https://lauls.in",
     siteName: "Lauls Ltd",
     locale: "en_IN",
@@ -49,15 +47,15 @@ export const metadata: Metadata = {
         url: "/images/IMG_9916.JPG",
         width: 1200,
         height: 630,
-        alt: "Lauls Ltd — Industrial operations since 1933",
+        alt: "Lauls Ltd — Industrial Steel Manufacturing",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lauls Ltd — India's Trusted Industrial Partner Since 1933",
+    title: "Lauls Ltd | EV Wire Solutions & Industrial Steel Manufacturing",
     description:
-      "Sole authorized TATA Steel Ferro Alloys distributor. Logistics, railway manufacturing & distribution since 1933.",
+      "Leading EV wire solutions and round wire manufacturers in India. Specialized in alloy steel wire rods and EV supply chain.",
     images: ["/images/IMG_9916.JPG"],
   },
   robots: {
@@ -91,7 +89,7 @@ const jsonLd = {
   logo: "https://lauls.in/images/logo.png",
   foundingDate: "1933",
   description:
-    "Northern India's trusted industrial enterprise since 1933. Sole authorized TATA Steel Ferro Alloys & Minerals distributors.",
+    "Leading EV wire solutions and round wire manufacturers in India since 1933. Specialized in alloy steel wire rods, industrial steel manufacturing, and EV supply chain solutions.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "33-B, N.I.T",
@@ -129,6 +127,7 @@ export default function RootLayout({
         />
         {children}
         <FloatingContact />
+        <WhatsAppFloatingCTA />
       </body>
     </html>
   );

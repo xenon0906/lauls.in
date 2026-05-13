@@ -10,7 +10,7 @@ export default function AboutIntro() {
       {/* Hero-style Background Image Overlays with Attractive Cut Line */}
       <div className="absolute top-0 left-0 w-full h-[520px] lg:h-[620px] z-0 overflow-hidden border-b-2 border-highlight/60 shadow-[0_10px_40px_rgba(0,0,0,0.1)]">
         <Image 
-          src="/lauls image/Screenshot 2026-05-12 at 8.02.05 PM.png" 
+          src="/images/products/steel_rounds_stacked.png" 
           alt="Metal Background" 
           fill 
           className="object-cover"
@@ -46,7 +46,7 @@ export default function AboutIntro() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch relative">
           
           {/* Left Column: Headings & Text */}
-          <div className="lg:col-span-6 flex flex-col justify-between h-full">
+          <div className="lg:col-span-6 flex flex-col gap-12 lg:gap-16 h-full justify-start">
             
             {/* Top Heading Area (On Dark Background) - Comes from Left */}
             <motion.div 
@@ -98,7 +98,7 @@ export default function AboutIntro() {
               className="w-full relative shadow-2xl flex-grow min-h-[300px] rounded-xl overflow-hidden group"
             >
               <Image 
-                src="/lauls image/image.png" 
+                src="/images/products/ferro_alloys_raw.png" 
                 alt="Molten Alloy Casting" 
                 fill 
                 className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
@@ -163,7 +163,7 @@ export default function AboutIntro() {
               className="w-full relative shadow-xl flex-grow min-h-[250px] rounded-xl overflow-hidden group"
             >
               <Image 
-                src="/lauls image/image copy 2.png" 
+                src="/images/products/precision_tubes_erw.png" 
                 alt="Precision Manufacturing" 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-110"

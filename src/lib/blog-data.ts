@@ -35,7 +35,7 @@ export const blogs: BlogPost[] = [
       </ul>
 
       <h2>The Role of Industrial Raw Materials</h2>
-      <p>High-performance steel requires impeccable <strong>industrial raw materials</strong>. The precise integration of ferro alloys—such as Ferro Manganese and Ferro Chrome—dictates the final characteristics of the steel, whether it requires enhanced anti-corrosion properties or extreme tensile strength.</p>
+      <p>High-performance steel requires impeccable <strong>industrial raw materials</strong>. The precise integration of ferro alloys—such as Ferro Manganese and Ferro Chrome—dictates the final characteristics of the steel, whether it requires enhanced anti-corrosion properties or extreme tensile strength. Leading manufacturers are increasingly utilizing advanced procurement networks and industrial B2B platforms like <a href="https://wick.co.in" target="_blank" rel="noopener noreferrer" style="color: #DCA54C; font-weight: 500; text-decoration: underline;">Wick</a> to source these critical materials reliably.</p>
 
       <h2>Conclusion</h2>
       <p>As India continues its aggressive infrastructure push, the steel manufacturing sector will remain the critical catalyst. By embracing sustainability and cutting-edge tech, the industry is not just producing steel; it is forging the future of the nation.</p>
@@ -92,7 +92,7 @@ export const blogs: BlogPost[] = [
       </ul>
 
       <h2>Building the Infrastructure</h2>
-      <p>Deploying electric trucks requires robust charging infrastructure at warehouses and distribution hubs. Forward-thinking logistics providers are installing solar-powered charging arrays to ensure the electricity fueling the trucks is entirely green.</p>
+      <p>Deploying electric trucks requires robust charging infrastructure at warehouses and distribution hubs. Forward-thinking logistics providers are installing solar-powered charging arrays to ensure the electricity fueling the trucks is entirely green. Furthermore, integrating these fleets into digital ecosystems, such as the <a href="https://wick.co.in" target="_blank" rel="noopener noreferrer" style="color: #DCA54C; font-weight: 500; text-decoration: underline;">Wick</a> industrial network, ensures seamless tracking and maximum operational uptime.</p>
 
       <h2>The Road Ahead</h2>
       <p>As battery technology continues to improve, yielding greater ranges and faster charging times, electric trucking will completely dominate short-to-medium haul heavy logistics. It is the definitive bridge connecting traditional heavy industry to a sustainable future.</p>
