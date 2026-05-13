@@ -107,8 +107,79 @@ const jsonLd = {
   sameAs: ["https://www.linkedin.com/company/10073868"],
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What logistics services does Lauls Ltd provide?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We provide end-to-end logistics solutions, ensuring reliable supply chains and operational efficiency for massive industrial cargo, managing over 500,000 MT of transport annually.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you supply heavy alloy steel rounds?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we operate extensive, strategically located stockyards dedicated to distributing heavy alloy steel, precision tubes, and rounds to meet diverse industrial manufacturing requirements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which ferro alloys do you trade and supply?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "As the sole authorized distributor of TATA Steel Ferro Alloys & Minerals in Northern India, we supply high-quality ferro chrome, ferro manganese, silico manganese, and other essential minerals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is your approach to sustainable transport?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We are pioneering sustainable transport with our expanding fleet of electric trucks, significantly reducing carbon footprints and promoting eco-friendly practices in heavy industry operations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are your capabilities in precision tubes?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We offer dedicated handling and storage for specialized precision pipes, employing flawless concentric engineering for critical high-pressure systems while maintaining zero-defect methodology.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What types of wire rods do you offer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We supply high-grade mild, alloy, and stainless steel wire rods that are optimized for precise drawing, complex fabrication, and aerospace or power sector applications.",
+      },
+    },
+  ],
+};
+
+const webSiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Lauls Ltd",
+  url: "https://lauls.in",
+  description:
+    "Leading EV wire solutions and round wire manufacturers in India since 1933. Specialized in alloy steel wire rods, industrial steel manufacturing, and EV supply chain solutions.",
+  publisher: {
+    "@type": "Organization",
+    name: "Lauls Ltd",
+    logo: "https://lauls.in/images/logo.png",
+  },
+};
+
 // JSON-LD is a static constant - safe to serialize directly
 const jsonLdString = JSON.stringify(jsonLd);
+const faqJsonLdString = JSON.stringify(faqJsonLd);
+const webSiteJsonLdString = JSON.stringify(webSiteJsonLd);
 
 export default function RootLayout({
   children,
@@ -124,6 +195,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdString }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: faqJsonLdString }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: webSiteJsonLdString }}
         />
         {children}
         <FloatingContact />

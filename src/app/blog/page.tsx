@@ -33,7 +33,7 @@ export default function BlogIndex() {
             Our <span className="text-[#DCA54C]">Blog</span>
           </h1>
           <p className="text-white/70 max-w-2xl mx-auto text-lg leading-relaxed font-light">
-            Expert perspectives on modern manufacturing, sustainable supply chains, and the materials building tomorrow's infrastructure.
+            Expert perspectives on modern manufacturing, sustainable supply chains, and the materials building tomorrow&apos;s infrastructure.
           </p>
         </div>
       </section>

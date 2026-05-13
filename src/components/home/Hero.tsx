@@ -11,7 +11,7 @@ const slides = [
     title: "Powering the \nEV Supply Chain \n& Industrial Steel",
     highlight: "EV Supply Chain",
     subtext: "Northern India's leading industrial conglomerate. Delivering precision wire rods, round wire solutions, and advanced steel manufacturing since 1933.",
-    image: "/images/products/wire_rods_coils.png",
+    image: "/lauls image/Screenshot 2026-05-12 at 8.02.05 PM.png",
     stats: [
       { label: "Projects", value: "500+" },
       { label: "Clients", value: "150+" },

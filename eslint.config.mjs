@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Legacy utility scripts (not part of the app)
+    "download_images.js",
+    "fetch_images.js",
   ]),
 ]);
 

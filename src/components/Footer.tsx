@@ -122,8 +122,8 @@ export default function Footer() {
               Powered by Wick Network
             </a>
             <span className="text-white/10 text-xs">|</span>
-            <Link href="#" className="text-white/20 hover:text-white text-xs transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-white/20 hover:text-white text-xs transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="text-white/20 hover:text-white text-xs transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="text-white/20 hover:text-white text-xs transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
