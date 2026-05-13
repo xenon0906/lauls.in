@@ -5,33 +5,33 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 
 const milestones = [
-  { 
+  {
     year: "1933",
-    title: "Foundation", 
+    title: "Foundation",
     desc: "Began as a trusted industrial trading house, setting the groundwork for a multi-generation infrastructure enterprise.",
-    image: "/images/IMG_9877.JPG",
+    image: "/lauls image/image copy 7.png",
     accent: "#0A1628"
   },
-  { 
-    year: "2005", 
-    title: "First Plant", 
-    desc: "Expanded into heavy alloy steel distribution, becoming a key TATA associated supplier across India.", 
-    image: "/images/IMG_9944.JPG",
+  {
+    year: "2005",
+    title: "First Plant",
+    desc: "Expanded into heavy alloy steel distribution, becoming a key TATA associated supplier across India.",
+    image: "/lauls image/image copy 6.png",
     accent: "#0A1628"
   },
-  { 
-    year: "2012", 
-    title: "WAREX Gold", 
-    desc: "Achieved WAREX Gold certification, cementing as an approved vendor for critical supply chains.", 
-    image: "/images/IMG_9844.JPG",
+  {
+    year: "2012",
+    title: "WAREX Gold",
+    desc: "Achieved WAREX Gold certification, cementing as an approved vendor for critical supply chains.",
+    image: "/lauls image/image copy 8.png",
     accent: "#0A1628"
   },
-  { 
-    year: "2026", 
-    title: "Global Expansion", 
-    point: true, 
-    desc: "Launching EV-powered fleet and expanding our global logistics, fulfilling massive national contracts.", 
-    image: "/images/IMG_0028.JPG",
+  {
+    year: "2026",
+    title: "Global Expansion",
+    point: true,
+    desc: "Launching EV-powered fleet and expanding our global logistics, fulfilling massive national contracts.",
+    image: "/lauls image/Screenshot 2026-05-12 at 8.02.05 PM.png",
     accent: "#DCA54C"
   },
 ];
@@ -59,11 +59,10 @@ function TimelineCard({ ms, idx }: { ms: typeof milestones[0]; idx: number }) {
         <motion.div
           whileHover={{ scale: 1.15, rotate: 5 }}
           transition={{ type: "spring", stiffness: 300 }}
-          className={`w-14 h-14 rounded-full flex items-center justify-center relative z-10 shadow-xl ${
-            ms.point 
-              ? 'bg-[#DCA54C] text-white shadow-[0_0_30px_#DCA54C50]' 
-              : 'bg-[#0A1628] text-white'
-          }`}
+          className={`w-14 h-14 rounded-full flex items-center justify-center relative z-10 shadow-xl ${ms.point
+            ? 'bg-[#DCA54C] text-white shadow-[0_0_30px_#DCA54C50]'
+            : 'bg-[#0A1628] text-white'
+            }`}
         >
           <div className="w-4 h-4 rounded-full border-2 border-white opacity-60" />
         </motion.div>
@@ -81,7 +80,7 @@ function TimelineCard({ ms, idx }: { ms: typeof milestones[0]; idx: number }) {
 
       <h4 className="text-sm font-bold text-[#DCA54C] uppercase tracking-widest mt-1 mb-4">{ms.title}</h4>
       <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow max-w-[250px]">{ms.desc}</p>
-      
+
       {/* Card Image with hover reveal */}
       <div className="w-full h-[140px] rounded-xl overflow-hidden mt-auto border border-gray-100 shadow-sm group-hover:shadow-xl transition-shadow duration-500 relative">
         <Image
@@ -103,7 +102,7 @@ export default function AboutTimeline() {
   return (
     <section className="bg-white py-24 w-full border-t border-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        
+
         {/* Animated Header */}
         <motion.div
           ref={headerRef}

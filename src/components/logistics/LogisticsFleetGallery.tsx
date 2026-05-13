@@ -8,8 +8,8 @@ export default function LogisticsFleetGallery() {
   const images = [
     { src: "/images/IMG_9993.JPG", label: "Road Logistics", href: "/logistics" },
     { src: "/images/IMG_9978.JPG", label: "Rail Freight", href: "/logistics" },
-    { src: "/images/IMG_9974.JPG", label: "Electric Fleet", href: "/logistics" },
-    { src: "/images/IMG_9962.JPG", label: "Warehousing Hubs", href: "/logistics" }
+    { src: "/lauls image/image copy 4.png", label: "Electric Fleet", href: "/logistics" },
+    { src: "/lauls image/image copy 9.png", label: "Warehousing Hubs", href: "/logistics" }
   ];
 
   return (
@@ -18,7 +18,7 @@ export default function LogisticsFleetGallery() {
         <div className="flex flex-col md:flex-row gap-4 h-[60vh] min-h-[500px]">
           {images.map((img, idx) => (
             <Link key={idx} href={img.href} className="relative flex-1 group cursor-pointer h-full">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}

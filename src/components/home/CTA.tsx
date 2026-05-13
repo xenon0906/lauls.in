@@ -2,9 +2,28 @@
 
 import Link from "next/link";
 import { Phone, Clock, ShieldCheck, Globe, FileText, Mail } from "lucide-react";
-import AutoImageRotator from "../AutoImageRotator";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+
+const ctaImages = [
+  "/images/IMG_9916.JPG",
+  "/images/IMG_9939.JPG",
+  "/images/IMG_9944.JPG",
+  "/images/IMG_9978.JPG",
+  "/images/IMG_9988.JPG"
+];
 
 export default function CTA() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % ctaImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div id="cta" className="bg-[#0A1628] w-full py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -73,15 +92,24 @@ export default function CTA() {
         {/* Right Image Block */}
         <div className="lg:col-span-5 flex justify-end">
           <div className="relative w-full max-w-[450px] aspect-square lg:h-[450px] rounded-2xl overflow-hidden group">
-             <AutoImageRotator
-               images={[
-                 "/images/IMG_9916.JPG",
-                 "/images/IMG_9988.JPG",
-                 "/images/IMG_9993.JPG"
-               ]}
-               interval={4500}
-               sizes="(max-width: 1024px) 100vw, 450px"
-             />
+             <AnimatePresence>
+               <motion.div
+                 key={currentImage}
+                 initial={{ opacity: 0, scale: 1.05 }}
+                 animate={{ opacity: 1, scale: 1 }}
+                 exit={{ opacity: 0 }}
+                 transition={{ duration: 1.5, ease: "easeInOut" }}
+                 className="absolute inset-0"
+               >
+                 <Image
+                   src={ctaImages[currentImage]}
+                   alt="Lauls Ltd Facility"
+                   fill
+                   sizes="(max-width: 1024px) 100vw, 450px"
+                   className="object-cover object-center"
+                 />
+               </motion.div>
+             </AnimatePresence>
              
              {/* Gradient for stats visibility */}
              <div className="absolute inset-0 bg-linear-to-t from-[#0A1628]/95 via-[#0A1628]/40 to-transparent pointer-events-none" />

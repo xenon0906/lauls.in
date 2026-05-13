@@ -11,7 +11,7 @@ export default function DistributionHero() {
       {/* Immersive Background Layer */}
       <div className="absolute inset-0">
         <Image
-          src="/images/IMG_9944.JPG"
+          src="/lauls image/Screenshot 2026-05-12 at 8.23.33 PM.png"
           alt=""
           fill
           sizes="100vw"
@@ -61,7 +61,7 @@ export default function DistributionHero() {
             <Link href="/products" className="px-8 py-4 bg-[#DCA54C] text-[#0A1628] font-bold hover:bg-[#c5923b] transition-all text-sm flex items-center gap-2 group rounded-sm shadow-xl shadow-[#DCA54C]/20">
               Explore Products <ArrowRight size={16} className="text-[#0A1628] group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/contact#contact-form" className="px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/20 text-white font-bold hover:bg-white/10 hover:border-white/40 transition-all text-sm rounded-sm">
+            <Link href="#contact-form" className="px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/20 text-white font-bold hover:bg-white/10 hover:border-white/40 transition-all text-sm rounded-sm">
               Request Quote
             </Link>
           </motion.div>

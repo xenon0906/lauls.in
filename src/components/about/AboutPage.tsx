@@ -3,8 +3,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import AboutHero from "./AboutHero";
-import AboutNarrative from "./AboutNarrative";
+import AboutIntro from "./AboutIntro";
 import AboutPillars from "./AboutPillars";
 import FoundersLineage from "./FoundersLineage";
 import AboutLeadership from "./AboutLeadership";
@@ -22,10 +21,9 @@ export default function AboutPage() {
       className="min-h-screen"
     >
       <Navbar />
-      <AboutHero />
-      <AboutNarrative />
-      <AboutPillars />
+      <AboutIntro />
       <FoundersLineage />
+      <AboutPillars />
       <AboutLeadership />
       <AboutTimeline />
       <AboutStatsBar />

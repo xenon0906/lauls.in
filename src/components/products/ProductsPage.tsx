@@ -19,35 +19,31 @@ const productCategories = [
       "Lauls is a primary distributor of ferro alloys sourced directly from top-tier smelters. Our ferro alloys are used in producing high-grade, specialty steels and are supplied to Indian and global steel mills with rigorous quality assurance.",
     accent: "#DCA54C",
     bgGradient: "from-amber-50 to-white",
-    image: "/images/IMG_9956.JPG",
+    image: "/lauls image/image.png",
     products: [
       {
         name: "Ferro Manganese",
         grade: "HC / MC / LC",
         use: "Deoxidiser & desulphuriser in steel production",
         specs: "Mn: 60–75% | C: 0.1–7%",
-        thumbnail: "/images/products/ferro_manganese_1778571486667.png",
       },
       {
         name: "Ferro Chrome",
         grade: "HC / MC / LC",
         use: "Essential for stainless and alloy steel production",
         specs: "Cr: 50–70% | C: 0.03–8%",
-        thumbnail: "/images/products/ferro_chrome_1778571501692.png",
       },
       {
         name: "Ferro Silicon",
         grade: "FeSi 45 / 65 / 75",
         use: "Strengthening and deoxidising steel & cast iron",
         specs: "Si: 45–75% | Al: <2%",
-        thumbnail: "/images/products/ferro_silicon_1778571520226.png",
       },
       {
         name: "Silico Manganese",
         grade: "Standard / High-Grade",
         use: "Combined deoxidiser and alloying element",
         specs: "Mn: 60–68% | Si: 14–20%",
-        thumbnail: "/images/products/silico_manganese_1778571539533.png",
       },
     ],
   },
@@ -60,28 +56,25 @@ const productCategories = [
       "Our wire rod inventory spans an extensive range of grades suited for fasteners, springs, tyre cords, welding wires, and cold heading applications. All stock is sourced from Sail, Tata, and JSW mills.",
     accent: "#3b82f6",
     bgGradient: "from-blue-50 to-white",
-    image: "/images/IMG_9988.JPG",
+    image: "/lauls image/image copy 5.png",
     products: [
       {
         name: "Alloy Steel Wire Rods",
         grade: "SAE / IS Standards",
         use: "Automotive springs, fasteners & high-strength bolts",
         specs: "Dia: 5.5mm – 25mm | Coil Wt: 1–2 MT",
-        thumbnail: "/images/products/alloy_wire_rods_1778571554783.png",
       },
       {
         name: "Mild Steel Wire Rods",
         grade: "IS 2062 / SAE 1006–1018",
         use: "Nails, fencing, binding wire, barbed wire",
         specs: "Dia: 5.5mm – 14mm | C: <0.15%",
-        thumbnail: "/images/products/mild_wire_rods_1778571571818.png",
       },
       {
         name: "Stainless Steel Wire Rods",
         grade: "SS 304 / 316 / 410 / 430",
         use: "Pharmaceutical, food-grade and marine applications",
         specs: "Dia: 5.5mm – 16mm | Finish: Bright Annealed",
-        thumbnail: "/images/products/stainless_wire_rods_1778571588871.png",
       },
     ],
   },
@@ -94,21 +87,19 @@ const productCategories = [
       "Lauls supplies forged and rolled steel rounds across a wide diameter spectrum. Our rounds are the choice of engineering firms, auto-component manufacturers and defence contractors for critical load-bearing applications.",
     accent: "#10b981",
     bgGradient: "from-emerald-50 to-white",
-    image: "/images/IMG_9944.JPG",
+    image: "/lauls image/image copy.png",
     products: [
       {
         name: "Alloy Steel Rounds",
         grade: "EN8 / EN19 / EN24 / EN31 / EN36",
         use: "Gears, axles, shafts, tooling & dies",
         specs: "Dia: 20mm – 500mm | Length: 3–7m",
-        thumbnail: "/images/products/alloy_steel_rounds_1778571606218.png",
       },
       {
         name: "Mild Steel Rounds",
         grade: "IS 2062 E250 / E350",
         use: "General engineering, construction & fabrication",
         specs: "Dia: 6mm – 250mm | Length: 3–12m",
-        thumbnail: "/images/products/mild_steel_rounds_1778571621519.png",
       },
     ],
   },
@@ -121,21 +112,19 @@ const productCategories = [
       "Our ERW (Electric Resistance Welded) steel tubes are manufactured under rigorous conditions and supplied to auto, construction, and infrastructure sectors. All tubes comply with IS / ASTM / DIN standards.",
     accent: "#8b5cf6",
     bgGradient: "from-purple-50 to-white",
-    image: "/images/IMG_9988.JPG",
+    image: "/lauls image/image copy 2.png",
     products: [
       {
         name: "ERW Steel Tubes",
         grade: "IS 1239 / IS 3601 / ASTM A513",
         use: "Structural, mechanical & automotive tube applications",
         specs: "OD: 15mm – 168mm | WT: 1.6mm – 8mm",
-        thumbnail: "/images/products/erw_steel_tubes_1778571635920.png",
       },
       {
         name: "Square & Rectangular Hollow Sections",
         grade: "IS 4923",
         use: "Fabrication, furniture & construction frames",
         specs: "Size: 20×20 – 150×150mm | WT: 1.6–6mm",
-        thumbnail: "/images/products/hollow_sections_1778571651283.png",
       },
     ],
   },
@@ -268,7 +257,7 @@ export default function ProductsPage() {
       {/* Hero */}
       <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/IMG_9988.JPG"
+          src="/lauls image/Screenshot 2026-05-12 at 8.22.04 PM.png"
           alt=""
           fill
           sizes="100vw"

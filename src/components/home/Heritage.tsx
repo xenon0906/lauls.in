@@ -3,7 +3,7 @@
 import Link from "next/link";
 import SectionWrapper from "../SectionWrapper";
 import { BadgeCheck, ShieldCheck, Globe } from "lucide-react";
-import AutoImageRotator from "../AutoImageRotator";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Heritage() {
@@ -68,7 +68,7 @@ export default function Heritage() {
 
         {/* Image Grid */}
         <div className="relative order-1 lg:order-2">
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-10%" }}
@@ -78,88 +78,96 @@ export default function Heritage() {
             className="grid grid-cols-2 gap-4"
           >
             <div className="space-y-4">
-              <motion.div 
+              <motion.div
                 variants={{
                   hidden: { opacity: 0, x: -400 },
                   visible: { opacity: 1, x: 0, transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } }
                 }}
                 className="rounded-3xl overflow-hidden aspect-[4/5] relative group shadow-xl"
               >
-                <AutoImageRotator
-                  images={[
-                    "/images/stockyard.jpg",
-                    "/images/warehouse.jpg",
-                    "/images/stockyard-lauls.jpg"
-                  ]}
-                  interval={4000}
+                <Image
+                  src="/lauls image/Screenshot 2026-05-12 at 8.21.18 PM.png"
+                  alt="Logistics"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-primary/90 via-primary/20 to-transparent" />
                 <div className="absolute bottom-5 left-6 lg:bottom-6 lg:left-8">
                   <span className="text-white font-display font-bold text-xl lg:text-2xl drop-shadow-md">Logistics</span>
                 </div>
+                <Link href="/logistics" className="absolute inset-0 z-20">
+                  <span className="sr-only">Logistics</span>
+                </Link>
               </motion.div>
               {/* Precision Tubes moved here, under Logistics */}
-              <motion.div 
+              <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 400 },
                   visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } }
                 }}
                 className="rounded-3xl overflow-hidden aspect-square relative group shadow-xl"
               >
-                <AutoImageRotator
-                  images={[
-                    "/images/manufacturing.jpg",
-                    "/images/below-manufacturing.jpg",
-                    "/images/stats-bg.jpg"
-                  ]}
-                  interval={4500}
+                <Image
+                  src="/lauls image/image copy 2.png"
+                  alt="Precision Tubes"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-primary/90 via-primary/20 to-transparent" />
                 <div className="absolute bottom-5 left-6 lg:bottom-6 lg:left-8">
                   <span className="text-white font-display font-bold text-xl lg:text-2xl drop-shadow-md">Precision Tubes</span>
                 </div>
+                <Link href="/products/precision-tubes" className="absolute inset-0 z-20">
+                  <span className="sr-only">Precision Tubes</span>
+                </Link>
               </motion.div>
             </div>
             <div className="space-y-4 pt-8">
-              <motion.div 
+              <motion.div
                 variants={{
                   hidden: { opacity: 0, y: -400 },
                   visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } }
                 }}
                 className="rounded-3xl overflow-hidden aspect-square relative group shadow-xl"
               >
-                <AutoImageRotator
-                  images={[
-                    "/images/trading.jpg",
-                    "/images/business-goals.jpg",
-                    "/images/stats-bg.jpg"
-                  ]}
-                  interval={5000}
+                <Image
+                  src="/lauls image/image.png"
+                  alt="Ferro Alloys"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-primary/90 via-primary/20 to-transparent" />
                 <div className="absolute bottom-5 left-6 lg:bottom-6 lg:left-8">
                   <span className="text-white font-display font-bold text-xl lg:text-2xl drop-shadow-md">Ferro Alloys</span>
                 </div>
+                <Link href="/products/ferro-alloys" className="absolute inset-0 z-20">
+                  <span className="sr-only">Ferro Alloys</span>
+                </Link>
               </motion.div>
-              <motion.div 
+              <motion.div
                 variants={{
                   hidden: { opacity: 0, x: 400 },
                   visible: { opacity: 1, x: 0, transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } }
                 }}
                 className="rounded-3xl overflow-hidden aspect-[4/5] relative group shadow-xl"
               >
-                <AutoImageRotator
-                  images={[
-                    "/images/stockyard-lauls.jpg",
-                    "/images/business-goals.jpg",
-                    "/images/warehouse.jpg"
-                  ]}
-                  interval={5500}
+                <Image
+                  src="/lauls image/image copy.png"
+                  alt="Steel Distribution"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-primary/90 via-primary/20 to-transparent" />
                 <div className="absolute bottom-5 left-6 lg:bottom-6 lg:left-8">
                   <span className="text-white font-display font-bold text-xl lg:text-2xl drop-shadow-md">Steel Distribution</span>
                 </div>
+                <Link href="/distribution" className="absolute inset-0 z-20">
+                  <span className="sr-only">Steel Distribution</span>
+                </Link>
               </motion.div>
             </div>
           </motion.div>

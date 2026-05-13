@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import AutoImageRotator from "@/components/AutoImageRotator";
+
 import { ArrowLeft, ArrowRight, Layers } from "lucide-react";
 
 const products = [
@@ -87,10 +87,12 @@ export default function WireRodsPage() {
               className={`flex flex-col lg:flex-row items-center gap-10 ${idx % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
             >
               <div className="w-full lg:w-2/5 rounded-2xl overflow-hidden aspect-4/3 shadow-xl relative">
-                <AutoImageRotator
-                  images={p.images}
-                  interval={4500 + idx * 500}
+                <Image
+                  src={p.images[0]}
+                  alt={p.name}
+                  fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover object-center"
                 />
               </div>
               <div className="w-full lg:w-3/5">

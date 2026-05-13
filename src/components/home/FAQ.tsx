@@ -7,29 +7,34 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "What railway components does Lauls Ltd. manufacture?",
-    answer: "We manufacture a comprehensive range of RDSO-certified railway components including elastic rail clips (ERC Mark III & IV), grooved rubber sole plates, liner pads, GFN fittings, and various track fastening systems. All products meet Indian Railways' stringent quality specifications.",
-    tags: ["Rail Clips", "Sole Plates", "GFN Fittings", "Liner Pads"]
+    question: "What logistics services does Lauls Ltd. provide?",
+    answer: "We provide end-to-end logistics solutions, ensuring reliable supply chains and operational efficiency for massive industrial cargo, managing over 500,000 MT of transport annually.",
+    tags: ["Supply Chain", "Heavy Cargo", "Pan India"]
   },
   {
-    question: "What is your warehousing and logistics capacity?",
-    answer: "We handle over 1,000,000 MT of steel annually and transport 500,000 MT. We operate dedicated TATA Steel stockyards in Faridabad and Prithla with WAREX GOLD (CII) certification for excellence in warehousing.",
-    tags: ["1M MT/Year", "WAREX Gold", "TATA partner"]
-  },
-  {
-    question: "What certifications does Lauls Ltd. hold?",
-    answer: "Lauls Ltd is an RDSO Lucknow approved vendor and holds ISO 9001:2015, ISO 14001:2015, OHSAS 18001:2007, and WAREX GOLD (CII) certifications.",
-    tags: ["ISO Certified", "RDSO Approved", "OHSAS"]
+    question: "Do you supply heavy alloy steel rounds?",
+    answer: "Yes, we operate extensive, strategically located stockyards dedicated to distributing heavy alloy steel, precision tubes, and rounds to meet diverse industrial manufacturing requirements.",
+    tags: ["Stockyards", "Alloy Steel", "Distribution"]
   },
   {
     question: "Which ferro alloys do you trade and supply?",
     answer: "As the sole authorized distributor of TATA Steel Ferro Alloys & Minerals in Northern India, we supply high-quality ferro chrome, ferro manganese, silico manganese, and other essential minerals.",
-    tags: ["TATA Steel", "North India", "Alloys"]
+    tags: ["TATA Steel", "Authorized", "Minerals"]
   },
   {
-    question: "How can I request a quote or become a partner?",
-    answer: "You can request a quote by clicking the 'Request a Quote' button or contact us at +91-129-4098300. Our team typically responds to industrial inquiries within 24 hours.",
-    tags: ["24h Response", "Quote Process"]
+    question: "What is your approach to sustainable transport?",
+    answer: "We are pioneering sustainable transport with our expanding fleet of electric trucks, significantly reducing carbon footprints and promoting eco-friendly practices in heavy industry operations.",
+    tags: ["Eco-Fleet", "Zero Emission", "Sustainability"]
+  },
+  {
+    question: "What are your capabilities in precision tubes?",
+    answer: "We offer dedicated handling and storage for specialized precision pipes, employing flawless concentric engineering for critical high-pressure systems while maintaining zero-defect methodology.",
+    tags: ["Zero Defect", "Tube Division", "High-Pressure"]
+  },
+  {
+    question: "What types of wire rods do you offer?",
+    answer: "We supply high-grade mild, alloy, and stainless steel wire rods that are optimized for precise drawing, complex fabrication, and aerospace or power sector applications.",
+    tags: ["Mild Steel", "Stainless", "Fabrication"]
   }
 ];
 
@@ -50,7 +55,7 @@ export default function FAQ() {
             Frequently Asked Questions
           </h2>
           <p className="text-primary/60 mb-10 leading-relaxed text-sm">
-            Find answers to common questions about our manufacturing capabilities, logistics services, and certifications.
+            Find answers to common questions about our comprehensive industrial divisions, from logistics and sustainable fleets to specialized steel and alloy distribution.
           </p>
 
           <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
@@ -58,7 +63,7 @@ export default function FAQ() {
               <Mail size={20} />
             </div>
             <h4 className="font-display font-bold text-primary mb-2 text-lg">Can&apos;t find your answer?</h4>
-            <p className="text-primary/50 text-xs mb-8 leading-relaxed">Our team is ready to help with any specific questions about our railway manufacturing, logistics, or trading services.</p>
+            <p className="text-primary/50 text-xs mb-8 leading-relaxed">Our team is ready to help with any specific questions about our industrial supply chains, logistics, or trading services.</p>
             
             <div className="flex gap-3">
               <button className="flex-1 py-3 bg-accent text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-accent/90 transition-all text-xs shadow-lg shadow-accent/20">

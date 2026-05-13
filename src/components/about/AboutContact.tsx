@@ -15,7 +15,7 @@ export default function AboutContact() {
           {/* Left Visual Area */}
           <div className="lg:w-1/2 relative min-h-[400px] lg:min-h-full">
             <Image
-              src="/images/business-goals.jpg"
+              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80"
               alt="Corporate Boardroom"
               fill
               className="object-cover"
@@ -57,7 +57,7 @@ export default function AboutContact() {
               <div className="space-y-4 pt-4">
                 <label className="text-xs font-bold text-gray-500 uppercase tracking-wider block">Interested In</label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {['Logistics', 'Electric Trucks', 'Fe Alloy Distribution', 'Alloy Steel Distribution'].map((item) => (
+                  {['Logistics', 'Electric Trucks', 'Fe Alloy Distribution', 'Alloy Steel Distribution', 'Precision Tubes', 'Wire Rods'].map((item) => (
                     <label 
                       key={item} 
                       onClick={() => setSelectedInterest(item)}

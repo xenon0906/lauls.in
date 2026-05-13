@@ -11,7 +11,7 @@ export default function LogisticsHero() {
       {/* Immersive Background Layer */}
       <div className="absolute inset-0">
         <Image
-          src="/images/IMG_9993.JPG"
+          src="/lauls image/Screenshot 2026-05-12 at 8.21.18 PM.png"
           alt=""
           fill
           sizes="100vw"

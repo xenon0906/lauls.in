@@ -3,7 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactHero from "./ContactHero";
-import ContactFormOverlay from "./ContactFormOverlay";
+import AboutContact from "@/components/about/AboutContact";
 import ContactDepartments from "./ContactDepartments";
 import ContactMapGrid from "./ContactMapGrid";
 
@@ -15,8 +15,8 @@ export default function ContactPage() {
       {/* 1. Immersive Hero */}
       <ContactHero />
 
-      {/* 2. Overlapping Split Layout */}
-      <ContactFormOverlay />
+      {/* 2. Global Contact Form */}
+      <AboutContact />
 
       {/* 3. Departmental Contact Lines */}
       <ContactDepartments />

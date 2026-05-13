@@ -10,7 +10,7 @@ export default function EVHero() {
       {/* Immersive Background Layer - EV/Green Logistics */}
       <div className="absolute inset-0">
         <Image
-          src="/images/IMG_9993.JPG"
+          src="/lauls image/image copy 10.png"
           alt=""
           fill
           sizes="100vw"

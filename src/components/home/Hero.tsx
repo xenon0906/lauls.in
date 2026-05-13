@@ -11,7 +11,7 @@ const slides = [
     title: "About Lauls: \n90 Years of \nExcellence",
     highlight: "90 Years",
     subtext: "Founded in 1933, Lauls Ltd. has evolved from a trading house into Northern India's leading industrial conglomerate across steel, logistics, and manufacturing.",
-    image: "/images/IMG_9999.JPG",
+    image: "/lauls image/Screenshot 2026-05-12 at 8.02.05 PM.png",
     stats: [
       { label: "Projects", value: "500+" },
       { label: "Clients", value: "150+" },
@@ -23,7 +23,7 @@ const slides = [
     title: "Leading Ferro Alloy \nDistribution \nin Northern India",
     highlight: "Ferro Alloy",
     subtext: "Sole authorized distributor of TATA Steel Ferro Alloys & Minerals. Powering the steel industry with quality and reliability.",
-    image: "/images/IMG_9988.JPG",
+    image: "/lauls image/Screenshot 2026-05-12 at 8.23.33 PM.png",
     stats: [
       { label: "Annual Distribution", value: "15K MT" },
       { label: "TATA Steel Partner", value: "Sole" },
@@ -35,7 +35,7 @@ const slides = [
     title: "World-Class \nLogistics & \nWarehousing",
     highlight: "Logistics",
     subtext: "Operating TATA Steel stockyards with WAREX GOLD certification. Precision in handling, safety in transportation.",
-    image: "/images/IMG_9974.JPG",
+    image: "/lauls image/Screenshot 2026-05-12 at 8.21.18 PM.png",
     stats: [
       { label: "Steel Handling", value: "1M MT" },
       { label: "Warehousing", value: "Certified Gold" },
@@ -47,7 +47,7 @@ const slides = [
     title: "Pioneering \nSustainable \nElectric Trucking",
     highlight: "Electric Trucking",
     subtext: "Transitioning to a greener future with our electric truck fleet. Logistics engineered for sustainability and efficiency.",
-    image: "/images/IMG_9993.JPG",
+    image: "/lauls image/Screenshot 2026-05-12 at 8.22.04 PM.png",
     stats: [
       { label: "Zero Emission", value: "100%" },
       { label: "Sustainable", value: "Eco-Friendly" },
@@ -111,7 +111,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, width: 0 }}
               animate={{ opacity: 1, width: "auto" }}
               transition={{ delay: 0.3, duration: 0.6 }}
@@ -125,7 +125,7 @@ export default function Hero() {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-white leading-[1.15] tracking-tight mb-8">
               {slides[currentSlide].title.split('\n').map((line, lineIndex) => (
-                <motion.span 
+                <motion.span
                   key={lineIndex}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -144,7 +144,7 @@ export default function Hero() {
               ))}
             </h1>
 
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.8 }}
@@ -153,7 +153,7 @@ export default function Hero() {
               {slides[currentSlide].subtext}
             </motion.p>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.6 }}
@@ -176,7 +176,7 @@ export default function Hero() {
       {/* Stats Grid Overlay - Pinned to bottom within hero */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 mt-auto pb-6">
         <AnimatePresence mode="wait">
-          <motion.div 
+          <motion.div
             key={`stats-${currentSlide}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -194,13 +194,13 @@ export default function Hero() {
         </AnimatePresence>
 
         {/* Scroll Indicator */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
           className="absolute bottom-6 right-6 md:right-12 flex flex-col items-center gap-2"
         >
-          <motion.div 
+          <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           >
@@ -218,14 +218,12 @@ export default function Hero() {
             className="group relative flex items-center justify-end py-4 px-2 cursor-pointer"
             aria-label={`Go to slide ${idx + 1}`}
           >
-            <span className={`hidden md:block absolute right-14 text-[10px] font-bold tracking-widest uppercase transition-all duration-300 whitespace-nowrap ${
-              currentSlide === idx ? "opacity-100 text-white translate-x-0" : "opacity-0 text-white/30 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-white/60"
-            }`}>
+            <span className={`hidden md:block absolute right-14 text-[10px] font-bold tracking-widest uppercase transition-all duration-300 whitespace-nowrap ${currentSlide === idx ? "opacity-100 text-white translate-x-0" : "opacity-0 text-white/30 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-white/60"
+              }`}>
               {idx === 0 ? "About Lauls" : idx === 1 ? "Steel Distribution" : idx === 2 ? "Logistics" : "Electric Truck"}
             </span>
-            <div className={`w-[3px] md:w-auto md:h-[3px] rounded-full transition-all duration-500 ${
-              currentSlide === idx ? "h-12 md:h-auto md:w-16 bg-highlight shadow-[0_0_8px_rgba(245,158,11,0.6)]" : "h-6 md:h-auto md:w-8 bg-white/30 group-hover:bg-white/60"
-            }`} />
+            <div className={`w-[3px] md:w-auto md:h-[3px] rounded-full transition-all duration-500 ${currentSlide === idx ? "h-12 md:h-auto md:w-16 bg-highlight shadow-[0_0_8px_rgba(245,158,11,0.6)]" : "h-6 md:h-auto md:w-8 bg-white/30 group-hover:bg-white/60"
+              }`} />
           </button>
         ))}
       </div>

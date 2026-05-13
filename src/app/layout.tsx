@@ -122,7 +122,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${outfit.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-primary text-body relative group overflow-x-hidden">
+      <body className="min-h-full flex flex-col bg-primary text-body relative group overflow-x-clip">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdString }}

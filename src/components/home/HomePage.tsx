@@ -9,6 +9,7 @@ import Heritage from "./Heritage";
 import Pillars from "./Pillars";
 import Leadership from "./Leadership";
 import CTA from "./CTA";
+import AboutContact from "@/components/about/AboutContact";
 import FAQ from "./FAQ";
 import Footer from "@/components/Footer";
 
@@ -29,6 +30,7 @@ export default function HomePage() {
       <Pillars />
       <Leadership />
       <CTA />
+      <AboutContact />
       <FAQ />
       <Footer />
     </motion.main>

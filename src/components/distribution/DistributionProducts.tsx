@@ -3,51 +3,56 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const products = [
   {
     title: "Ferro Alloys",
     subtitle: "High-strength alloys for steel production",
     desc: "Sourced globally and processed to exact metallurgical standards, our ferro alloys guarantee enhanced strength, de-oxidation, and alloying capabilities for specialized steel manufacturing.",
-    image: "/images/IMG_9988.JPG",
+    image: "/lauls image/image.png",
     chips: [
       { label: "Ferro Chrome", value: "HC, MC Grades" },
       { label: "Ferro Manganese", value: "Lumps & powder" },
     ],
-    link: "Explore Ferro Alloys"
+    link: "Explore Ferro Alloys",
+    href: "/products/ferro-alloys"
   },
   {
     title: "Steel Rounds",
     subtitle: "Alloy and mild steel rounds",
     desc: "Engineered for heavy-duty automotive and industrial machinery applications, our steel rounds offer superior machinability, grain consistency, and immense tensile strength.",
-    image: "/images/IMG_9944.JPG",
+    image: "/lauls image/image copy.png",
     chips: [
       { label: "Alloy Steel", value: "SAE 4140, 4340" },
       { label: "Mild Steel", value: "IS 2062, ASTM A36" },
     ],
-    link: "Explore Steel Rounds"
+    link: "Explore Steel Rounds",
+    href: "/products/steel-rounds"
   },
   {
     title: "Wire Rods",
     subtitle: "High tensile strength wire rods",
     desc: "Manufactured for precision forming processes. Excellent drawability and surface finish guarantee flawless execution in fastener production and heavy spring coiling.",
-    image: "/images/IMG_9993.JPG",
+    image: "/lauls image/image copy 5.png",
     chips: [
       { label: "Carbon / Alloy", value: "SAE 1010, IS 7904" },
       { label: "Size range", value: "5.5 mm — 14 mm" },
     ],
-    link: "Explore Wire Rods"
+    link: "Explore Wire Rods",
+    href: "/products/wire-rods"
   },
   {
     title: "Precision Tubes",
     subtitle: "ERW and CEW tubes for industrial use",
     desc: "State-of-the-art structural and mechanical precision tubes. Our CDW and CEW tubes offer exact geometric tolerances perfect for hydraulic cylinders and automotive chassis.",
-    image: "/images/IMG_9988.JPG",
+    image: "/lauls image/image copy 2.png",
     chips: [
       { label: "ERW Tubes", value: "IS 3601, ASTM A500" },
       { label: "Seamless", value: "ASTM A106, A53" },
     ],
-    link: "Explore Precision Tubes"
+    link: "Explore Precision Tubes",
+    href: "/products/precision-tubes"
   }
 ];
 
@@ -131,9 +136,9 @@ export default function DistributionProducts() {
                 </div>
 
                 {/* Call to action */}
-                <button className="flex items-center gap-2 text-[#DCA54C] font-bold border-b-2 border-transparent hover:border-[#DCA54C] pb-1 transition-all w-max group">
+                <Link href={product.href} className="flex items-center gap-2 text-[#DCA54C] font-bold border-b-2 border-transparent hover:border-[#DCA54C] pb-1 transition-all w-max group">
                   {product.link} <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
-                </button>
+                </Link>
               </motion.div>
             </div>
           ))}
