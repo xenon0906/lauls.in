@@ -11,7 +11,7 @@ const leaders = [
     id: "visionaries",
     name: "Mr. SR Laul & Late Shri CS Gupta",
     role: "Founding Visionaries",
-    image: "/images/team-group.jpg",
+    image: "/images/founders.png",
     bio: "The visionary founders who laid the foundation of Lauls Ltd. in 1933. Mr. SR Laul and Late Shri CS Gupta brought together decades of industrial expertise to create a company that would become a cornerstone of India's railway manufacturing and logistics landscape.",
     achievements: [
       "Established Lauls Ltd. in 1933",
@@ -24,7 +24,7 @@ const leaders = [
     id: "abhay",
     name: "Mr. Abhay Sagar Gupta",
     role: "Director In-Charge",
-    image: "/images/abhay-gupta-new.jpg",
+    image: "/images/abhay.png",
     bio: "With over 30 years of leadership, Mr. Abhay Sagar Gupta has steer Lauls Ltd through various phases of growth and diversification. His strategic vision has been instrumental in securing key partnerships with Indian Railways and TATA Steel.",
     achievements: [
       "30+ Years active leadership",
@@ -37,7 +37,7 @@ const leaders = [
     id: "sudhir",
     name: "Mr. Sudhir Gupta",
     role: "Director, Manufacturing & Trading",
-    image: "/images/sudhir-gupta.jpg",
+    image: "/images/sudhir.png",
     bio: "Focuses on the technical excellence and supply chain efficiency of our manufacturing units and trading operations.",
     achievements: [
       "Manufacturing Excellence",
@@ -50,7 +50,7 @@ const leaders = [
     id: "kanishk",
     name: "Mr. Kanishk Sagar Gupta",
     role: "Director, Logistics",
-    image: "/images/kanishk-gupta-new.jpg",
+    image: "/images/kanishk.png",
     bio: "Mechanical Engineer from University of Nottingham. Specializes in mechanical excellence in logistics and warehousing operations.",
     achievements: [
       "Logistics Automation",
@@ -63,7 +63,7 @@ const leaders = [
     id: "atirav",
     name: "Mr. Atirav Sagar Gupta",
     role: "Director, Operations & HR",
-    image: "/images/atirav-gupta-new.jpg",
+    image: "/images/atirav.png",
     bio: "Educated at IHL Lausanne, Switzerland. Focuses on operational efficiency and modern HR practices.",
     achievements: [
       "Operational Scaling",
@@ -94,11 +94,10 @@ export default function Leadership() {
             <button
               key={leader.id}
               onClick={() => setActiveLeader(leader)}
-              className={`w-full flex items-center gap-4 p-4 rounded-2xl border transition-all text-left ${
-                activeLeader.id === leader.id 
-                  ? "bg-white border-accent shadow-xl shadow-accent/5 ring-4 ring-accent/5" 
-                  : "bg-white border-transparent hover:border-accent/30"
-              }`}
+              className={`w-full flex items-center gap-4 p-4 rounded-2xl border transition-all text-left ${activeLeader.id === leader.id
+                ? "bg-white border-accent shadow-xl shadow-accent/5 ring-4 ring-accent/5"
+                : "bg-white border-transparent hover:border-accent/30"
+                }`}
             >
               <div className="w-14 h-14 rounded-full overflow-hidden bg-primary/10 shrink-0">
                 <Image src={leader.image} alt={leader.name} width={56} height={56} className="object-cover" />
@@ -150,7 +149,7 @@ export default function Leadership() {
                   {activeLeader.name}
                 </h3>
                 <p className="text-primary/50 font-medium mb-8">{activeLeader.role}</p>
-                
+
                 <p className="text-primary/70 text-base leading-relaxed mb-8 italic">
                   &quot;{activeLeader.bio}&quot;
                 </p>

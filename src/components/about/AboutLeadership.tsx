@@ -9,7 +9,7 @@ const executives = [
     id: "abhay",
     name: "Mr. Abhay Sagar Gupta",
     role: "Director In-Charge",
-    image: "/images/abhay-gupta-new.jpg",
+    image: "/images/abhay.png",
     quote: "Our strength lies in building enduring partnerships and delivering consistent value across every vertical we operate in.",
     bio: "With over 30 years of leadership, Mr. Abhay Sagar Gupta has steered Lauls Ltd through various phases of growth and diversification. His strategic vision has been instrumental in securing key partnerships with Indian Railways and TATA Steel.",
     stats: ["30+ Yrs Exp", "Visionary", "Strategy"]
@@ -18,7 +18,7 @@ const executives = [
     id: "sudhir",
     name: "Mr. Sudhir Gupta",
     role: "Director, Manufacturing & Trading",
-    image: "/images/sudhir-gupta.jpg",
+    image: "/images/sudhir.png",
     quote: "Technical excellence and supply chain efficiency are the pillars on which our manufacturing and trading operations stand.",
     bio: "Focuses on the technical excellence and supply chain efficiency of our manufacturing units and trading operations.",
     stats: ["Manufacturing Excellence", "Trading Operations", "Supply Chain"]
@@ -27,7 +27,7 @@ const executives = [
     id: "kanishk",
     name: "Mr. Kanishk Sagar Gupta",
     role: "Director, Logistics",
-    image: "/images/kanishk-gupta-new.jpg",
+    image: "/images/kanishk.png",
     quote: "Precision in logistics and warehousing is what transforms a supply chain into a competitive advantage.",
     bio: "Mechanical Engineer from University of Nottingham. Specializes in mechanical excellence in logistics and warehousing operations.",
     stats: ["Logistics Automation", "Warehousing", "Fleet Mgmt"]
@@ -36,7 +36,7 @@ const executives = [
     id: "atirav",
     name: "Mr. Atirav Sagar Gupta",
     role: "Director, Operations & HR",
-    image: "/images/atirav-gupta-new.jpg",
+    image: "/images/atirav.png",
     quote: "Operational efficiency paired with a strong people-first culture is the foundation of sustainable growth.",
     bio: "Educated at IHL Lausanne, Switzerland. Focuses on operational efficiency and modern HR practices.",
     stats: ["Operations", "HR Culture", "International"]
