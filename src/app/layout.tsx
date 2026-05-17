@@ -3,6 +3,7 @@ import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import FloatingContact from "@/components/FloatingContact";
 import WhatsAppFloatingCTA from "@/components/WhatsAppFloatingCTA";
+import Schema from "@/components/seo/Schema";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,8 +17,10 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lauls.in"),
-  title:
-    "Lauls Ltd | EV Wire Solutions, Round Wire Manufacturers & Industrial Steel",
+  title: {
+    default: "LAULS PRIVATE LIMITED | Industrial Steel & EV Solutions",
+    template: "%s | LAULS PRIVATE LIMITED",
+  },
   description:
     "Leading EV wire solutions and round wire manufacturers in India since 1933. Specialized in alloy steel wire rods, industrial steel manufacturing, and EV supply chain solutions.",
   keywords: [
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
     "lauls ltd"
   ],
   openGraph: {
-    title: "Lauls Ltd | EV Wire Solutions & Industrial Steel Manufacturing",
+    title: "LAULS PRIVATE LIMITED | EV Wire Solutions & Industrial Steel Manufacturing",
     description:
       "Leading EV wire solutions and round wire manufacturers in India since 1933. Specialized in alloy steel wire rods, industrial steel manufacturing, and EV supply chain solutions.",
     url: "https://lauls.in",
@@ -53,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lauls Ltd | EV Wire Solutions & Industrial Steel Manufacturing",
+    title: "LAULS PRIVATE LIMITED | EV Wire Solutions & Industrial Steel Manufacturing",
     description:
       "Leading EV wire solutions and round wire manufacturers in India. Specialized in alloy steel wire rods and EV supply chain.",
     images: ["/images/IMG_9916.JPG"],
@@ -73,38 +76,13 @@ export const metadata: Metadata = {
     canonical: "https://lauls.in",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.svg",
+    apple: "/icon.svg",
   },
   other: {
     "geo.region": "IN-HR",
     "geo.placename": "Faridabad",
   },
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Lauls Ltd",
-  url: "https://lauls.in",
-  logo: "https://lauls.in/images/logo.png",
-  foundingDate: "1933",
-  description:
-    "Leading EV wire solutions and round wire manufacturers in India since 1933. Specialized in alloy steel wire rods, industrial steel manufacturing, and EV supply chain solutions.",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "33-B, N.I.T",
-    addressLocality: "Faridabad",
-    addressRegion: "Haryana",
-    postalCode: "121001",
-    addressCountry: "IN",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+91-129-4098300",
-    contactType: "customer service",
-    email: "info@lauls.in",
-  },
-  sameAs: ["https://www.linkedin.com/company/10073868"],
 };
 
 const faqJsonLd = {
@@ -124,7 +102,7 @@ const faqJsonLd = {
       name: "Do you supply heavy alloy steel rounds?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we operate extensive, strategically located stockyards dedicated to distributing heavy alloy steel, precision tubes, and rounds to meet diverse industrial manufacturing requirements.",
+        text: "We operate extensive stockyards dedicated to distributing heavy alloy steel, precision tubes, and rounds to meet diverse industrial manufacturing requirements.",
       },
     },
     {
@@ -132,7 +110,7 @@ const faqJsonLd = {
       name: "Which ferro alloys do you trade and supply?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "As the sole authorized distributor of TATA Steel Ferro Alloys & Minerals in Northern India, we supply high-quality ferro chrome, ferro manganese, silico manganese, and other essential minerals.",
+        text: "As the authorized distributor of TATA Steel Ferro Alloys & Minerals in Northern India, we supply high-quality ferro chrome, ferro manganese, and other essential minerals.",
       },
     },
     {
@@ -140,7 +118,7 @@ const faqJsonLd = {
       name: "What is your approach to sustainable transport?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We are pioneering sustainable transport with our expanding fleet of electric trucks, significantly reducing carbon footprints and promoting eco-friendly practices in heavy industry operations.",
+        text: "We are pioneering sustainable transport with our expanding fleet of electric trucks, significantly reducing carbon footprints.",
       },
     },
     {
@@ -148,7 +126,7 @@ const faqJsonLd = {
       name: "What are your capabilities in precision tubes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We offer dedicated handling and storage for specialized precision pipes, employing flawless concentric engineering for critical high-pressure systems while maintaining zero-defect methodology.",
+        text: "We offer dedicated handling and storage for specialized precision pipes, employing flawless concentric engineering for critical systems.",
       },
     },
     {
@@ -162,24 +140,7 @@ const faqJsonLd = {
   ],
 };
 
-const webSiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Lauls Ltd",
-  url: "https://lauls.in",
-  description:
-    "Leading EV wire solutions and round wire manufacturers in India since 1933. Specialized in alloy steel wire rods, industrial steel manufacturing, and EV supply chain solutions.",
-  publisher: {
-    "@type": "Organization",
-    name: "Lauls Ltd",
-    logo: "https://lauls.in/images/logo.png",
-  },
-};
-
-// JSON-LD is a static constant - safe to serialize directly
-const jsonLdString = JSON.stringify(jsonLd);
 const faqJsonLdString = JSON.stringify(faqJsonLd);
-const webSiteJsonLdString = JSON.stringify(webSiteJsonLd);
 
 export default function RootLayout({
   children,
@@ -192,17 +153,10 @@ export default function RootLayout({
       className={`${inter.variable} ${outfit.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-primary text-body relative group overflow-x-clip">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: jsonLdString }}
-        />
+        <Schema />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: faqJsonLdString }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: webSiteJsonLdString }}
         />
         {children}
         <FloatingContact />

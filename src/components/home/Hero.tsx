@@ -87,11 +87,13 @@ export default function Hero() {
           >
             <Image
               src={slides[currentSlide].image}
-              alt=""
+              alt="Industrial Manufacturing Background"
               fill
               priority={currentSlide === 0}
               sizes="100vw"
               quality={90}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
               className="object-cover object-center"
             />
           </motion.div>
@@ -159,12 +161,12 @@ export default function Hero() {
               transition={{ delay: 1, duration: 0.6 }}
               className="flex flex-wrap gap-4"
             >
-              <button className="px-8 py-4 bg-accent hover:bg-accent/90 text-white font-medium rounded-lg flex items-center gap-3 transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-accent/20">
-                Explore Our Solutions <ArrowRight size={20} />
+              <button aria-label="Explore Our Solutions" className="px-8 py-4 bg-accent hover:bg-accent/90 text-white font-medium rounded-lg flex items-center gap-3 transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-accent/20">
+                Explore Our Solutions <ArrowRight size={20} aria-hidden="true" />
               </button>
-              <Link href="/contact" className="px-8 py-4 border border-white/20 hover:bg-white/10 text-white font-medium rounded-lg flex items-center gap-3 transition-all group backdrop-blur-sm">
+              <Link aria-label="Contact Us" href="/contact" className="px-8 py-4 border border-white/20 hover:bg-white/10 text-white font-medium rounded-lg flex items-center gap-3 transition-all group backdrop-blur-sm">
                 <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-accent/80 transition-colors">
-                  <Mail size={14} className="ml-1" />
+                  <Mail size={14} className="ml-1" aria-hidden="true" />
                 </span>
                 Contact Us
               </Link>

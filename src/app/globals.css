@@ -52,3 +52,7 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+img[data-nimg] {
+  transition: opacity 0.5s ease-in-out !important;
+}

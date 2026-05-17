@@ -13,6 +13,10 @@ export default function AboutIntro() {
           src="/images/products/steel_rounds_stacked.png" 
           alt="Metal Background" 
           fill 
+          priority
+          sizes="100vw"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
           className="object-cover"
         />
         {/* Dark Navy Gradient from Left to Right */}
@@ -103,6 +107,8 @@ export default function AboutIntro() {
                 fill 
                 className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
                 sizes="(max-width: 1024px) 100vw, 33vw"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
               />
               <div className="absolute inset-0 bg-linear-to-t from-[#0A1628]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
@@ -168,6 +174,8 @@ export default function AboutIntro() {
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                 sizes="(max-width: 1024px) 100vw, 25vw"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
               />
               <div className="absolute inset-0 bg-linear-to-t from-[#0A1628]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>

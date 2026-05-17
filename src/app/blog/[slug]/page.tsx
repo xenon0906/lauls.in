@@ -22,7 +22,7 @@ export async function generateMetadata(
   }
 
   return {
-    title: `${blog.title} | Lauls Ltd Blog`,
+    title: `${blog.title} | LAULS PRIVATE LIMITED Blog`,
     description: blog.excerpt,
     openGraph: {
       title: blog.title,
@@ -39,6 +39,12 @@ export async function generateMetadata(
           alt: blog.title,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.excerpt,
+      images: [blog.featuredImage],
     },
     alternates: { canonical: `https://lauls.in/blog/${blog.slug}` },
   };

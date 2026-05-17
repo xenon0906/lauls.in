@@ -85,7 +85,7 @@ export default function FerroAlloysPage() {
               className={`flex flex-col lg:flex-row items-center gap-10 ${idx % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
             >
               <div className="w-full lg:w-2/5 rounded-2xl overflow-hidden aspect-4/3 shadow-xl relative">
-                <Image src={p.image} alt={p.name} fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover hover:scale-105 transition-transform duration-700" />
+                <Image src={p.image} alt={p.name} fill sizes="(max-width: 1024px) 100vw, 40vw" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=" className="object-cover hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="w-full lg:w-3/5">
                 <div className="text-[#DCA54C] text-[10px] font-black uppercase tracking-widest mb-2">{p.grade}</div>
@@ -93,8 +93,10 @@ export default function FerroAlloysPage() {
                 <p className="text-gray-600 font-light leading-relaxed mb-6">{p.desc}</p>
                 <div className="font-mono text-xs text-gray-500 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3 mb-6">{p.specs}</div>
                 <div className="text-sm text-gray-500 mb-8 italic">Used for: {p.use}</div>
-                <Link href={`/contact?product=${encodeURIComponent(p.name)}&intent=quote#contact-form`} className="inline-flex items-center gap-2 px-6 py-3 bg-[#DCA54C] text-[#0A1628] font-bold rounded-lg hover:bg-[#c5923b] transition-all text-sm shadow-lg">
-                  Get a Quote Today <ArrowRight size={14} />
+                <Link href={`/contact?product=${encodeURIComponent(p.name)}&intent=quote#contact-form`} aria-label={`Request quote for ${p.name}`}>
+                  <button aria-label="Request Bulk Quote" className="w-full py-4 bg-[#DCA54C] text-[#0A1628] font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-[#c5923b] transition-all shadow-xl shadow-[#DCA54C]/20 group">
+                    Request Bulk Quote <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                  </button>
                 </Link>
               </div>
             </motion.div>

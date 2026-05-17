@@ -37,7 +37,7 @@ export default function AboutPillars() {
               <p className="text-gray-600 text-base">End-to-end logistics solutions, ensuring reliable supply chains and operational efficiency.</p>
             </div>
             <div className="w-full md:w-7/12 relative h-[240px] md:h-auto md:rounded-l-[4rem] overflow-hidden shadow-[-10px_0_20px_rgba(0,0,0,0.04)] z-20">
-              <Image src="/lauls image/Screenshot 2026-05-12 at 8.21.18 PM.png" fill className="object-cover" alt="Logistics" />
+              <Image src="/lauls image/Screenshot 2026-05-12 at 8.21.18 PM.png" fill sizes="(max-width: 1024px) 100vw, 33vw" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=" className="object-cover" alt="Logistics" />
             </div>
           </div>
 
@@ -45,7 +45,7 @@ export default function AboutPillars() {
           {/* 3. Machine Card (Tall, spans 2 rows) */}
           <div className="col-span-1 lg:row-span-2 bg-white rounded-[3rem] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.06)] overflow-hidden flex flex-col relative z-20 hover:-translate-y-2 transition-transform duration-500 border border-white/60 h-full min-h-[480px]">
             <div className="h-[280px] lg:h-[360px] relative w-full border-b border-gray-50">
-              <Image src="/lauls image/image copy.png" fill className="object-cover" alt="Steel Rounds" />
+              <Image src="/lauls image/image copy.png" fill sizes="(max-width: 1024px) 100vw, 33vw" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=" className="object-cover" alt="Steel Rounds" />
             </div>
             <div className="p-8 lg:p-10 flex-1 flex flex-col justify-center bg-white relative z-10">
               <h3 className="text-2xl font-bold text-[#0A1628] mb-2">Steel Rounds</h3>
@@ -68,7 +68,7 @@ export default function AboutPillars() {
           {/* 5. Highway Trucks */}
           <div className="col-span-1 bg-white rounded-[3rem] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.06)] overflow-hidden flex flex-col relative z-20 hover:-translate-y-2 transition-transform duration-500 border border-white/60 h-full min-h-[360px]">
             <div className="h-[200px] lg:h-[220px] relative w-full border-b border-gray-50">
-              <Image src="/lauls image/image.png" fill className="object-cover" alt="Ferro Alloys" />
+              <Image src="/lauls image/image.png" fill sizes="(max-width: 1024px) 100vw, 33vw" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=" className="object-cover" alt="Ferro Alloys" />
             </div>
             <div className="p-8 flex-1 flex flex-col justify-center bg-white">
               <h3 className="text-xl font-bold text-[#0A1628] mb-2">Ferro Alloys</h3>
@@ -79,7 +79,7 @@ export default function AboutPillars() {
           {/* 6. EV Trucks */}
           <div className="col-span-1 bg-white rounded-[3rem] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.06)] overflow-hidden flex flex-col relative z-20 hover:-translate-y-2 transition-transform duration-500 border border-white/60 h-full min-h-[360px]">
             <div className="h-[200px] lg:h-[220px] relative w-full border-b border-gray-50">
-              <Image src="/lauls image/image copy 4.png" fill className="object-cover" alt="Electric Truck" />
+              <Image src="/lauls image/image copy 4.png" fill sizes="(max-width: 1024px) 100vw, 33vw" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=" className="object-cover" alt="Electric Truck" />
             </div>
             <div className="p-8 flex-1 flex flex-col justify-center bg-white">
               <h3 className="text-xl font-bold text-[#0A1628] mb-2">Electric Truck</h3>
@@ -90,7 +90,7 @@ export default function AboutPillars() {
           {/* 7. Meeting */}
           <div className="col-span-1 bg-white rounded-[3rem] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.06)] overflow-hidden flex flex-col relative z-20 hover:-translate-y-2 transition-transform duration-500 border border-white/60 h-full min-h-[360px]">
             <div className="h-[200px] lg:h-[220px] relative w-full border-b border-gray-50">
-              <Image src="/lauls image/image copy 5.png" fill className="object-cover" alt="Wire Rods" />
+              <Image src="/lauls image/image copy 5.png" fill sizes="(max-width: 1024px) 100vw, 33vw" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=" className="object-cover" alt="Wire Rods" />
             </div>
             <div className="p-8 flex-1 flex flex-col justify-center bg-white">
               <h3 className="text-xl font-bold text-[#0A1628] mb-2">Wire Rods</h3>
@@ -103,7 +103,7 @@ export default function AboutPillars() {
         {/* Footer Credit (Matching the bottom right of the image) */}
         <div className="mt-16 flex justify-end items-center gap-3 opacity-60">
           <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-blue-500 to-blue-300" />
-          <p className="text-sm font-medium text-[#0A1628]">Designed by <span className="font-bold">Lauls Creative</span></p>
+          <p className="text-sm font-medium text-[#0A1628]">Designed by <span className="font-bold">LAULS PRIVATE LIMITED</span></p>
         </div>
 
       </div>

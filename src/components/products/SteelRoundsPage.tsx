@@ -69,7 +69,7 @@ export default function SteelRoundsPage() {
               className={`flex flex-col lg:flex-row items-center gap-10 ${idx % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
             >
               <div className="w-full lg:w-2/5 rounded-2xl overflow-hidden aspect-4/3 shadow-xl relative">
-                <Image src={p.image} alt={p.name} fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover hover:scale-105 transition-transform duration-700" />
+                <Image src={p.image} alt={p.name} fill sizes="(max-width: 1024px) 100vw, 40vw" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=" className="object-cover hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="w-full lg:w-3/5">
                 <div className="text-emerald-600 text-[10px] font-black uppercase tracking-widest mb-2">{p.grade}</div>
