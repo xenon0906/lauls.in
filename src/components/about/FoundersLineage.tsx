@@ -63,7 +63,7 @@ export default function FoundersLineage() {
   const dot3Opacity = useTransform(scrollYProgress, [0.7, 1], [0.3, 1]);
 
   return (
-    <section ref={targetRef} className="relative bg-[#FFFCF8] h-[300vh] w-full">
+    <section id="heritage" ref={targetRef} className="relative bg-[#FFFCF8] h-[300vh] w-full">
       {/* Sticky container that pins to the screen */}
       <div className="sticky top-0 h-screen flex flex-col overflow-hidden pt-24 lg:pt-32 pb-12 w-full max-w-[100vw]">
         

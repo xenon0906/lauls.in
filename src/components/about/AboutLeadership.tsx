@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -46,11 +46,24 @@ const executives = [
 export default function AboutLeadership() {
   const [activeLeader, setActiveLeader] = useState(executives[0]);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const leaderId = params.get("leader");
+      if (leaderId) {
+        const found = executives.find((exec) => exec.id === leaderId);
+        if (found) {
+          setActiveLeader(found);
+        }
+      }
+    }
+  }, []);
+
   // Filter out the active leader to show the remaining 3 as thumbnails
   const remainingLeaders = executives.filter(exec => exec.id !== activeLeader.id);
 
   return (
-    <section className="bg-[#f8fafc] py-24 w-full">
+    <section id="leadership" className="bg-[#f8fafc] py-24 w-full">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Section Header */}

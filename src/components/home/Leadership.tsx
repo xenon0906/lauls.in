@@ -5,6 +5,7 @@ import SectionWrapper from "../SectionWrapper";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const leaders = [
   {
@@ -163,10 +164,17 @@ export default function Leadership() {
                   ))}
                 </div>
 
-                <button className="px-8 py-3.5 bg-accent text-white font-bold rounded-xl hover:bg-accent/90 transition-all flex items-center gap-2 self-start ring-4 ring-accent/10">
+                <Link
+                  href={
+                    activeLeader.id === "visionaries"
+                      ? "/about#heritage"
+                      : `/about?leader=${activeLeader.id}#leadership`
+                  }
+                  className="px-8 py-3.5 bg-accent text-white font-bold rounded-xl hover:bg-accent/90 transition-all flex items-center gap-2 self-start ring-4 ring-accent/10 text-center cursor-pointer"
+                >
                   <span className="text-white fill-white"><ChevronRight size={18} /></span>
                   {activeLeader.fullStory}
-                </button>
+                </Link>
               </div>
             </motion.div>
           </AnimatePresence>

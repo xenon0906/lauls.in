@@ -101,11 +101,7 @@ export default function Pillars() {
 
         </div>
 
-        {/* Footer Credit (Matching the bottom right of the image) */}
-        <div className="mt-16 flex justify-end items-center gap-3 opacity-60">
-          <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-blue-500 to-blue-300" />
-          <p className="text-sm font-medium text-[#0A1628]">Designed by <span className="font-bold">LAULS PRIVATE LIMITED</span></p>
-        </div>
+
 
       </div>
     </SectionWrapper>
