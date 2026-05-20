@@ -5,6 +5,7 @@ import SectionWrapper from "../SectionWrapper";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 import Link from "next/link";
 
 const leaders = [
@@ -12,7 +13,7 @@ const leaders = [
     id: "visionaries",
     name: "Mr. SR Laul & Late Shri CS Gupta",
     role: "Founding Visionaries",
-    image: "/images/founders.png",
+    image: cloudinary("images/founders.png"),
     bio: "The visionary founders who laid the foundation of Lauls Ltd. in 1933. Mr. SR Laul and Late Shri CS Gupta brought together decades of industrial expertise to create a company that would become a cornerstone of India's railway manufacturing and logistics landscape.",
     achievements: [
       "Established Lauls Ltd. in 1933",
@@ -25,7 +26,7 @@ const leaders = [
     id: "abhay",
     name: "Mr. Abhay Sagar Gupta",
     role: "Director In-Charge",
-    image: "/images/abhay.png",
+    image: cloudinary("images/abhay.png"),
     bio: "With over 30 years of leadership, Mr. Abhay Sagar Gupta has steer Lauls Ltd through various phases of growth and diversification. His strategic vision has been instrumental in securing key partnerships with Indian Railways and TATA Steel.",
     achievements: [
       "30+ Years active leadership",
@@ -38,7 +39,7 @@ const leaders = [
     id: "sudhir",
     name: "Mr. Sudhir Gupta",
     role: "Director, Manufacturing & Trading",
-    image: "/images/sudhir.png",
+    image: cloudinary("images/sudhir.png"),
     bio: "Focuses on the technical excellence and supply chain efficiency of our manufacturing units and trading operations.",
     achievements: [
       "Manufacturing Excellence",
@@ -51,7 +52,7 @@ const leaders = [
     id: "kanishk",
     name: "Mr. Kanishk Sagar Gupta",
     role: "Director, Logistics",
-    image: "/images/kanishk.png",
+    image: cloudinary("images/kanishk.png"),
     bio: "Mechanical Engineer from University of Nottingham. Specializes in mechanical excellence in logistics and warehousing operations.",
     achievements: [
       "Logistics Automation",
@@ -64,7 +65,7 @@ const leaders = [
     id: "atirav",
     name: "Mr. Atirav Sagar Gupta",
     role: "Director, Operations & HR",
-    image: "/images/atirav.png",
+    image: cloudinary("images/atirav.png"),
     bio: "Educated at IHL Lausanne, Switzerland. Focuses on operational efficiency and modern HR practices.",
     achievements: [
       "Operational Scaling",

@@ -1,10 +1,12 @@
+import { cloudinary } from "@/utils/cloudinary";
+
 export default function Schema() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "LAULS PRIVATE LIMITED",
     url: "https://lauls.in",
-    logo: "https://lauls.in/images/logo.png",
+    logo: cloudinary("images/logo.png"),
     foundingDate: "1933",
     description: "Leading EV wire solutions and round wire manufacturers in India since 1933. Specialized in alloy steel wire rods, industrial steel manufacturing, and EV supply chain solutions.",
     address: {
@@ -33,7 +35,7 @@ export default function Schema() {
     publisher: {
       "@type": "Organization",
       name: "LAULS PRIVATE LIMITED",
-      logo: "https://lauls.in/images/logo.png",
+      logo: cloudinary("images/logo.png"),
     },
   };
 

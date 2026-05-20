@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 
 const services = [
   {
     title: "Pan-India Dedicated Fleet",
     subtitle: "Heavy haulage across every state",
     desc: "Maintaining our own fleet of over 400 heavy commercial vehicles gives us complete control over supply chain timelines. We ensure zero third-party dependencies for enterprise critical cargo.",
-    image: "/images/IMG_9993.JPG",
+    image: cloudinary("images/IMG_9993.JPG"),
     chips: [
       { label: "Coverage", value: "All Indian States" },
       { label: "Cargo Types", value: "Bulk, Over-Dimensional" },
@@ -21,7 +22,7 @@ const services = [
     title: "Rail Freight Operations",
     subtitle: "Bulk material movement at scale",
     desc: "For unparalleled scale, Lauls Ltd operates dedicated railway sidings to mobilize tens of thousands of tons of raw material across the continent efficiently and affordably.",
-    image: "/lauls image/IMG_9916.JPG",
+    image: cloudinary("lauls image/IMG_9916.JPG"),
     chips: [
       { label: "Capacity", value: "Mass Bulk Freight" },
       { label: "Network", value: "Direct Port/Mill Connect" },
@@ -32,7 +33,7 @@ const services = [
     title: "Zero-Emission EV Transport",
     subtitle: "Pioneering green logistics",
     desc: "We are aggressively electrifying our last-mile and mid-range fleet, deploying state-of-the-art Heavy Electric Trucks to decarbonize supply chains for our ESG-conscious partners.",
-    image: "/lauls image/image copy 4.png",
+    image: cloudinary("lauls image/image copy 4.png"),
     chips: [
       { label: "Emissions", value: "Net-Zero Fleet" },
       { label: "Use Case", value: "Sustainable Mid-Mile" },
@@ -43,7 +44,7 @@ const services = [
     title: "Strategic Warehousing",
     subtitle: "12 high-capacity national hubs",
     desc: "Our interconnected warehouse network offers secure, massive-scale storage for steel and alloys, enabling direct JIT (Just-In-Time) supply models directly to automotive plants and construction zones.",
-    image: "/lauls image/image copy 9.png",
+    image: cloudinary("lauls image/image copy 9.png"),
     chips: [
       { label: "Facilities", value: "12 Distribution Hubs" },
       { label: "Services", value: "JIT, Inventory Management" },

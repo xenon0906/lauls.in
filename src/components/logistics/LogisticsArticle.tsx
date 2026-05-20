@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 
 export default function LogisticsArticle() {
   return (
@@ -49,7 +50,7 @@ export default function LogisticsArticle() {
 
         <div className="relative w-full aspect-video rounded-2xl overflow-hidden my-12 group">
            <Image
-              src="/images/IMG_9993.JPG"
+              src={cloudinary("images/IMG_9993.JPG")}
               alt="Train logistics"
               fill
               sizes="(max-width: 768px) 100vw, 768px"

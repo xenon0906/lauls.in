@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MoveRight, PackageSearch, ShieldCheck, Factory } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 
 const features = [
   {
@@ -91,7 +92,7 @@ export default function LogisticsPrecisionTubes() {
             className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group"
           >
             <Image
-              src="/images/IMG_9988.JPG"
+              src={cloudinary("images/IMG_9988.JPG")}
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

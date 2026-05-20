@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 
 export default function ContactHero() {
   return (
     <section className="relative w-full h-[60vh] md:h-[65vh] bg-[#0A1628] overflow-hidden flex items-center">
       <Image
-        src="/images/business-goals.jpg"
+        src={cloudinary("images/business-goals.jpg")}
         alt=""
         fill
         sizes="100vw"

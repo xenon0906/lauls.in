@@ -3,6 +3,7 @@
 import { useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 import { ArrowRight } from "lucide-react";
 
 const productCategories = [
@@ -10,35 +11,35 @@ const productCategories = [
     category: "Ferro Alloys",
     href: "/products/ferro-alloys",
     items: [
-      { name: "Ferro Manganese", image: "/images/products/ferro_manganese_1778571486667.png" },
-      { name: "Ferro Chrome", image: "/images/products/ferro_chrome_1778571501692.png" },
-      { name: "Ferro Silicon", image: "/images/products/ferro_silicon_1778571520226.png" },
-      { name: "Silico Manganese", image: "/images/products/silico_manganese_1778571539533.png" },
+      { name: "Ferro Manganese", image: cloudinary("images/products/ferro_manganese_1778571486667.png") },
+      { name: "Ferro Chrome", image: cloudinary("images/products/ferro_chrome_1778571501692.png") },
+      { name: "Ferro Silicon", image: cloudinary("images/products/ferro_silicon_1778571520226.png") },
+      { name: "Silico Manganese", image: cloudinary("images/products/silico_manganese_1778571539533.png") },
     ],
   },
   {
     category: "Wire Rods",
     href: "/products/wire-rods",
     items: [
-      { name: "Alloy Steel Wire Rods", image: "/images/products/alloy_wire_rods_1778571554783.png" },
-      { name: "Mild Steel Wire Rods", image: "/images/products/mild_wire_rods_1778571571818.png" },
-      { name: "Stainless Steel Wire Rods", image: "/images/products/stainless_wire_rods_1778571588871.png" },
+      { name: "Alloy Steel Wire Rods", image: cloudinary("images/products/alloy_wire_rods_1778571554783.png") },
+      { name: "Mild Steel Wire Rods", image: cloudinary("images/products/mild_wire_rods_1778571571818.png") },
+      { name: "Stainless Steel Wire Rods", image: cloudinary("images/products/stainless_wire_rods_1778571588871.png") },
     ],
   },
   {
     category: "Steel Rounds",
     href: "/products/steel-rounds",
     items: [
-      { name: "Alloy Steel Rounds", image: "/images/products/alloy_steel_rounds_1778571606218.png" },
-      { name: "Mild Steel Rounds", image: "/images/products/mild_steel_rounds_1778571621519.png" },
+      { name: "Alloy Steel Rounds", image: cloudinary("images/products/alloy_steel_rounds_1778571606218.png") },
+      { name: "Mild Steel Rounds", image: cloudinary("images/products/mild_steel_rounds_1778571621519.png") },
     ],
   },
   {
     category: "Precision Tubes",
     href: "/products/precision-tubes",
     items: [
-      { name: "ERW Steel Tubes", image: "/images/products/erw_steel_tubes_1778571635920.png" },
-      { name: "Square & Rectangular Sections", image: "/images/products/hollow_sections_1778571651283.png" },
+      { name: "ERW Steel Tubes", image: cloudinary("images/products/erw_steel_tubes_1778571635920.png") },
+      { name: "Square & Rectangular Sections", image: cloudinary("images/products/hollow_sections_1778571651283.png") },
     ],
   },
 ];

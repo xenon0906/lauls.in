@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import WireRodsPage from "@/components/products/WireRodsPage";
+import { cloudinary } from "@/utils/cloudinary";
 
 export const metadata: Metadata = {
   title: "EV Wire Solutions & Alloy Steel Wire Rods | Lauls Ltd",
@@ -18,7 +19,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
   name: "Alloy Steel Wire Rods & EV Wire Solutions",
-  image: "https://lauls.in/images/products/alloy_wire_rods_1778571554783.png",
+  image: cloudinary("images/products/alloy_wire_rods_1778571554783.png"),
   description: "Precision-rolled alloy steel wire rods and EV wire solutions for demanding industrial applications including suspension springs, EV components, and cold-headed bolts.",
   brand: {
     "@type": "Brand",

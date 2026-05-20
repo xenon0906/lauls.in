@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
+import { cloudinary } from "@/utils/cloudinary";
 import FloatingContact from "@/components/FloatingContact";
 import WhatsAppFloatingCTA from "@/components/WhatsAppFloatingCTA";
 import Schema from "@/components/seo/Schema";
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/IMG_9916.JPG",
+        url: cloudinary("images/IMG_9916.JPG"),
         width: 1200,
         height: 630,
         alt: "Lauls Ltd — Industrial Steel Manufacturing",
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
     title: "LAULS PRIVATE LIMITED | EV Wire Solutions & Industrial Steel Manufacturing",
     description:
       "Leading EV wire solutions and round wire manufacturers in India. Specialized in alloy steel wire rods and EV supply chain.",
-    images: ["/images/IMG_9916.JPG"],
+    images: [cloudinary("images/IMG_9916.JPG")],
   },
   robots: {
     index: true,

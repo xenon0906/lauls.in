@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -10,7 +11,7 @@ export default function AboutIntro() {
       {/* Hero-style Background Image Overlays with Attractive Cut Line */}
       <div className="absolute top-0 left-0 w-full h-[520px] lg:h-[620px] z-0 overflow-hidden border-b-2 border-highlight/60 shadow-[0_10px_40px_rgba(0,0,0,0.1)]">
         <Image 
-          src="/images/products/steel_rounds_stacked.png" 
+          src={cloudinary("images/products/steel_rounds_stacked.png")} 
           alt="Metal Background" 
           fill 
           priority
@@ -102,7 +103,7 @@ export default function AboutIntro() {
               className="w-full relative shadow-2xl flex-grow min-h-[300px] rounded-xl overflow-hidden group"
             >
               <Image 
-                src="/images/products/ferro_alloys_raw.png" 
+                src={cloudinary("images/products/ferro_alloys_raw.png")} 
                 alt="Molten Alloy Casting" 
                 fill 
                 className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
@@ -169,7 +170,7 @@ export default function AboutIntro() {
               className="w-full relative shadow-xl flex-grow min-h-[250px] rounded-xl overflow-hidden group"
             >
               <Image 
-                src="/images/products/precision_tubes_erw.png" 
+                src={cloudinary("images/products/precision_tubes_erw.png")} 
                 alt="Precision Manufacturing" 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-110"

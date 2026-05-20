@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Crown, Heart } from "lucide-react";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 import { useRef } from "react";
 
 const founders = [
@@ -11,7 +12,7 @@ const founders = [
     name: "Shri Girdhari Lal",
     role: "Patriarch & Visionary Founder",
     relation: "Grandfather Generation",
-    portrait: "/images/founders.png",
+    portrait: cloudinary("images/founders.png"),
     bio: "Shri Girdhari Lal laid the first stone of what would become a 90-year industrial dynasty. Starting with a small trading post in Northern India, he built the foundational values of integrity, reliability, and long-term partnerships that still guide the company today.",
     legacy: "Founder of the original trading house that seeded the Lauls enterprise.",
     accentColor: "#DCA54C", 
@@ -22,7 +23,7 @@ const founders = [
     name: "Shri Madan Lal",
     role: "Industrial Pioneer & Builder",
     relation: "Father's Generation",
-    portrait: "/images/sudhir.png",
+    portrait: cloudinary("images/sudhir.png"),
     bio: "Inheriting a sturdy foundation, Shri Madan Lal fearlessly scaled the enterprise into steel trading and logistics. His visionary decision to partner with national railways and steel mills during India's industrialisation era transformed a regional firm into a trusted national operator.",
     legacy: "Expanded into steel and logistics, establishing government and railway partnerships.",
     accentColor: "#DCA54C",
@@ -33,7 +34,7 @@ const founders = [
     name: "The Present Directors",
     role: "Third Generation Leadership",
     relation: "Current Generation",
-    portrait: "/images/atirav.png",
+    portrait: cloudinary("images/atirav.png"),
     bio: "Carrying the torch forward, the third generation has modernised operations across EV logistics, digital supply chains, and global ferro alloy distribution — preserving the family's 90-year reputation while steering Lauls into the future of Indian industry.",
     legacy: "Leading sustainability, EV fleet expansion and pan-India distribution growth.",
     accentColor: "#0A1628", 

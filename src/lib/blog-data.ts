@@ -1,3 +1,5 @@
+import { cloudinary } from "@/utils/cloudinary";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -18,7 +20,7 @@ export const blogs: BlogPost[] = [
     date: "2026-05-10",
     author: "Industrial Insights Team",
     readTime: "8 min read",
-    featuredImage: "/images/IMG_9988.JPG",
+    featuredImage: cloudinary("images/IMG_9988.JPG"),
     tags: ["Steel Manufacturing", "Innovation", "India", "Industrial Raw Materials"],
     content: `
       <h2>The Genesis of India's Steel Industry</h2>
@@ -48,7 +50,7 @@ export const blogs: BlogPost[] = [
     date: "2026-04-28",
     author: "Technical Engineering Group",
     readTime: "6 min read",
-    featuredImage: "/images/IMG_9877.JPG",
+    featuredImage: cloudinary("images/IMG_9877.JPG"),
     tags: ["Wire Rods", "Infrastructure", "Alloy Steel", "Engineering"],
     content: `
       <h2>Understanding Alloy Steel Wire Rods</h2>
@@ -75,7 +77,7 @@ export const blogs: BlogPost[] = [
     date: "2026-04-15",
     author: "Supply Chain & Logistics Division",
     readTime: "7 min read",
-    featuredImage: "/images/IMG_0033.JPG",
+    featuredImage: cloudinary("images/IMG_0033.JPG"),
     tags: ["Logistics", "Electric Trucking", "Sustainability", "Supply Chain"],
     content: `
       <h2>The Urgent Need for Sustainable Manufacturing</h2>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowLeft, ArrowRight, FlaskConical } from "lucide-react";
@@ -11,7 +12,7 @@ const products = [
   {
     name: "Ferro Manganese",
     grade: "HC / MC / LC",
-    image: "/images/products/ferro_alloys_raw.png",
+    image: cloudinary("images/products/ferro_alloys_raw.png"),
     use: "Deoxidiser & desulphuriser in steel production",
     specs: "Mn: 60–75% | C: 0.1–7%",
     desc: "Ferro Manganese is essential in steel manufacturing as a deoxidiser and desulphuriser. Lauls sources HC, MC, and LC grades from premium smelters to serve diverse steel mill specifications.",
@@ -19,7 +20,7 @@ const products = [
   {
     name: "Ferro Chrome",
     grade: "HC / MC / LC",
-    image: "/images/products/ferro_alloys_raw.png",
+    image: cloudinary("images/products/ferro_alloys_raw.png"),
     use: "Essential for stainless and alloy steel production",
     specs: "Cr: 50–70% | C: 0.03–8%",
     desc: "Ferro Chrome is the primary source of chromium in stainless and alloy steels, providing corrosion resistance, hardness, and high-temperature strength. We supply multiple grades to suit your specific alloying requirements.",
@@ -27,7 +28,7 @@ const products = [
   {
     name: "Ferro Silicon",
     grade: "FeSi 45 / 65 / 75",
-    image: "/images/products/ferro_alloys_raw.png",
+    image: cloudinary("images/products/ferro_alloys_raw.png"),
     use: "Strengthening and deoxidising steel & cast iron",
     specs: "Si: 45–75% | Al: <2%",
     desc: "Ferro Silicon is used as both a deoxidising and alloying agent. It improves the strength, elasticity, and corrosion resistance of steel and cast iron, available in FeSi 45, 65, and 75 grades.",
@@ -35,7 +36,7 @@ const products = [
   {
     name: "Silico Manganese",
     grade: "Standard / High-Grade",
-    image: "/images/products/ferro_alloys_raw.png",
+    image: cloudinary("images/products/ferro_alloys_raw.png"),
     use: "Combined deoxidiser and alloying element",
     specs: "Mn: 60–68% | Si: 14–20%",
     desc: "Silico Manganese is a combined deoxidiser and alloying agent used widely in structural steel production. It simultaneously provides deoxidising and manganese-alloying benefits, reducing costs versus separate additions.",
@@ -50,7 +51,7 @@ export default function FerroAlloysPage() {
       {/* Hero */}
       <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <Image
-          src="/images/products/ferro_alloys_raw.png"
+          src={cloudinary("images/products/ferro_alloys_raw.png")}
           alt="Raw Ferro Alloys"
           fill
           sizes="100vw"

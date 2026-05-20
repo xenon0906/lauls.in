@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Clock, Calendar, Share2 } from "lucide-react";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 
 export default function LogisticsDetailsHero() {
   return (
@@ -60,7 +61,7 @@ export default function LogisticsDetailsHero() {
       >
         <div className="relative w-full aspect-[21/9] md:aspect-[3/1] rounded-3xl overflow-hidden shadow-2xl bg-[#0A1628]">
           <Image
-            src="/images/stockyard-lauls.jpg"
+            src={cloudinary("images/stockyard-lauls.jpg")}
             alt="Lauls Fleet Cover"
             fill
             className="object-cover object-center opacity-90"

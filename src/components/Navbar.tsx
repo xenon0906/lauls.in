@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProductCatalogGrid from "./products/ProductCatalogGrid";
@@ -99,7 +100,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center gap-2">
           <Image
-            src="/images/logo.png"
+            src={cloudinary("images/logo.png")}
             alt="Lauls Ltd"
             width={144}
             height={22}

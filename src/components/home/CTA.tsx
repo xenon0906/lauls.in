@@ -3,15 +3,16 @@
 import Link from "next/link";
 import { Phone, Clock, ShieldCheck, Globe, FileText, Mail } from "lucide-react";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const ctaImages = [
-  "/images/IMG_9916.JPG",
-  "/images/IMG_9939.JPG",
-  "/images/IMG_9944.JPG",
-  "/images/IMG_9978.JPG",
-  "/images/IMG_9988.JPG"
+  cloudinary("images/IMG_9916.JPG"),
+  cloudinary("images/IMG_9939.JPG"),
+  cloudinary("images/IMG_9944.JPG"),
+  cloudinary("images/IMG_9978.JPG"),
+  cloudinary("images/IMG_9988.JPG")
 ];
 
 export default function CTA() {

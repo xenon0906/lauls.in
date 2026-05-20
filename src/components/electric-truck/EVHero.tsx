@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 
 export default function EVHero() {
   return (
@@ -10,7 +11,7 @@ export default function EVHero() {
       {/* Immersive Background Layer - EV/Green Logistics */}
       <div className="absolute inset-0">
         <Image
-          src="/lauls image/image copy 10.png"
+          src={cloudinary("lauls image/image copy 10.png")}
           alt=""
           fill
           sizes="100vw"

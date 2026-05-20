@@ -2,30 +2,31 @@
 
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 
 const locations = [
   {
     title: "Corporate Headquarters",
     description: "Plot No. 33 B Nit, Faridabad, Haryana - 121001, India",
-    mapImage: "/images/stockyard.jpg",
+    mapImage: cloudinary("images/stockyard.jpg"),
     mapLink: "https://www.google.com/maps/search/33+B+Nit,+Faridabad"
   },
   {
     title: "Delhi Distribution Hub",
     description: "C-55/2, Wazirpur Industrial Area, New Delhi - 110052, India",
-    mapImage: "/images/warehouse.jpg",
+    mapImage: cloudinary("images/warehouse.jpg"),
     mapLink: "https://www.google.com/maps/search/Wazirpur+Industrial+Area,+New+Delhi"
   },
   {
     title: "Central Warehousing",
     description: "Plot No. 1401/2 & 1415, GIDC Industrial Estate, Palwal, Haryana, India",
-    mapImage: "/images/stockyard-lauls.jpg",
+    mapImage: cloudinary("images/stockyard-lauls.jpg"),
     mapLink: "https://www.google.com/maps/search/Palwal+Haryana"
   },
   {
     title: "Regional Sales Office",
     description: "1603 to 1605, Block - D, Westgate Highway, Ahmedabad, Gujarat - 380015, India",
-    mapImage: "/images/trading.jpg",
+    mapImage: cloudinary("images/trading.jpg"),
     mapLink: "https://www.google.com/maps/search/Ahmedabad+Gujarat"
   }
 ];

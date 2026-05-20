@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { cloudinary } from "@/utils/cloudinary";
 import { Globe, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
@@ -21,7 +22,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
              <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center gap-2">
-              <Image src="/images/logo.png" alt="Lauls Ltd" width={144} height={32} className="h-8 w-auto" />
+              <Image src={cloudinary("images/logo.png")} alt="Lauls Ltd" width={144} height={32} className="h-8 w-auto" />
             </Link>
             <p className="text-white/40 text-sm leading-relaxed">
               Engineering the backbone of Indian Railways and powering the EV supply chain. A legacy of precision wire rods, trust, and industrial steel excellence since 1933.

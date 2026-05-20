@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowLeft, ArrowRight, Cylinder } from "lucide-react";
@@ -11,7 +12,7 @@ const products = [
   {
     name: "ERW Steel Tubes",
     grade: "IS 1239 / IS 3601 / ASTM A513",
-    image: "/images/products/precision_tubes_erw.png",
+    image: cloudinary("images/products/precision_tubes_erw.png"),
     use: "Structural, mechanical & automotive tube applications",
     specs: "OD: 15mm – 168mm | WT: 1.6mm – 8mm",
     desc: "Electric Resistance Welded (ERW) Steel Tubes are manufactured under rigorous quality controls and are the industry standard for structural, mechanical, and automotive applications. Lauls supplies ERW tubes conforming to IS 1239, IS 3601, and ASTM A513 standards.",
@@ -19,7 +20,7 @@ const products = [
   {
     name: "Square & Rectangular Hollow Sections",
     grade: "IS 4923",
-    image: "/images/products/precision_tubes_erw.png",
+    image: cloudinary("images/products/precision_tubes_erw.png"),
     use: "Fabrication, furniture & construction frames",
     specs: "Size: 20×20 – 150×150mm | WT: 1.6–6mm",
     desc: "Square and Rectangular Hollow Sections (SHS/RHS) are the preferred structural shape for modern construction, industrial frames, furniture, and gates. All our hollow sections comply with IS 4923 and are available in a wide range of sizes and wall thicknesses.",
@@ -34,7 +35,7 @@ export default function PrecisionTubesPage() {
       {/* Hero */}
       <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <Image
-          src="/images/products/precision_tubes_erw.png"
+          src={cloudinary("images/products/precision_tubes_erw.png")}
           alt="Precision Tubes"
           fill
           sizes="100vw"

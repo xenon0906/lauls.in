@@ -3,13 +3,14 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 
 const initiatives = [
   {
     title: "Education & Skilling",
     subtitle: "Empowering the next generation",
     desc: "We fund and operate multiple rural schools and vocational training centers near our manufacturing hubs. By providing scholarships and modern technical skilling, we ensure local youths are prepared for high-tech industrial careers.",
-    image: "/images/savera.png",
+    image: cloudinary("images/savera.png"),
     chips: [
       { label: "Impact", value: "5,000+ Students Annually" },
       { label: "Focus", value: "STEM & Vocational" },
@@ -20,7 +21,7 @@ const initiatives = [
     title: "Environmental Sustainability",
     subtitle: "Aggressive decarbonization",
     desc: "Beyond strictly adhering to EPA regulations, Lauls Ltd is actively investing in captive solar power plants and large-scale afforestation drives to offset the carbon footprint of our steel operations.",
-    image: "/images/solar.jpg",
+    image: cloudinary("images/solar.jpg"),
     chips: [
       { label: "Renewables", value: "25MW Captive Solar" },
       { label: "Ecology", value: "2M Trees Planted" },
@@ -31,7 +32,7 @@ const initiatives = [
     title: "Community Healthcare",
     subtitle: "Accessible medical infrastructure",
     desc: "We've established 4 primary healthcare centers and run regular mobile medical camps in remote mining regions, offering free diagnostics, maternal care, and essential medicines to underserved families.",
-    image: "/images/sewa.png",
+    image: cloudinary("images/sewa.png"),
     chips: [
       { label: "Facilities", value: "4 Primary Care Centers" },
       { label: "Outreach", value: "Monthly Health Camps" },

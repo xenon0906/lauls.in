@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowLeft, ArrowRight, Circle } from "lucide-react";
@@ -11,7 +12,7 @@ const products = [
   {
     name: "Alloy Steel Rounds",
     grade: "EN8 / EN19 / EN24 / EN31 / EN36",
-    image: "/images/products/steel_rounds_stacked.png",
+    image: cloudinary("images/products/steel_rounds_stacked.png"),
     use: "Gears, axles, shafts, tooling & dies",
     specs: "Dia: 20mm – 500mm | Length: 3–7m",
     desc: "Alloy Steel Rounds are the material of choice for heavy-duty engineering applications requiring high strength, toughness, and wear resistance. Lauls stocks a full range of EN-grade alloy rounds for immediate supply to auto-component and defence manufacturers.",
@@ -19,7 +20,7 @@ const products = [
   {
     name: "Mild Steel Rounds",
     grade: "IS 2062 E250 / E350",
-    image: "/images/products/steel_rounds_stacked.png",
+    image: cloudinary("images/products/steel_rounds_stacked.png"),
     use: "General engineering, construction & fabrication",
     specs: "Dia: 6mm – 250mm | Length: 3–12m",
     desc: "Mild Steel Rounds are the most versatile construction and fabrication material in any industrial setting. Our IS 2062 rounds come in E250 and E350 grades, ideal for structural steel work, machine bases, and general engineering components.",
@@ -34,7 +35,7 @@ export default function SteelRoundsPage() {
       {/* Hero */}
       <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <Image
-          src="/images/products/steel_rounds_stacked.png"
+          src={cloudinary("images/products/steel_rounds_stacked.png")}
           alt="Steel Rounds"
           fill
           sizes="100vw"

@@ -6,6 +6,7 @@ import { Calendar, Clock, ChevronLeft, Tag } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { blogs, getBlogBySlug } from "@/lib/blog-data";
+import { cloudinary } from "@/utils/cloudinary";
 
 type Props = {
   params: { slug: string };
@@ -67,7 +68,7 @@ export default function BlogPost({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: blog.title,
-    image: [`https://lauls.in${blog.featuredImage}`],
+    image: [blog.featuredImage.startsWith("http") ? blog.featuredImage : `https://lauls.in${blog.featuredImage}`],
     datePublished: blog.date,
     dateModified: blog.date,
     author: {
@@ -79,7 +80,7 @@ export default function BlogPost({ params }: Props) {
       name: "Lauls Ltd",
       logo: {
         "@type": "ImageObject",
-        url: "https://lauls.in/images/logo.png",
+        url: cloudinary("images/logo.png"),
       },
     },
     description: blog.excerpt,

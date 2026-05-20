@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowRight, FlaskConical, Layers, Circle, Cylinder } from "lucide-react";
@@ -19,7 +20,7 @@ const productCategories = [
       "Lauls is a primary distributor of ferro alloys sourced directly from top-tier smelters. Our ferro alloys are used in producing high-grade, specialty steels and are supplied to Indian and global steel mills with rigorous quality assurance.",
     accent: "#DCA54C",
     bgGradient: "from-amber-50 to-white",
-    image: "/lauls image/image.png",
+    image: cloudinary("lauls image/image.png"),
     products: [
       {
         name: "Ferro Manganese",
@@ -56,7 +57,7 @@ const productCategories = [
       "Our wire rod inventory spans an extensive range of grades suited for fasteners, springs, tyre cords, welding wires, and cold heading applications. All stock is sourced from Sail, Tata, and JSW mills.",
     accent: "#3b82f6",
     bgGradient: "from-blue-50 to-white",
-    image: "/lauls image/image copy 5.png",
+    image: cloudinary("lauls image/image copy 5.png"),
     products: [
       {
         name: "Alloy Steel Wire Rods",
@@ -87,7 +88,7 @@ const productCategories = [
       "Lauls supplies forged and rolled steel rounds across a wide diameter spectrum. Our rounds are the choice of engineering firms, auto-component manufacturers and defence contractors for critical load-bearing applications.",
     accent: "#10b981",
     bgGradient: "from-emerald-50 to-white",
-    image: "/lauls image/image copy.png",
+    image: cloudinary("lauls image/image copy.png"),
     products: [
       {
         name: "Alloy Steel Rounds",
@@ -112,7 +113,7 @@ const productCategories = [
       "Our ERW (Electric Resistance Welded) steel tubes are manufactured under rigorous conditions and supplied to auto, construction, and infrastructure sectors. All tubes comply with IS / ASTM / DIN standards.",
     accent: "#8b5cf6",
     bgGradient: "from-purple-50 to-white",
-    image: "/lauls image/image copy 2.png",
+    image: cloudinary("lauls image/image copy 2.png"),
     products: [
       {
         name: "ERW Steel Tubes",
@@ -257,7 +258,7 @@ export default function ProductsPage() {
       {/* Hero */}
       <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
         <Image
-          src="/lauls image/Screenshot 2026-05-12 at 8.22.04 PM.png"
+          src={cloudinary("lauls image/Screenshot 2026-05-12 at 8.22.04 PM.png")}
           alt=""
           fill
           sizes="100vw"

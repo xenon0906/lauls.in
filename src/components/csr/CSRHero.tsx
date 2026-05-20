@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 
 export default function CSRHero() {
   return (
@@ -10,7 +11,7 @@ export default function CSRHero() {
       {/* Immersive Background Layer - using a green/nature or community focused image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/savan.jpg"
+          src={cloudinary("images/savan.jpg")}
           alt=""
           fill
           sizes="100vw"

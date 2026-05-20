@@ -4,6 +4,7 @@ import Link from "next/link";
 import SectionWrapper from "../SectionWrapper";
 import { BadgeCheck, ShieldCheck, Globe } from "lucide-react";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 import { motion } from "framer-motion";
 
 export default function Heritage() {
@@ -86,7 +87,7 @@ export default function Heritage() {
                 className="rounded-3xl overflow-hidden aspect-[4/5] relative group shadow-xl"
               >
                 <Image
-                  src="/lauls image/Screenshot 2026-05-12 at 8.21.18 PM.png"
+                  src={cloudinary("lauls image/Screenshot 2026-05-12 at 8.21.18 PM.png")}
                   alt="Logistics"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -109,7 +110,7 @@ export default function Heritage() {
                 className="rounded-3xl overflow-hidden aspect-square relative group shadow-xl"
               >
                 <Image
-                  src="/lauls image/image copy 2.png"
+                  src={cloudinary("lauls image/image copy 2.png")}
                   alt="Precision Tubes"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -133,7 +134,7 @@ export default function Heritage() {
                 className="rounded-3xl overflow-hidden aspect-square relative group shadow-xl"
               >
                 <Image
-                  src="/lauls image/image.png"
+                  src={cloudinary("lauls image/image.png")}
                   alt="Ferro Alloys"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -155,7 +156,7 @@ export default function Heritage() {
                 className="rounded-3xl overflow-hidden aspect-[4/5] relative group shadow-xl"
               >
                 <Image
-                  src="/lauls image/image copy.png"
+                  src={cloudinary("lauls image/image copy.png")}
                   alt="Steel Distribution"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"

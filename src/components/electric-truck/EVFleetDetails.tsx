@@ -3,13 +3,14 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 
 const evDetails = [
   {
     title: "Heavy Haulage Capabilities",
     subtitle: "Built for industrial payloads",
     desc: "Our EV fleet isn't restricted to light delivery. We deploy heavy-duty multi-axle electric rigs designed specifically for transporting steel coils, ferro alloys, and massive infrastructural components with identical reliability to diesel counterparts.",
-    image: "/lauls image/image copy 11.png",
+    image: cloudinary("lauls image/image copy 11.png"),
     chips: [
       { label: "Capacity", value: "Up to 40T Gross" },
       { label: "Torque", value: "Instant Hub Torque" },
@@ -20,7 +21,7 @@ const evDetails = [
     title: "Decarbonized Supply Chains",
     subtitle: "Scope 3 Emission Reduction",
     desc: "By integrating our electric fleet into your logistics network, Lauls Ltd directly and drastically reduces your corporate Scope 3 emissions. Track your exact carbon offset through our rigorous, transparent ESG reporting.",
-    image: "/images/IMG_9974.JPG",
+    image: cloudinary("images/IMG_9974.JPG"),
     chips: [
       { label: "Impact", value: "Zero Scope 1 Emissions" },
       { label: "Reporting", value: "Real-time ESG Dashboards" },
@@ -31,7 +32,7 @@ const evDetails = [
     title: "Smart Charging Network",
     subtitle: "Eliminating range anxiety",
     desc: "We own and operate an expansive proprietary network of high-speed DC fast chargers across key industrial corridors. Our rigorous telemetry systems predict optimal charging stops, ensuring your supply chain never halts.",
-    image: "/images/IMG_9978.JPG",
+    image: cloudinary("images/IMG_9978.JPG"),
     chips: [
       { label: "Infrastructure", value: "120kW+ DC Fast Chargers" },
       { label: "Telemetry", value: "AI-Routed Checkpoints" },

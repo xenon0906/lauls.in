@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 
 export default function DistributionHero() {
   return (
@@ -11,7 +12,7 @@ export default function DistributionHero() {
       {/* Immersive Background Layer */}
       <div className="absolute inset-0">
         <Image
-          src="/lauls image/Screenshot 2026-05-12 at 8.23.33 PM.png"
+          src={cloudinary("lauls image/Screenshot 2026-05-12 at 8.23.33 PM.png")}
           alt=""
           fill
           sizes="100vw"

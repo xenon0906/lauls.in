@@ -3,27 +3,28 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 
 const milestones = [
   {
     year: "1933",
     title: "Foundation",
     desc: "Began as a trusted industrial trading house, setting the groundwork for a multi-generation infrastructure enterprise.",
-    image: "/lauls image/image copy 7.png",
+    image: cloudinary("lauls image/image copy 7.png"),
     accent: "#0A1628"
   },
   {
     year: "2005",
     title: "First Plant",
     desc: "Expanded into heavy alloy steel distribution, becoming a key TATA associated supplier across India.",
-    image: "/lauls image/image copy 6.png",
+    image: cloudinary("lauls image/image copy 6.png"),
     accent: "#0A1628"
   },
   {
     year: "2012",
     title: "WAREX Gold",
     desc: "Achieved WAREX Gold certification, cementing as an approved vendor for critical supply chains.",
-    image: "/lauls image/image copy 8.png",
+    image: cloudinary("lauls image/image copy 8.png"),
     accent: "#0A1628"
   },
   {
@@ -31,7 +32,7 @@ const milestones = [
     title: "Global Expansion",
     point: true,
     desc: "Launching EV-powered fleet and expanding our global logistics, fulfilling massive national contracts.",
-    image: "/lauls image/Screenshot 2026-05-12 at 8.02.05 PM.png",
+    image: cloudinary("lauls image/Screenshot 2026-05-12 at 8.02.05 PM.png"),
     accent: "#DCA54C"
   },
 ];

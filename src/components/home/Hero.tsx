@@ -5,13 +5,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ChevronDown, Mail } from "lucide-react";
 import Link from 'next/link';
 import Image from "next/image";
+import { cloudinary } from "@/utils/cloudinary";
 
 const slides = [
   {
     title: "Powering the \nEV Supply Chain \n& Industrial Steel",
     highlight: "EV Supply Chain",
     subtext: "Northern India's leading industrial conglomerate. Delivering precision wire rods, round wire solutions, and advanced steel manufacturing since 1933.",
-    image: "/lauls image/image copy 13.png",
+    image: cloudinary("lauls image/image copy 13.png"),
     stats: [
       { label: "Projects", value: "500+" },
       { label: "Clients", value: "150+" },
@@ -23,7 +24,7 @@ const slides = [
     title: "Advanced \nWire Rod \nSolutions",
     highlight: "Wire Rod",
     subtext: "Premium alloy steel wire rods and round wire solutions engineered for modern manufacturing, including EV components and high-strength fasteners.",
-    image: "/images/products/mild_wire_rods.png",
+    image: cloudinary("images/products/mild_wire_rods.png"),
     stats: [
       { label: "Annual Distribution", value: "15K MT" },
       { label: "Wire Rod Grades", value: "SAE/IS" },
@@ -35,7 +36,7 @@ const slides = [
     title: "World-Class \nLogistics & \nWarehousing",
     highlight: "Logistics",
     subtext: "Operating TATA Steel stockyards with WAREX GOLD certification. Precision in handling, safety in transportation.",
-    image: "/lauls image/Screenshot 2026-05-12 at 8.21.18 PM.png",
+    image: cloudinary("lauls image/Screenshot 2026-05-12 at 8.21.18 PM.png"),
     stats: [
       { label: "Steel Handling", value: "1M MT" },
       { label: "Warehousing", value: "Certified Gold" },
@@ -47,7 +48,7 @@ const slides = [
     title: "Pioneering \nSustainable \nElectric Trucking",
     highlight: "Electric Trucking",
     subtext: "Transitioning to a greener future with our electric truck fleet. Logistics engineered for sustainability and efficiency.",
-    image: "/lauls image/Screenshot 2026-05-12 at 8.22.04 PM.png",
+    image: cloudinary("lauls image/Screenshot 2026-05-12 at 8.22.04 PM.png"),
     stats: [
       { label: "Zero Emission", value: "100%" },
       { label: "Sustainable", value: "Eco-Friendly" },
