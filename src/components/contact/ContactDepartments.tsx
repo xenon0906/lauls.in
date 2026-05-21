@@ -2,6 +2,24 @@
 
 import { Mail, Phone, MessageCircle } from "lucide-react";
 
+const LinkedinIcon = ({ className, size, strokeWidth }: { className?: string; size?: number; strokeWidth?: number }) => (
+  <svg 
+    className={className} 
+    width={size || 28} 
+    height={size || 28} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth={strokeWidth || 1.5} 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
 export default function ContactDepartments() {
   const methods = [
     { 
@@ -28,6 +46,18 @@ export default function ContactDepartments() {
       href: "https://wa.me/911294098300",
       Icon: MessageCircle 
     },
+    { 
+      title: "FERRO ALLOYS", 
+      value: "ferroalloys@lauls.in", 
+      href: "mailto:ferroalloys@lauls.in",
+      Icon: Mail 
+    },
+    { 
+      title: "LINKEDIN", 
+      value: "LAULS PRIVATE LIMITED", 
+      href: "https://www.linkedin.com/company/10073868",
+      Icon: LinkedinIcon 
+    },
   ];
 
   return (
@@ -37,7 +67,7 @@ export default function ContactDepartments() {
           Connect Directly
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {methods.map((method, idx) => {
             const { Icon } = method;
             return (
@@ -49,9 +79,9 @@ export default function ContactDepartments() {
                    <h4 className="text-sm font-bold text-[#0A1628] uppercase tracking-widest mb-1">{method.title}</h4>
                    <a 
                      href={method.href} 
-                     target={method.title === "WHATSAPP" ? "_blank" : undefined} 
+                     target={method.title === "WHATSAPP" || method.title === "LINKEDIN" ? "_blank" : undefined} 
                      rel="noopener noreferrer" 
-                     className="text-[#3b82f6] hover:text-[#0A1628] transition-colors text-lg font-medium"
+                     className="text-[#3b82f6] hover:text-[#0A1628] transition-colors text-lg font-medium break-words"
                    >
                      {method.value}
                    </a>
@@ -60,6 +90,22 @@ export default function ContactDepartments() {
             );
           })}
         </div>
+
+        {/* Company Information Card */}
+        <div className="mt-16 bg-gray-50 border border-gray-100 rounded-2xl p-8 max-w-3xl">
+          <h3 className="text-lg font-bold text-[#0A1628] mb-6 uppercase tracking-wider">Company Information</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <div className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Legal Name</div>
+              <div className="text-gray-800 font-medium">LAULS PRIVATE LIMITED</div>
+            </div>
+            <div>
+              <div className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">GSTIN</div>
+              <div className="text-gray-800 font-mono font-semibold">06AAACL3118P1ZF</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

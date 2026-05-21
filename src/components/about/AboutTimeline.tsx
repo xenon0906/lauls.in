@@ -32,7 +32,7 @@ const milestones = [
     title: "Global Expansion",
     point: true,
     desc: "Launching EV-powered fleet and expanding our global logistics, fulfilling massive national contracts.",
-    image: cloudinary("lauls image/Screenshot 2026-05-12 at 8.02.05 PM.png"),
+    image: cloudinary("lauls image/image copy 13.png"),
     accent: "#DCA54C"
   },
 ];

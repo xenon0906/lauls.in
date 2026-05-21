@@ -20,11 +20,11 @@ const founders = [
   },
   {
     era: "1960s – 1980s",
-    name: "Shri Madan Lal",
+    name: "Mr. Sudhir Gupta",
     role: "Industrial Pioneer & Builder",
     relation: "Father's Generation",
     portrait: cloudinary("images/sudhir.png"),
-    bio: "Inheriting a sturdy foundation, Shri Madan Lal fearlessly scaled the enterprise into steel trading and logistics. His visionary decision to partner with national railways and steel mills during India's industrialisation era transformed a regional firm into a trusted national operator.",
+    bio: "Inheriting a sturdy foundation, Mr. Sudhir Gupta fearlessly scaled the enterprise into steel trading and logistics. His visionary decision to partner with national railways and steel mills during India's industrialisation era transformed a regional firm into a trusted national operator.",
     legacy: "Expanded into steel and logistics, establishing government and railway partnerships.",
     accentColor: "#DCA54C",
     shadowColor: "rgba(220, 165, 76, 0.3)",

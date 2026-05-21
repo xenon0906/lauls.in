@@ -22,11 +22,7 @@ export default function ContactHero() {
             animate={{ y: 0, opacity: 1 }} 
             transition={{ duration: 0.8, ease: "easeOut" }}
          >
-            <div className="flex items-center gap-4 mb-6 text-[#DCA54C] text-xs font-bold tracking-widest uppercase">
-              <span className="hover:text-white cursor-pointer transition-colors">Home</span>
-              <span>&gt;</span>
-              <span className="text-white">Contact Us</span>
-            </div>
+
             <h1 className="text-5xl md:text-7xl font-display font-black text-white mb-6 tracking-tight">Contact Us</h1>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl font-light leading-relaxed">
               We are ready to build India&apos;s future together. Connect with our dedicated departments for logistics, distribution, and manufacturing inquiries.
