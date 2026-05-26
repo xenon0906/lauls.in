@@ -77,8 +77,9 @@ export const metadata: Metadata = {
     canonical: "https://lauls.in",
   },
   icons: {
-    icon: "/icon.svg",
-    apple: "/icon.svg",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   other: {
     "geo.region": "IN-HR",
