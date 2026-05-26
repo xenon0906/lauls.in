@@ -54,6 +54,7 @@ export default function AboutLeadership() {
       if (leaderId) {
         const found = executives.find((exec) => exec.id === leaderId);
         if (found) {
+          /* eslint-disable-next-line react-hooks/set-state-in-effect */
           setActiveLeader(found);
         }
       }

@@ -2,7 +2,7 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { BookOpen, HeartPulse, ArrowRight, CheckCircle2, ChevronRight, Settings } from "lucide-react";
+import { BookOpen, HeartPulse, CheckCircle2, ChevronRight, Settings } from "lucide-react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -85,7 +85,7 @@ export default function CSRDetailsPage() {
     router.push(`/csr/details?tab=${key}`, { scroll: false });
   };
 
-  const handleScrollToContact = (e: React.MouseEvent, interest: string) => {
+  const handleScrollToContact = (e: React.MouseEvent, _interest: string) => {
     e.preventDefault();
     // Update query parameters to select CSR checkbox in AboutContact
     router.replace(`/csr/details?tab=${activeTabKey}&product=csr`, { scroll: false });

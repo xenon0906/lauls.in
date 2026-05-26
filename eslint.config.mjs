@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     // Legacy utility scripts (not part of the app)
     "download_images.js",
     "fetch_images.js",
+    "upload_images.js",
   ]),
 ]);
 

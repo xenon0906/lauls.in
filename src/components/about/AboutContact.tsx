@@ -45,12 +45,14 @@ function ContactFormInner() {
 
   useEffect(() => {
     if (initialInterest) {
+      /* eslint-disable-next-line react-hooks/set-state-in-effect */
       setSelectedInterest(initialInterest);
     }
   }, [initialInterest]);
 
   useEffect(() => {
     if (initialMessage) {
+      /* eslint-disable-next-line react-hooks/set-state-in-effect */
       setMessage(initialMessage);
     }
   }, [initialMessage]);

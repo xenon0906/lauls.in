@@ -2,9 +2,8 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Truck, Leaf, Warehouse, ArrowRight, CheckCircle2, ChevronRight, Settings } from "lucide-react";
+import { Truck, Leaf, Warehouse, CheckCircle2, ChevronRight, Settings } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AboutContact from "@/components/about/AboutContact";
@@ -151,7 +150,7 @@ export default function LogisticsDetailsPage() {
               </h1>
             </div>
             <p className="text-white/50 text-base md:text-lg max-w-md mt-4 md:mt-0 font-light">
-              Deep dive into the infrastructure, machinery, and sustainability goals driving Lauls' multi-modal logistics ecosystem.
+              Deep dive into the infrastructure, machinery, and sustainability goals driving Lauls&apos; multi-modal logistics ecosystem.
             </p>
           </div>
 

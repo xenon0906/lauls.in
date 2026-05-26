@@ -4,7 +4,7 @@ import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { 
-  Phone, Mail, MessageCircle, MapPin, Building2, 
+  Phone, Mail, MessageCircle, MapPin, 
   Send, Loader2, CheckCircle, AlertCircle, ChevronDown, ExternalLink
 } from "lucide-react";
 import Image from "next/image";

@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { cloudinary } from "@/utils/cloudinary";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export default function AboutIntro() {
   return (
