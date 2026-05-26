@@ -21,8 +21,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
           <div className="space-y-6">
-             <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center gap-2">
-              <Image src={cloudinary("images/logo.png")} alt="Lauls Ltd" width={144} height={32} className="h-8 w-auto" />
+            <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center group">
+              <Image
+                src="/images/logo.png"
+                alt="LAULS PRIVATE LIMITED"
+                width={240}
+                height={36}
+                className="h-9 w-auto object-contain transition-transform group-hover:scale-102"
+              />
             </Link>
             <p className="text-white/40 text-sm leading-relaxed">
               Engineering the backbone of Indian Railways and powering the EV supply chain. A legacy of precision wire rods, trust, and industrial steel excellence since 1933.

@@ -92,20 +92,19 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass py-4" : "bg-transparent py-6"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "glass py-4" : "bg-transparent py-6"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center gap-2">
+        <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center group">
           <Image
-            src={cloudinary("images/logo.png")}
-            alt="Lauls Ltd"
-            width={144}
-            height={22}
+            src="/images/logo.png"
+            alt="LAULS PRIVATE LIMITED"
+            width={240}
+            height={36}
             priority
-            className="h-8 w-auto"
+            className="h-9 w-auto object-contain transition-transform group-hover:scale-102"
           />
         </Link>
 
@@ -130,9 +129,8 @@ export default function Navbar() {
                   {link.name}
                   <ChevronDown
                     size={14}
-                    className={`transition-transform duration-200 ${
-                      isProductsOpen ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform duration-200 ${isProductsOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
               ) : (
@@ -224,9 +222,8 @@ export default function Navbar() {
                         <span>Products</span>
                         <ChevronDown
                           size={18}
-                          className={`transition-transform duration-200 ${
-                            isMobileProductsOpen ? "rotate-180" : ""
-                          }`}
+                          className={`transition-transform duration-200 ${isMobileProductsOpen ? "rotate-180" : ""
+                            }`}
                         />
                       </button>
                       <AnimatePresence>
