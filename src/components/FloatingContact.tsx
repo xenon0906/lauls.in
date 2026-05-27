@@ -76,11 +76,11 @@ export default function FloatingContact() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -5 }}
                 transition={{ duration: 0.3 }}
-                className="absolute right-full mr-4 whitespace-nowrap bg-white text-primary text-sm font-semibold py-2.5 px-4 rounded-xl shadow-xl shadow-black/10 border border-black/5 pointer-events-none hidden sm:block"
+                className="absolute bottom-full right-0 mb-3 whitespace-nowrap bg-white text-primary text-sm font-semibold py-2.5 px-4 rounded-xl shadow-xl shadow-black/10 border border-black/5 pointer-events-none"
               >
                 {messages[messageIndex]}
                 {/* Tooltip Arrow */}
-                <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 bg-white rotate-45 border-r border-t border-black/5"></div>
+                <div className="absolute -bottom-1.5 right-[22px] w-3 h-3 bg-white rotate-45 border-r border-b border-black/5"></div>
               </motion.div>
             </AnimatePresence>
 
