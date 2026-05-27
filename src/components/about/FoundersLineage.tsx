@@ -66,7 +66,7 @@ export default function FoundersLineage() {
   return (
     <section id="heritage" ref={targetRef} className="relative bg-[#FFFCF8] h-[300vh] w-full">
       {/* Sticky container that pins to the screen */}
-      <div className="sticky top-0 h-screen flex flex-col overflow-hidden pt-24 lg:pt-32 pb-12 w-full max-w-[100vw]">
+      <div className="sticky top-0 h-screen flex flex-col overflow-hidden pt-28 lg:pt-36 pb-12 w-full max-w-[100vw]">
         
         {/* Fixed Header with Badge and Dots (Always visible at the top) */}
         <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-12 flex justify-between items-center shrink-0 z-20">
@@ -97,7 +97,7 @@ export default function FoundersLineage() {
                 <div className="w-full max-w-[1200px] flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                   
                   {/* Image Side - Elegant Portrait Card */}
-                  <div className="w-full max-w-[320px] lg:max-w-[360px] shrink-0 relative">
+                  <div className="w-full max-w-[260px] sm:max-w-[280px] lg:max-w-[300px] xl:max-w-[340px] shrink-0 relative">
                     {/* The glowing soft shadow behind the card */}
                     <div 
                       className="absolute inset-0 rounded-3xl z-0" 
@@ -140,20 +140,20 @@ export default function FoundersLineage() {
                     </div>
 
                     {/* Name & Role */}
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-[#0A1628] mb-3 lg:mb-4 tracking-tight leading-none">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-[#0A1628] mb-2 lg:mb-3 tracking-tight leading-none">
                       {founder.name}
                     </h2>
-                    <p className="font-bold text-xs md:text-sm uppercase tracking-widest mb-6 lg:mb-8" style={{ color: founder.accentColor }}>
+                    <p className="font-bold text-[10px] md:text-xs uppercase tracking-widest mb-4 lg:mb-5" style={{ color: founder.accentColor }}>
                       {founder.role}
                     </p>
 
                     {/* Bio */}
-                    <p className="text-gray-600 text-base md:text-lg lg:text-xl leading-relaxed mb-8 lg:mb-10 max-w-2xl">
+                    <p className="text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed mb-6 lg:mb-8 max-w-2xl">
                       {founder.bio}
                     </p>
 
                     {/* Legacy Box */}
-                    <div className="relative pl-6 py-2 border-l-4" style={{ borderColor: founder.accentColor }}>
+                    <div className="relative pl-5 py-1.5 border-l-4" style={{ borderColor: founder.accentColor }}>
                       <div className="absolute inset-0 right-auto w-full max-w-[400px] opacity-[0.08] rounded-r-xl" style={{ backgroundColor: founder.accentColor, zIndex: -1 }} />
                       <div className="text-[10px] font-black uppercase tracking-widest mb-2" style={{ color: founder.accentColor }}>
                         Key Legacy

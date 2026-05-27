@@ -9,7 +9,7 @@ import { cloudinary } from "@/utils/cloudinary";
 export default function EVHero() {
   const router = useRouter();
   return (
-    <section className="relative w-full min-h-[100svh] lg:h-[100svh] lg:min-h-[700px] flex flex-col justify-center overflow-hidden">
+    <section className="relative w-full min-h-[100svh] lg:min-h-[100svh] lg:min-h-[700px] flex flex-col justify-center overflow-hidden">
       {/* Immersive Background Layer - EV/Green Logistics */}
       <div className="absolute inset-0">
         <Image

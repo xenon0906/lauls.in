@@ -109,7 +109,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-4 xl:gap-8 shrink-0">
+        <div className="hidden xl:flex items-center gap-6 2xl:gap-8 shrink-0">
           {navLinks.map((link) => (
             <div
               key={link.name}
@@ -124,7 +124,7 @@ export default function Navbar() {
                   aria-expanded={isProductsOpen}
                   onKeyDown={handleProductsKeyDown}
                   onClick={() => setIsProductsOpen((prev) => !prev)}
-                  className="text-xs xl:text-sm font-medium text-white/80 hover:text-white transition-colors flex items-center gap-1"
+                  className="text-xs 2xl:text-sm font-medium text-white/80 hover:text-white transition-colors flex items-center gap-1"
                 >
                   {link.name}
                   <ChevronDown
@@ -137,7 +137,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
-                  className={`text-xs xl:text-sm font-medium transition-colors ${pathname === link.href ? 'text-accent' : 'text-white/80 hover:text-white'}`}
+                  className={`text-xs 2xl:text-sm font-medium transition-colors ${pathname === link.href ? 'text-accent' : 'text-white/80 hover:text-white'}`}
                 >
                   {link.name}
                 </Link>
@@ -146,7 +146,7 @@ export default function Navbar() {
           ))}
 
           {/* Phone & Mail */}
-          <div className="hidden xl:flex items-center gap-2 border-l border-white/20 pl-5">
+          <div className="hidden 2xl:flex items-center gap-2 border-l border-white/20 pl-5">
             <a
               href="tel:+911294098300"
               title="+91-129-4098300"
@@ -165,7 +165,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={(e) => handleLinkClick(e, "/contact")}
-            className="px-4 py-2 xl:px-6 xl:py-2.5 bg-accent hover:bg-accent/90 text-white text-xs xl:text-sm font-semibold rounded-full transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-accent/25 whitespace-nowrap"
+            className="px-4 py-2 2xl:px-6 2xl:py-2.5 bg-accent hover:bg-accent/90 text-white text-xs 2xl:text-sm font-semibold rounded-full transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-accent/25 whitespace-nowrap"
           >
             Contact Us
           </Link>
@@ -173,7 +173,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden text-white min-w-11 min-h-11 flex items-center justify-center shrink-0"
+          className="xl:hidden text-white min-w-11 min-h-11 flex items-center justify-center shrink-0"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle navigation menu"
           aria-expanded={isMobileMenuOpen}
@@ -205,7 +205,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-primary border-b border-white/10 overflow-hidden"
+            className="xl:hidden bg-primary border-b border-white/10 overflow-hidden"
             role="menu"
           >
             <div className="flex flex-col gap-1 p-6 max-h-[80vh] overflow-y-auto">

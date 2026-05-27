@@ -8,7 +8,7 @@ import { cloudinary } from "@/utils/cloudinary";
 
 export default function LogisticsHero() {
   return (
-    <section className="relative w-full min-h-[100svh] lg:h-[100svh] lg:min-h-[700px] flex flex-col justify-center overflow-hidden">
+    <section className="relative w-full min-h-[100svh] lg:min-h-[100svh] lg:min-h-[700px] flex flex-col justify-center overflow-hidden">
       {/* Immersive Background Layer */}
       <div className="absolute inset-0">
         <Image
