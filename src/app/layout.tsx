@@ -3,7 +3,6 @@ import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { cloudinary } from "@/utils/cloudinary";
 import FloatingContact from "@/components/FloatingContact";
-import WhatsAppFloatingCTA from "@/components/WhatsAppFloatingCTA";
 import Schema from "@/components/seo/Schema";
 
 const inter = Inter({
@@ -162,7 +161,6 @@ export default function RootLayout({
         />
         {children}
         <FloatingContact />
-        <WhatsAppFloatingCTA />
       </body>
     </html>
   );
