@@ -18,11 +18,11 @@ export async function generateMetadata(
   const blog = getBlogBySlug(params.slug);
 
   if (!blog) {
-    return { title: "Post Not Found | Lauls Ltd" };
+    return { title: "Post Not Found | Lauls Private Limited" };
   }
 
   return {
-    title: `${blog.title} | LAULS PRIVATE LIMITED Blog`,
+    title: `${blog.title} | Lauls Private Limited`,
     description: blog.excerpt,
     openGraph: {
       title: blog.title,
@@ -76,7 +76,7 @@ export default function BlogPost({ params }: Props) {
     },
     publisher: {
       "@type": "Organization",
-      name: "Lauls Ltd",
+      name: "Lauls Private Limited",
       logo: {
         "@type": "ImageObject",
         url: cloudinary("images/logo.png"),

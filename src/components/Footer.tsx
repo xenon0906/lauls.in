@@ -24,7 +24,7 @@ export default function Footer() {
             <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center group">
               <Image
                 src="/images/logo.png"
-                alt="LAULS PRIVATE LIMITED"
+                alt="Lauls Private Limited"
                 width={240}
                 height={36}
                 className="h-9 w-auto object-contain transition-transform group-hover:scale-102"

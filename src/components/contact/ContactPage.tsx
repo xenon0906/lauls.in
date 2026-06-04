@@ -447,7 +447,7 @@ export default function ContactPage() {
                 <div className="relative z-10 space-y-6">
                   <div>
                     <span className="text-[#DCA54C] font-bold text-xs uppercase tracking-widest block mb-1">Corporate Identity</span>
-                    <h3 className="text-xl font-display font-bold">LAULS PRIVATE LIMITED</h3>
+                    <h3 className="text-xl font-display font-bold">Lauls Private Limited</h3>
                     <p className="text-xs text-white/40 mt-1 font-mono">CIN / GSTIN: 06AAACL3118P1ZF</p>
                   </div>
 
@@ -484,13 +484,13 @@ export default function ContactPage() {
 
                     {/* Emails by Department */}
                     <div className="space-y-3">
-                      <a href="mailto:sales@laulsltd.com" className="flex items-center gap-3.5 group hover:text-[#DCA54C] transition-colors">
+                      <a href="mailto:sales@lauls.in" className="flex items-center gap-3.5 group hover:text-[#DCA54C] transition-colors">
                         <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:bg-[#DCA54C] group-hover:border-[#DCA54C] transition-all">
                           <Mail size={16} className="text-white/60 group-hover:text-[#0A1628] transition-colors" />
                         </div>
                         <div>
                           <p className="text-[10px] text-white/40 uppercase font-bold tracking-wider">Sales & Logistics</p>
-                          <p className="text-sm font-semibold font-mono">sales@laulsltd.com</p>
+                          <p className="text-sm font-semibold font-mono">sales@lauls.in</p>
                         </div>
                       </a>
 

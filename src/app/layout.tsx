@@ -18,11 +18,11 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL("https://lauls.in"),
   title: {
-    default: "LAULS PRIVATE LIMITED | Logistics | Ferro Alloys | Railway Manufacturing | Since 1933",
-    template: "%s | LAULS PRIVATE LIMITED",
+    default: "Lauls Private Limited | Logistics | Ferro Alloys | Railway Manufacturing | Since 1933",
+    template: "%s | Lauls Private Limited",
   },
   description:
-    "LAULS PRIVATE LIMITED is an industrial powerhouse in India handling over 1,000,000 MT of Steel Logistics, distributing TATA Steel Ferro Alloys, and manufacturing RDSO Approved Railway Track Fasteners since 1933 from Faridabad.",
+    "Lauls Private Limited is an industrial powerhouse in India handling over 1,000,000 MT of Steel Logistics, distributing TATA Steel Ferro Alloys, and manufacturing RDSO Approved Railway Track Fasteners since 1933 from Faridabad.",
   keywords: [
     "Lauls Private Limited",
     "ferro alloys India",
@@ -40,11 +40,11 @@ export const metadata: Metadata = {
     "RDSO Approved Manufacturer"
   ],
   openGraph: {
-    title: "LAULS PRIVATE LIMITED — Logistics | Ferro Alloys | Railway Manufacturing",
+    title: "Lauls Private Limited — Logistics | Ferro Alloys | Railway Manufacturing",
     description:
       "India's trusted industrial partner handling 1,000,000 MT of steel annually. ISO 9001:2015 & WAREX GOLD certified operations.",
     url: "https://lauls.in",
-    siteName: "LAULS PRIVATE LIMITED",
+    siteName: "Lauls Private Limited",
     locale: "en_IN",
     type: "website",
     images: [
@@ -52,13 +52,13 @@ export const metadata: Metadata = {
         url: cloudinary("images/slider/Banner.jpg"),
         width: 1200,
         height: 630,
-        alt: "LAULS PRIVATE LIMITED - Mega Industrial Operations in Faridabad",
+        alt: "Lauls Private Limited - Mega Industrial Operations in Faridabad",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LAULS PRIVATE LIMITED — Logistics | Ferro Alloys | Railway Manufacturing",
+    title: "Lauls Private Limited — Logistics | Ferro Alloys | Railway Manufacturing",
     description:
       "India's trusted industrial partner handling 1,000,000 MT of steel annually.",
     images: [cloudinary("images/slider/Banner.jpg")],
@@ -102,7 +102,7 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What logistics services does Lauls Ltd provide?",
+      name: "What logistics services does Lauls Private Limited provide?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "We provide end-to-end logistics solutions, ensuring reliable supply chains and operational efficiency for massive industrial cargo, managing over 500,000 MT of transport annually.",
@@ -164,6 +164,7 @@ export default function RootLayout({
       className={`${inter.variable} ${outfit.variable} h-full antialiased`}
     >
       <head>
+        <link rel="manifest" href="/manifest.json" />
         {/* Preconnects for ultra-fast asset loading at the edge */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

@@ -24,8 +24,8 @@ export default function ContactDepartments() {
   const methods = [
     { 
       title: "SALES", 
-      value: "sales@laulsltd.com", 
-      href: "mailto:sales@laulsltd.com",
+      value: "sales@lauls.in", 
+      href: "mailto:sales@lauls.in",
       Icon: Mail 
     },
     { 
@@ -54,7 +54,7 @@ export default function ContactDepartments() {
     },
     { 
       title: "LINKEDIN", 
-      value: "LAULS PRIVATE LIMITED", 
+      value: "Lauls Private Limited", 
       href: "https://www.linkedin.com/company/10073868",
       Icon: LinkedinIcon 
     },
@@ -97,7 +97,7 @@ export default function ContactDepartments() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <div className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Legal Name</div>
-              <div className="text-gray-800 font-medium">LAULS PRIVATE LIMITED</div>
+              <div className="text-gray-800 font-medium">Lauls Private Limited</div>
             </div>
             <div>
               <div className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">GSTIN</div>

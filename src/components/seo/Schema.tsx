@@ -7,7 +7,7 @@ export default function Schema() {
       {
         "@type": ["LocalBusiness", "Organization", "B2BBusiness"],
         "@id": "https://lauls.in/#organization",
-        "name": "LAULS PRIVATE LIMITED",
+        "name": "Lauls Private Limited",
         "description": "Logistics & Steel Handling, Ferro Alloys Distribution (TATA Steel authorized), and Railway Track Fastener Manufacturing.",
         "foundingDate": "1933",
         "founder": {
@@ -100,7 +100,7 @@ export default function Schema() {
         "@type": "WebSite",
         "@id": "https://lauls.in/#website",
         "url": "https://lauls.in",
-        "name": "LAULS PRIVATE LIMITED",
+        "name": "Lauls Private Limited",
         "publisher": {
           "@id": "https://lauls.in/#organization"
         }

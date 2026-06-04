@@ -100,7 +100,7 @@ export default function Navbar() {
         <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center group max-w-[65vw] sm:max-w-none shrink-0">
           <Image
             src="/images/logo.png"
-            alt="LAULS PRIVATE LIMITED"
+            alt="Lauls Private Limited"
             width={240}
             height={36}
             priority
