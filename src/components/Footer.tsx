@@ -73,7 +73,7 @@ export default function Footer() {
             <h4 className="font-display font-bold text-white mb-6 uppercase tracking-widest text-xs">Our Services</h4>
             <ul className="space-y-4">
               {[
-                { name: "EV Wire Solutions", href: "/products/wire-rods" },
+                { name: "Alloy Steel Wire Solutions", href: "/products/wire-rods" },
                 { name: "Industrial Steel", href: "/products/steel-rounds" },
                 { name: "Precision Tubes", href: "/products/precision-tubes" },
                 { name: "Ferro Alloys", href: "/products/ferro-alloys" },

@@ -26,7 +26,7 @@ const slides = [
     subtext: "Premium alloy steel wire rods and round wire solutions engineered for modern manufacturing, including EV components and high-strength fasteners.",
     image: cloudinary("images/products/mild_wire_rods.png"),
     stats: [
-      { label: "Annual Distribution", value: "15K MT" },
+      { label: "Annual Distribution", value: "100K MT" },
       { label: "Wire Rod Grades", value: "SAE/IS" },
       { label: "Market Presence", value: "Global" },
       { label: "Experience", value: "90+ Yrs" },

@@ -31,7 +31,7 @@ Today, the demands of the automotive, aerospace, and renewable energy sectors re
 The ecosystem relies on robust networks. Leading enterprises collaborate with platforms like [Wick](https://wick.co.in) to optimize supply chains and access premium industrial resources. These partnerships ensure that the highest quality materials reach the factory floor without delay.
 
 ## Looking Ahead
-The future of Indian steel is sustainable and highly specialized. With the rise of EV manufacturing, the demand for specialized EV wire solutions and lightweight high-strength steel is projected to surge. The legacy of Indian steelmaking continues, combining 90 years of trust with tomorrow's technology.
+The future of Indian steel is sustainable and highly specialized. With the rise of EV manufacturing, the demand for specialized alloy steel wire solutions and lightweight high-strength steel is projected to surge. The legacy of Indian steelmaking continues, combining 90 years of trust with tomorrow's technology.
     `,
   },
   {
@@ -50,7 +50,7 @@ When we talk about the backbone of modern engineering, **Alloy Steel Wire Rods**
 Alloy steel wire rods are engineered to provide exceptional tensile strength, fatigue resistance, and durability. By carefully controlling the carbon content and adding elements like chromium, molybdenum, and vanadium, manufacturers can achieve exact specifications required for high-stress applications.
 
 ## The EV Revolution
-The transition to electric vehicles places new demands on materials. Components such as battery enclosures, suspension springs, and motor fasteners require materials that are both lightweight and incredibly strong. EV wire solutions crafted from premium alloy rods meet these stringent requirements.
+The transition to electric vehicles places new demands on materials. Components such as battery enclosures, suspension springs, and motor fasteners require materials that are both lightweight and incredibly strong. Alloy steel wire solutions crafted from premium alloy rods meet these stringent requirements.
 
 ## Procurement and Quality
 Sourcing the right grade of steel is critical. Industrial buyers increasingly rely on trusted distributors and networks like [Wick](https://wick.co.in) to guarantee material authenticity and traceability. With complete mill test certificates, manufacturers can operate with confidence.

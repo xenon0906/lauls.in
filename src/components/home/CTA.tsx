@@ -39,7 +39,7 @@ export default function CTA() {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
-            Ready to Partner with<span className="text-[#3b82f6]">Lauls Ltd</span>?
+            Ready to Partner with <span className="text-[#3b82f6]">Lauls Ltd</span>?
           </h2>
           
           <p className="text-white/60 text-sm md:text-base max-w-xl mb-10 leading-relaxed font-light">

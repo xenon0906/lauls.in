@@ -17,7 +17,7 @@ const services = [
   { name: "Warehouse", icon: <Warehouse size={30} strokeWidth={1.5} />, href: "/logistics" },
   { name: "Ferro Alloys", icon: <Fuel size={30} strokeWidth={1.5} />, href: "/products/ferro-alloys" },
   { name: "Industrial Steel", icon: <CircleDot size={30} strokeWidth={1.5} />, href: "/products/steel-rounds" },
-  { name: "EV Wire Solutions", icon: <Layers size={30} strokeWidth={1.5} />, href: "/products/wire-rods" },
+  { name: "Alloy Steel Wire Solutions", icon: <Layers size={30} strokeWidth={1.5} />, href: "/products/wire-rods" },
   { name: "Precision Tubes", icon: <Cog size={30} strokeWidth={1.5} />, href: "/products/precision-tubes" },
 ];
 
