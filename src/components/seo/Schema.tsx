@@ -43,6 +43,13 @@ export default function Schema() {
         "sameAs": [
           "https://www.linkedin.com/company/10073868"
         ],
+        "knowsAbout": [
+          "Steel Logistics",
+          "Ferro Alloys Distribution",
+          "Railway Track Fasteners",
+          "Electric Truck Transport",
+          "Wire Rods and Steel Rounds"
+        ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Industrial Services",
@@ -66,7 +73,7 @@ export default function Schema() {
         "sku": "LAULS-FISHPLATE-01",
         "brand": {
           "@type": "Brand",
-          "name": "Lauls"
+          "name": "Lauls Private Limited"
         },
         "manufacturer": {
           "@id": "https://lauls.in/#organization"
@@ -85,7 +92,7 @@ export default function Schema() {
         "sku": "LAULS-ERC-02",
         "brand": {
           "@type": "Brand",
-          "name": "Lauls"
+          "name": "Lauls Private Limited"
         },
         "manufacturer": {
           "@id": "https://lauls.in/#organization"
