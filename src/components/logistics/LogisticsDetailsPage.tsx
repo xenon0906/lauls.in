@@ -62,7 +62,7 @@ const tabContent = {
       "Transparent ESG reporting dashboards providing clients with precise carbon footprint calculations."
     ],
     specs: [
-      { parameter: "EV Payload Capacity", detail: "Up to 40T Gross Weight" },
+      { parameter: "EV Payload Capacity", detail: "Up to 55T Gross Weight" },
       { parameter: "EV Range & Power", detail: "250km+ range per charge, instant hub torque" },
       { parameter: "LNG/CNG Range", detail: "800km+ operational range for long-haul routes" },
       { parameter: "Charging Infrastructure", detail: "120kW+ DC Fast Chargers powered by captive solar" },

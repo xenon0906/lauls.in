@@ -469,7 +469,7 @@ export default function ContactPage() {
                         </div>
                       </a>
 
-                      <a href="https://wa.me/911294098300" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3.5 group hover:text-emerald-400 transition-colors">
+                      <a href="https://wa.me/919818688470" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3.5 group hover:text-emerald-400 transition-colors">
                         <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:bg-emerald-500 group-hover:border-emerald-500 transition-all">
                           <MessageCircle size={16} className="text-white/60 group-hover:text-white transition-colors" />
                         </div>

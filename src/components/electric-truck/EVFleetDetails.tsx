@@ -13,7 +13,7 @@ const evDetails = [
     desc: "Our EV fleet isn't restricted to light delivery. We deploy heavy-duty multi-axle electric rigs designed specifically for transporting steel coils, ferro alloys, and massive infrastructural components with identical reliability to diesel counterparts.",
     image: cloudinary("lauls image/image copy 11.png"),
     chips: [
-      { label: "Capacity", value: "Up to 40T Gross" },
+      { label: "Capacity", value: "Up to 55T Gross" },
       { label: "Torque", value: "Instant Hub Torque" },
     ],
     link: "View Specifications"

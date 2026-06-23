@@ -34,7 +34,7 @@ export default function FloatingContact() {
   }
 
   const encodedMessage = encodeURIComponent(message);
-  const waUrl = `https://wa.me/911294098300?text=${encodedMessage}`;
+  const waUrl = `https://wa.me/919818688470?text=${encodedMessage}`;
 
   useEffect(() => {
     const handleScroll = () => {

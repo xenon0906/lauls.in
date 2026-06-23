@@ -94,21 +94,26 @@ export default function EVHero() {
            initial={{ opacity: 0, y: 30 }}
            animate={{ opacity: 1, y: 0 }}
            transition={{ delay: 0.5 }}
-           className="max-w-4xl w-full grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-16 pt-5 md:pt-8 border-t border-white/10 mt-auto"
+           className="max-w-4xl w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 pt-5 md:pt-8 border-t border-white/10 mt-auto"
         >
            <div className="flex flex-col">
-             <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">0g</div>
-             <div className="text-emerald-400 text-[10px] mt-2 uppercase tracking-widest font-bold">Tailpipe Emissions</div>
+             <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">22</div>
+             <div className="text-emerald-400 text-[10px] mt-2 uppercase tracking-widest font-bold">EV Trucks Deployed</div>
            </div>
 
-           <div className="flex flex-col sm:border-l sm:border-white/10 sm:pl-8">
-             <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">40T</div>
+           <div className="flex flex-col border-l border-white/10 pl-6 md:pl-8">
+             <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">55T</div>
              <div className="text-emerald-400 text-[10px] mt-2 uppercase tracking-widest font-bold">Max Gross Payload</div>
            </div>
 
-           <div className="flex flex-col col-span-2 sm:col-span-1 sm:border-l sm:border-white/10 sm:pl-8">
+           <div className="flex flex-col md:border-l md:border-white/10 md:pl-8">
              <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">250km</div>
              <div className="text-emerald-400 text-[10px] mt-2 uppercase tracking-widest font-bold">Operational Range</div>
+           </div>
+
+           <div className="flex flex-col border-l border-white/10 pl-6 md:pl-8">
+             <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">0g</div>
+             <div className="text-emerald-400 text-[10px] mt-2 uppercase tracking-widest font-bold">Tailpipe Emissions</div>
            </div>
         </motion.div>
       </div>

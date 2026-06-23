@@ -60,7 +60,7 @@ export default function ContactLocations() {
 
           {/* Interactive View - WhatsApp */}
           <a 
-            href="https://wa.me/911294098300"
+            href="https://wa.me/919818688470"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col gap-4 group p-8 border border-transparent shadow-sm rounded-2xl bg-gray-50 hover:bg-white hover:border-gray-200 hover:shadow-xl transition-all"
@@ -73,7 +73,7 @@ export default function ContactLocations() {
             <div>
               <h4 className="text-xl font-bold text-[#0A1628] mb-2">WhatsApp Business</h4>
               <p className="text-gray-500 font-light mb-4 text-sm">Rapid text support & document sharing.</p>
-              <div className="text-[#0A1628] font-bold text-lg tracking-wide">Chat with +91-129-4098300</div>
+              <div className="text-[#0A1628] font-bold text-lg tracking-wide">Chat with +91-98186-88470</div>
             </div>
           </a>
 

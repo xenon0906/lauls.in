@@ -42,8 +42,8 @@ export default function ContactDepartments() {
     },
     { 
       title: "WHATSAPP", 
-      value: "+91-129-4098300", 
-      href: "https://wa.me/911294098300",
+      value: "+91-98186-88470", 
+      href: "https://wa.me/919818688470",
       Icon: MessageCircle 
     },
     { 
