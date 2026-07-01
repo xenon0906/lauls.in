@@ -7,6 +7,7 @@ import { cloudinary } from "@/utils/cloudinary";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowLeft, ArrowRight, FlaskConical } from "lucide-react";
+import ProductFAQ from "@/components/ProductFAQ";
 
 const products = [
   {
@@ -90,7 +91,7 @@ export default function FerroAlloysPage() {
               </div>
               <div className="w-full lg:w-3/5">
                 <div className="text-[#DCA54C] text-[10px] font-black uppercase tracking-widest mb-2">{p.grade}</div>
-                <h2 className="text-3xl font-display font-black text-[#0A1628] mb-3">{p.name}</h2>
+                <h2 className="text-3xl font-display font-black text-[#0A1628] mb-3">{p.name}: <span className="text-gray-500 text-xl font-light">What Is It Used For?</span></h2>
                 <p className="text-gray-600 font-light leading-relaxed mb-6">{p.desc}</p>
                 <div className="font-mono text-xs text-gray-500 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3 mb-6">{p.specs}</div>
                 <div className="text-sm text-gray-500 mb-8 italic">Used for: {p.use}</div>
@@ -105,6 +106,33 @@ export default function FerroAlloysPage() {
         </div>
       </section>
 
+      <ProductFAQ
+        title="Ferro Alloys — Your Questions Answered"
+        subtitle="Common questions about our ferro alloys grades, sourcing, and applications answered by our metallurgy experts."
+        items={[
+          {
+            question: "What is the difference between HC, MC, and LC Ferro Chrome?",
+            answer: "High Carbon (HC) Ferro Chrome contains 4-8% carbon and is used in stainless steel production where carbon content is not critical. Medium Carbon (MC) has 0.5-4% carbon for controlled applications. Low Carbon (LC) has under 0.5% carbon for specialty steels requiring strict carbon limits. Lauls supplies all three grades from premium TATA Steel smelters."
+          },
+          {
+            question: "Which grade of Ferro Manganese is best for steel deoxidation?",
+            answer: "High Carbon Ferro Manganese (HC FeMn) with 60-75% Manganese is the most commonly used deoxidiser and desulphuriser in steel production. For specialty steels requiring tighter carbon control, Medium Carbon (MC) or Low Carbon (LC) grades are recommended. Our technical team can recommend the optimal grade for your specific steel chemistry."
+          },
+          {
+            question: "Does Lauls supply Ferro Silicon for cast iron applications?",
+            answer: "Yes, we supply FeSi 45, 65, and 75 grades suitable for both steel and cast iron applications. Ferro Silicon improves strength, elasticity, and corrosion resistance. FeSi 75 is most commonly used in steelmaking, while FeSi 45 is preferred for certain cast iron foundry applications."
+          },
+          {
+            question: "What is the minimum order quantity for ferro alloys?",
+            answer: "We supply in standard truckload quantities (20-25 MT per truck) for bulk delivery to steel mills across Northern India. For smaller quantities, please contact our distribution team who can arrange LTL (Less Than Truckload) shipments from our Faridabad stockyard."
+          },
+          {
+            question: "Are mill test certificates provided with each consignment?",
+            answer: "Absolutely. Every consignment from Lauls includes complete mill test certificates (MTCs) certified against relevant IS/ASTM standards. We maintain full traceability from smelter to delivery, ensuring you receive exactly the grade and quality specified."
+          }
+        ]}
+        accentColor="#DCA54C"
+      />
       <Footer />
     </main>
   );

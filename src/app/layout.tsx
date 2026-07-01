@@ -92,7 +92,14 @@ export const metadata: Metadata = {
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
-  }
+  },
+  alternates: {
+    canonical: "https://lauls.in",
+    languages: {
+      "en-IN": "https://lauls.in",
+      "x-default": "https://lauls.in",
+    },
+  },
 };
 
 

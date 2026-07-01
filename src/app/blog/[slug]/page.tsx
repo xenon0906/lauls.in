@@ -9,13 +9,14 @@ import { blogs, getBlogBySlug } from "@/lib/blog-data";
 import { cloudinary } from "@/utils/cloudinary";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata(
   { params }: Props
 ): Promise<Metadata> {
-  const blog = getBlogBySlug(params.slug);
+  const { slug } = await params;
+  const blog = getBlogBySlug(slug);
 
   if (!blog) {
     return { title: "Post Not Found | Lauls Private Limited" };
@@ -56,8 +57,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function BlogPost({ params }: Props) {
-  const blog = getBlogBySlug(params.slug);
+export default async function BlogPost({ params }: Props) {
+  const { slug } = await params;
+  const blog = getBlogBySlug(slug);
 
   if (!blog) {
     notFound();

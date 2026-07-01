@@ -85,8 +85,9 @@ export function generateDailySEO(context: PageContext): Metadata {
   const dailyKeyword = clusterKeys[dayOfYear % clusterKeys.length];
   
   // 4. Inject into hyper-personalized Metadata
+  // NOTE: Layout template "%s | Lauls Private Limited" appends brand name automatically
   return {
-    title: `${baseTitle} | ${dailyKeyword} | Lauls Private Limited`,
+    title: `${baseTitle} | ${dailyKeyword}`,
     description: `${baseDesc} ${dailyKeyword}. Partner with Lauls Private Limited, serving India from Faridabad since 1933.`,
     keywords: [
       "Lauls Private Limited",

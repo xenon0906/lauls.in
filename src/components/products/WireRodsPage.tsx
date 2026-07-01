@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import { ArrowLeft, ArrowRight, Layers } from "lucide-react";
+import ProductFAQ from "@/components/ProductFAQ";
 
 const products = [
   {
@@ -98,7 +99,7 @@ export default function WireRodsPage() {
               </div>
               <div className="w-full lg:w-3/5">
                 <div className="text-[#3b82f6] text-[10px] font-black uppercase tracking-widest mb-2">{p.grade}</div>
-                <h2 className="text-3xl font-display font-black text-[#0A1628] mb-3">{p.name}</h2>
+                <h2 className="text-3xl font-display font-black text-[#0A1628] mb-3">{p.name}: <span className="text-gray-500 text-xl font-light">What Are Its Applications?</span></h2>
                 <p className="text-gray-600 font-light leading-relaxed mb-6">{p.desc}</p>
                 <div className="font-mono text-xs text-gray-500 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3 mb-6">{p.specs}</div>
                 <div className="text-sm text-gray-500 mb-8 italic">Used for: {p.use}</div>
@@ -111,6 +112,33 @@ export default function WireRodsPage() {
         </div>
       </section>
 
+      <ProductFAQ
+        title="Wire Rods — Your Questions Answered"
+        subtitle="Everything you need to know about our alloy steel, mild steel, and stainless steel wire rod specifications and applications."
+        items={[
+          {
+            question: "What is the difference between alloy steel and mild steel wire rods?",
+            answer: "Alloy Steel Wire Rods contain additional alloying elements like chromium, molybdenum, or nickel to enhance strength, hardness, and wear resistance — ideal for automotive springs, fasteners, and high-strength bolts. Mild Steel Wire Rods (SAE 1006-1018) have lower carbon content (<0.15%) for better ductility and formability, making them perfect for nails, binding wire, fencing, and general fabrication."
+          },
+          {
+            question: "Which wire rod grade is best for automotive spring manufacturing?",
+            answer: "For automotive suspension springs and engine valve springs, we recommend SAE 9254 or SAE 5160 alloy steel wire rods. These grades offer the fatigue resistance and tensile strength required for critical automotive applications. Our technical team can help match the exact SAE/AISI grade to your spring design specifications."
+          },
+          {
+            question: "Do you supply stainless steel wire rods for pharmaceutical equipment?",
+            answer: "Yes, we supply SS 304, 316, 410, and 430 grade stainless steel wire rods with bright annealed finish. SS 304 and SS 316 are ideal for pharmaceutical and food-grade equipment due to their excellent corrosion resistance. SS 316 offers superior resistance to chlorides and acidic environments compared to SS 304."
+          },
+          {
+            question: "What diameter range and coil weights are available for wire rods?",
+            answer: "Our alloy steel wire rods range from 5.5mm to 25mm diameter with coil weights of 1-2 MT. Mild steel wire rods range from 5.5mm to 14mm diameter. Stainless steel wire rods are available from 5.5mm to 16mm diameter. All stock is sourced from SAIL, TATA, and JSW mills with complete mill test certificates."
+          },
+          {
+            question: "Can you supply wire rods for cold heading and fastener applications?",
+            answer: "Absolutely. We stock SAE 1018, SAE 1022, and SAE 1035 grades specifically suited for cold heading operations. These grades offer excellent formability and consistent mechanical properties required for producing bolts, screws, nuts, and other cold-headed fasteners to IS and international standards."
+          }
+        ]}
+        accentColor="#3b82f6"
+      />
       <Footer />
     </main>
   );

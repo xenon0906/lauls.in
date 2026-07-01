@@ -7,6 +7,7 @@ import { cloudinary } from "@/utils/cloudinary";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowLeft, ArrowRight, Circle } from "lucide-react";
+import ProductFAQ from "@/components/ProductFAQ";
 
 const products = [
   {
@@ -74,7 +75,7 @@ export default function SteelRoundsPage() {
               </div>
               <div className="w-full lg:w-3/5">
                 <div className="text-emerald-600 text-[10px] font-black uppercase tracking-widest mb-2">{p.grade}</div>
-                <h2 className="text-3xl font-display font-black text-[#0A1628] mb-3">{p.name}</h2>
+                <h2 className="text-3xl font-display font-black text-[#0A1628] mb-3">{p.name}: <span className="text-gray-500 text-xl font-light">What Are Its Key Applications?</span></h2>
                 <p className="text-gray-600 font-light leading-relaxed mb-6">{p.desc}</p>
                 <div className="font-mono text-xs text-gray-500 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3 mb-6">{p.specs}</div>
                 <div className="text-sm text-gray-500 mb-8 italic">Used for: {p.use}</div>
@@ -86,6 +87,34 @@ export default function SteelRoundsPage() {
           ))}
         </div>
       </section>
+
+      <ProductFAQ
+        title="Steel Rounds — Your Questions Answered"
+        subtitle="Common questions about our alloy and mild steel rounds specifications, grades, and industrial applications."
+        items={[
+          {
+            question: "What is the difference between EN8, EN19, EN24, and EN31 alloy steel rounds?",
+            answer: "EN8 is a medium-carbon steel for general engineering components like shafts and studs. EN19 offers higher tensile strength for heavy-duty gears and axles. EN24 is a nickel-chrome-molybdenum steel for highly stressed parts like aircraft components. EN31 is a high-carbon alloy steel with excellent wear resistance for bearings, dies, and tooling. Lauls stocks all grades for immediate supply from our Faridabad stockyard."
+          },
+          {
+            question: "What diameter range of steel rounds does Lauls supply?",
+            answer: "We supply alloy steel rounds from 20mm to 500mm diameter in lengths of 3-7 meters, and mild steel rounds from 6mm to 250mm diameter in lengths of 3-12 meters. Custom cut-to-length options are available for bulk orders to reduce your processing time."
+          },
+          {
+            question: "Are these steel rounds suitable for defence and automotive applications?",
+            answer: "Yes, our alloy steel rounds (EN24, EN31, EN36) are specifically trusted by auto-component manufacturers and defence contractors for critical load-bearing applications including gears, axles, shafts, tooling, and dies. All material is supplied with full mill test certificates and traceability documentation."
+          },
+          {
+            question: "What surface finishes are available for steel rounds?",
+            answer: "We supply both black (hot rolled) and bright (cold drawn/ground) finishes. Black rounds are suitable for general engineering and construction where surface finish is not critical. Bright rounds offer tighter tolerances and better surface finish for precision applications like hydraulic pistons and machined components."
+          },
+          {
+            question: "Do you supply mild steel rounds for structural fabrication?",
+            answer: "Yes, our IS 2062 E250 and E350 grade mild steel rounds are ideal for structural steel work, machine bases, and general engineering components. These grades offer excellent weldability and formability, making them the preferred choice for construction and fabrication projects across India."
+          }
+        ]}
+        accentColor="#10b981"
+      />
 
       <Footer />
     </main>

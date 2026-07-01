@@ -7,6 +7,7 @@ import { cloudinary } from "@/utils/cloudinary";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowLeft, ArrowRight, Cylinder } from "lucide-react";
+import ProductFAQ from "@/components/ProductFAQ";
 
 const products = [
   {
@@ -74,7 +75,7 @@ export default function PrecisionTubesPage() {
               </div>
               <div className="w-full lg:w-3/5">
                 <div className="text-purple-600 text-[10px] font-black uppercase tracking-widest mb-2">{p.grade}</div>
-                <h2 className="text-3xl font-display font-black text-[#0A1628] mb-3">{p.name}</h2>
+                <h2 className="text-3xl font-display font-black text-[#0A1628] mb-3">{p.name}: <span className="text-gray-500 text-xl font-light">What Are Its Uses?</span></h2>
                 <p className="text-gray-600 font-light leading-relaxed mb-6">{p.desc}</p>
                 <div className="font-mono text-xs text-gray-500 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3 mb-6">{p.specs}</div>
                 <div className="text-sm text-gray-500 mb-8 italic">Used for: {p.use}</div>
@@ -86,6 +87,34 @@ export default function PrecisionTubesPage() {
           ))}
         </div>
       </section>
+
+      <ProductFAQ
+        title="Precision Tubes — Your Questions Answered"
+        subtitle="All you need to know about our ERW steel tubes and hollow sections specifications and applications."
+        items={[
+          {
+            question: "What is the difference between ERW tubes and seamless tubes?",
+            answer: "ERW (Electric Resistance Welded) tubes are manufactured by rolling steel strips and welding the seam longitudinally. They offer tighter dimensional tolerances, better surface finish, and are more cost-effective than seamless tubes. Seamless tubes are made by extruding solid billets and are preferred for high-pressure applications. Lauls supplies both ERW and CDW tubes conforming to IS 1239, IS 3601, and ASTM A513 standards."
+          },
+          {
+            question: "What sizes and thicknesses of ERW tubes does Lauls supply?",
+            answer: "We supply ERW steel tubes from 15mm to 168mm outer diameter with wall thicknesses from 1.6mm to 8mm. Square and rectangular hollow sections range from 20x20mm to 150x150mm with wall thickness from 1.6mm to 6mm. All sizes comply with IS 1239, IS 3601, IS 4923, and ASTM A500 standards."
+          },
+          {
+            question: "Which industries commonly use ERW steel tubes and hollow sections?",
+            answer: "ERW tubes are widely used in structural engineering, automotive manufacturing (chassis, exhaust systems), mechanical engineering, construction (scaffolding, handrails), and furniture manufacturing. Square and rectangular hollow sections are preferred for modern architectural frames, industrial sheds, gates, and structural columns. Our tubes serve clients across automotive, infrastructure, and construction sectors."
+          },
+          {
+            question: "Do you supply precision tubes with specific IS/ASTM certifications?",
+            answer: "Yes, all our tubes are manufactured and certified to relevant Indian and international standards including IS 1239 (medium/heavy duty tubes), IS 3601 (mechanical tubes), IS 4923 (hollow sections), and ASTM A513 (welded carbon steel tubing). Complete mill test certificates and quality documentation are provided with every consignment."
+          },
+          {
+            question: "Can you supply cut-to-length tubes for specific project requirements?",
+            answer: "Yes, we offer custom cut-to-length services for bulk orders. Our stockyard in Faridabad is equipped to handle precision cutting, allowing you to receive tubes in exact lengths as per your project specifications, reducing waste and fabrication time. Please contact our sales team with your specific requirements."
+          }
+        ]}
+        accentColor="#a855f7"
+      />
 
       <Footer />
     </main>
