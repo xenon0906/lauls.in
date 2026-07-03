@@ -35,7 +35,7 @@ export default function ContactLocations() {
               <MapPin className="text-[#DCA54C]" size={28} />
             </div>
             <div>
-              <h4 className="text-xl font-bold text-[#0A1628] mb-2 group-hover:text-[#DCA54C] transition-colors">Corporate Headquarters</h4>
+              <h3 className="text-xl font-bold text-[#0A1628] mb-2 group-hover:text-[#DCA54C] transition-colors">Corporate Headquarters</h3>
               <p className="text-gray-500 font-light mb-4 text-sm">33 B Nit, Faridabad, Haryana 121001</p>
               <div className="inline-flex text-[#DCA54C] text-[10px] font-bold uppercase tracking-widest items-center gap-1 group-hover:text-[#0A1628] transition-colors">
                 Open in Google Maps <ExternalLink size={12} />
@@ -52,7 +52,7 @@ export default function ContactLocations() {
               <Phone className="text-gray-500 group-hover:text-[#DCA54C] transition-colors" size={28} />
             </div>
             <div>
-              <h4 className="text-xl font-bold text-[#0A1628] mb-2">Direct Operations Line</h4>
+              <h3 className="text-xl font-bold text-[#0A1628] mb-2">Direct Operations Line</h3>
               <p className="text-gray-500 font-light mb-4 text-sm">Available Mon-Sat, 9AM to 6PM</p>
               <div className="text-[#0A1628] font-bold text-lg tracking-wide">+91-129-4098300</div>
             </div>
@@ -71,7 +71,7 @@ export default function ContactLocations() {
               </svg>
             </div>
             <div>
-              <h4 className="text-xl font-bold text-[#0A1628] mb-2">WhatsApp Business</h4>
+              <h3 className="text-xl font-bold text-[#0A1628] mb-2">WhatsApp Business</h3>
               <p className="text-gray-500 font-light mb-4 text-sm">Rapid text support & document sharing.</p>
               <div className="text-[#0A1628] font-bold text-lg tracking-wide">Chat with +91-98186-88470</div>
             </div>
@@ -83,7 +83,7 @@ export default function ContactLocations() {
               <Network className="text-gray-400" size={28} />
             </div>
             <div>
-              <h4 className="text-xl font-bold text-[#0A1628] mb-2">National Distribution</h4>
+              <h3 className="text-xl font-bold text-[#0A1628] mb-2">National Distribution</h3>
               <p className="text-gray-500 font-light text-sm">12 strategically positioned high-capacity warehousing hubs ensuring seamless delivery networks.</p>
             </div>
           </div>

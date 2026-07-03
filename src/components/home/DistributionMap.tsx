@@ -40,7 +40,7 @@ export default function DistributionMap() {
 
             {/* Labels & Global Text */}
             <div className="absolute bottom-8 left-8">
-              <h4 className="font-display font-black text-6xl md:text-8xl text-primary/5 leading-none mb-2">INDIA</h4>
+              <p className="font-display font-black text-6xl md:text-8xl text-primary/5 leading-none mb-2" aria-hidden="true">INDIA</p>
               <p className="text-primary/20 font-bold tracking-[0.4em] uppercase text-xs ml-2">Strategic Network</p>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function DistributionMap() {
                 <Clock size={24} />
               </div>
               <div>
-                <h4 className="font-display font-bold text-primary">24/7 Operations</h4>
+                <h3 className="font-display font-bold text-primary">24/7 Operations</h3>
                 <p className="text-primary/50 text-sm">Round-the-clock dispatch & handling</p>
               </div>
             </div>
@@ -86,7 +86,7 @@ export default function DistributionMap() {
                 <ShieldCheck size={24} />
               </div>
               <div>
-                <h4 className="font-display font-bold text-primary">WAREX Gold</h4>
+                <h3 className="font-display font-bold text-primary">WAREX Gold</h3>
                 <p className="text-primary/50 text-sm">CII-Certified inventory management</p>
               </div>
             </div>
@@ -95,7 +95,7 @@ export default function DistributionMap() {
                 <Zap size={24} />
               </div>
               <div>
-                <h4 className="font-display font-bold text-primary">500K+ MT</h4>
+                <h3 className="font-display font-bold text-primary">500K+ MT</h3>
                 <p className="text-primary/50 text-sm">Annual transport capacity</p>
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function DistributionMap() {
                 <Zap size={24} />
               </div>
               <div>
-                <h4 className="font-display font-bold text-primary">99% On-Time</h4>
+                <h3 className="font-display font-bold text-primary">99% On-Time</h3>
                 <p className="text-primary/50 text-sm">Unmatched delivery reliability</p>
               </div>
             </div>

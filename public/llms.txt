@@ -1,0 +1,42 @@
+# Lauls Private Limited - AI Agent Discovery Index
+
+## Company Overview
+Lauls Private Limited is a leading Indian company in steel distribution, logistics, and manufacturing. Founded in 1972, we specialize in precision steel products and comprehensive logistics solutions.
+
+## Core Services
+- **Steel Distribution**: Wire rods, steel rounds, precision tubes, ferro alloys
+- **Logistics**: Full truckload, part load, express delivery, EV fleet
+- **Distribution**: Pan-India network with 50+ warehouses
+
+## Key Pages
+- [Home](https://lauls.in) - Main landing page with company overview (500 tokens)
+- [About](https://lauls.in/about) - Company history, leadership, and values (800 tokens)
+- [Products](https://lauls.in/products) - Steel product catalog and specifications (1200 tokens)
+- [Logistics](https://lauls.in/logistics) - Transportation and warehousing services (1000 tokens)
+- [Distribution](https://lauls.in/distribution) - Pan-India distribution network (900 tokens)
+- [Contact](https://lauls.in/contact) - Contact information and locations (400 tokens)
+- [CSR](https://lauls.in/csr) - Corporate social responsibility initiatives (600 tokens)
+
+## Products
+1. **Wire Rods**: High-carbon, low-carbon, and special alloy wire rods (300 tokens)
+2. **Steel Rounds**: Precision-cut rounds for manufacturing (250 tokens)
+3. **Precision Tubes**: Seamless and welded tubes for automotive and industrial use (350 tokens)
+4. **Ferro Alloys**: Ferro silicon, ferro manganese, and other alloys (280 tokens)
+
+## Logistics Capabilities
+- Fleet of 200+ trucks (150 tokens)
+- Real-time GPS tracking (100 tokens)
+- Temperature-controlled transport (120 tokens)
+- EV trucks for sustainable delivery (130 tokens)
+- Pan-India coverage (80 tokens)
+
+## Contact
+- Email: info@lauls.in (50 tokens)
+- Phone: +91-XXXXXXXXXX (30 tokens)
+- Headquarters: Mumbai, Maharashtra, India (40 tokens)
+
+## Technical Details
+- Built with Next.js (100 tokens)
+- Deployed on Vercel (50 tokens)
+- Schema.org structured data implemented (80 tokens)
+- FAQ schema for featured snippets (60 tokens)

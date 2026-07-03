@@ -455,7 +455,7 @@ export default function ContactPage() {
 
                   {/* Direct Channels */}
                   <div className="space-y-4">
-                    <h4 className="text-white/50 text-[10px] font-bold uppercase tracking-widest">Connect Directly</h4>
+                    <h3 className="text-white/50 text-[10px] font-bold uppercase tracking-widest">Connect Directly</h3>
 
                     {/* Phones */}
                     <div className="space-y-3">
@@ -604,7 +604,7 @@ export default function ContactPage() {
                 
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
-                    <h4 className="text-[#0A1628] font-bold text-base mb-1.5">{loc.title}</h4>
+                    <h3 className="text-[#0A1628] font-bold text-base mb-1.5">{loc.title}</h3>
                     <p className="text-gray-500 text-xs sm:text-sm font-light leading-relaxed">{loc.description}</p>
                   </div>
                 </div>

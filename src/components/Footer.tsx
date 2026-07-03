@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display font-bold text-white mb-6 uppercase tracking-widest text-xs">Quick Links</h4>
+            <h3 className="font-display font-bold text-white mb-6 uppercase tracking-widest text-xs">Quick Links</h3>
             <ul className="space-y-4">
               {[
                 { name: "Home", href: "/" },
@@ -70,7 +70,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-display font-bold text-white mb-6 uppercase tracking-widest text-xs">Our Services</h4>
+            <h3 className="font-display font-bold text-white mb-6 uppercase tracking-widest text-xs">Our Services</h3>
             <ul className="space-y-4">
               {[
                 { name: "Alloy Steel Wire Solutions", href: "/products/wire-rods" },
@@ -91,7 +91,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-display font-bold text-white mb-6 uppercase tracking-widest text-xs">Contact Us</h4>
+            <h3 className="font-display font-bold text-white mb-6 uppercase tracking-widest text-xs">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex gap-4">
                 <MapPin className="text-accent shrink-0" size={18} />
@@ -112,7 +112,7 @@ export default function Footer() {
         {/* Embedded CTA */}
         <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-md">
           <div>
-            <h4 className="text-xl font-display font-bold text-white mb-2">Ready to discuss your requirements?</h4>
+            <h3 className="text-xl font-display font-bold text-white mb-2">Ready to discuss your requirements?</h3>
             <p className="text-white/60 text-sm">Get in touch with our experts for custom industrial and EV supply chain solutions.</p>
           </div>
           <Link href="/contact#contact-form" className="px-6 py-3 bg-highlight text-[#0A1628] font-bold rounded-lg hover:bg-[#c5923b] transition-all text-sm whitespace-nowrap shadow-lg">

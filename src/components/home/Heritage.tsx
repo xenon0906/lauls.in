@@ -36,7 +36,7 @@ export default function Heritage() {
                 <BadgeCheck size={24} />
               </div>
               <div>
-                <h4 className="font-display font-bold text-primary mb-1">Precision Manufacturing</h4>
+                <h3 className="font-display font-bold text-primary mb-1">Precision Manufacturing</h3>
                 <p className="text-primary/50 text-sm">RDSO-approved components with zero-defect methodology</p>
               </div>
             </div>
@@ -46,7 +46,7 @@ export default function Heritage() {
                 <ShieldCheck size={24} />
               </div>
               <div>
-                <h4 className="font-display font-bold text-primary mb-1">Quality Assurance</h4>
+                <h3 className="font-display font-bold text-primary mb-1">Quality Assurance</h3>
                 <p className="text-primary/50 text-sm">ISO 9001:2015 & ISO 14001 certified processes</p>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function Heritage() {
                 <Globe size={24} />
               </div>
               <div>
-                <h4 className="font-display font-bold text-primary mb-1">Global Reach</h4>
+                <h3 className="font-display font-bold text-primary mb-1">Global Reach</h3>
                 <p className="text-primary/50 text-sm">Serving clients across 12 countries with reliable supply chains</p>
               </div>
             </div>

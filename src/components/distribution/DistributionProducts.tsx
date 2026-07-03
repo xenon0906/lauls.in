@@ -118,9 +118,9 @@ export default function DistributionProducts() {
                   {product.title}
                 </h3>
                 
-                <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-6">
+                <h3 className="text-lg md:text-xl text-gray-800 font-medium mb-6">
                   {product.subtitle}
-                </h4>
+                </h3>
 
                 <p className="text-gray-500 font-light leading-relaxed mb-10 w-full lg:max-w-lg">
                   {product.desc}

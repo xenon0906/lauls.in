@@ -58,7 +58,7 @@ export default function ContactMapGrid() {
                   </div>
                 </div>
 
-                <h4 className="text-[#0A1628] font-bold text-lg leading-tight mb-3 pr-4">{loc.title}</h4>
+                <h3 className="text-[#0A1628] font-bold text-lg leading-tight mb-3 pr-4">{loc.title}</h3>
                 <p className="text-gray-500 text-sm font-light leading-relaxed pr-4">{loc.description}</p>
              </div>
           ))}

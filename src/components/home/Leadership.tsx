@@ -105,9 +105,9 @@ export default function Leadership() {
                 <Image src={leader.image} alt={leader.name} width={56} height={56} className="object-cover" />
               </div>
               <div>
-                <h4 className={`font-display font-bold text-sm md:text-base ${activeLeader.id === leader.id ? "text-primary" : "text-primary/70"}`}>
+                <h3 className={`font-display font-bold text-sm md:text-base ${activeLeader.id === leader.id ? "text-primary" : "text-primary/70"}`}>
                   {leader.name}
-                </h4>
+                </h3>
                 <p className="text-xs text-primary/40 mt-1 font-medium">{leader.role}</p>
               </div>
               <ChevronRight className={`ml-auto transition-transform ${activeLeader.id === leader.id ? "text-accent translate-x-1" : "text-primary/20 opacity-0 group-hover:opacity-100"}`} size={20} />

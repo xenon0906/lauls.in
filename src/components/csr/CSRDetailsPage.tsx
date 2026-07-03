@@ -182,7 +182,7 @@ export default function CSRDetailsPage() {
 
                 {/* Features Checklist */}
                 <div className="space-y-4 pt-4">
-                  <h4 className="font-display font-bold text-slate-800 uppercase tracking-wider text-xs">Core Program Focus Areas</h4>
+                  <h3 className="font-display font-bold text-slate-800 uppercase tracking-wider text-xs">Core Program Focus Areas</h3>
                   <div className="grid grid-cols-1 gap-3.5">
                     {activeTab.features.map((feature, i) => (
                       <div key={i} className="flex items-start gap-3">
@@ -195,9 +195,9 @@ export default function CSRDetailsPage() {
 
                 {/* Technical Specifications Table */}
                 <div className="pt-8">
-                  <h4 className="font-display font-bold text-[#0A1628] mb-4 uppercase tracking-wider text-xs flex items-center gap-2">
+                  <h3 className="font-display font-bold text-[#0A1628] mb-4 uppercase tracking-wider text-xs flex items-center gap-2">
                     <Settings size={16} className="text-[#DCA54C]" /> Program Framework
-                  </h4>
+                  </h3>
                   <div className="border border-slate-200 rounded-2xl overflow-hidden shadow-xs bg-white">
                     <table className="w-full text-left border-collapse">
                       <thead>
@@ -252,9 +252,9 @@ export default function CSRDetailsPage() {
                   <div className="relative z-10 flex flex-col h-full justify-between">
                     <div>
                       <span className="text-[#DCA54C] font-display font-black uppercase tracking-widest text-[9px] mb-3 block">Direct Engagement</span>
-                      <h4 className="text-xl md:text-2xl font-display font-bold text-white mb-3 tracking-tight">
+                      <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-3 tracking-tight">
                         {activeTab.ctaTitle}
-                      </h4>
+                      </h3>
                       <p className="text-white/60 text-xs md:text-sm font-light leading-relaxed mb-6">
                         {activeTab.ctaDesc}
                       </p>

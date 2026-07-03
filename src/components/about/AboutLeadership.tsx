@@ -106,9 +106,9 @@ export default function AboutLeadership() {
                 </div>
               </div>
               <div className="lg:w-3/5 bg-[#0A1628] p-10 lg:p-16 flex flex-col justify-center">
-                <h4 className="text-2xl md:text-3xl font-display font-bold text-white mb-6 leading-relaxed">
+                <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-6 leading-relaxed">
                   &quot;{activeLeader.quote}&quot;
-                </h4>
+                </h3>
                 <p className="text-white/60 mb-10 leading-relaxed font-light">
                   {activeLeader.bio}
                 </p>
@@ -154,7 +154,7 @@ export default function AboutLeadership() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-[#0A1628]/90 to-transparent p-6">
-                    <h4 className="text-white font-display font-bold text-xl">{member.name}</h4>
+                    <h3 className="text-white font-display font-bold text-xl">{member.name}</h3>
                     <p className="text-white/70 text-xs uppercase tracking-widest font-bold mt-1">{member.role}</p>
                   </div>
                 </div>

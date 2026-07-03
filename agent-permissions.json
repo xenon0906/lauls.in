@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "name": "Lauls Private Limited",
+  "description": "Agent permissions for lauls.in website interactions",
+  "permissions": {
+    "public_content": {
+      "description": "All public website content is accessible to agents",
+      "allow": true,
+      "rateLimit": {
+        "requests": 100,
+        "windowMs": 60000
+      }
+    },
+    "api_endpoints": {
+      "description": "API endpoints require human-in-the-loop for mutations",
+      "contact_form": {
+        "allow": true,
+        "method": "POST",
+        "requiresHumanApproval": true,
+        "rateLimit": {
+          "requests": 5,
+          "windowMs": 60000
+        }
+      },
+      "cron_reports": {
+        "allow": false,
+        "requiresHumanApproval": true
+      }
+    },
+    "data_reuse": {
+      "description": "Content may be cited with attribution",
+      "attribution": "Lauls Private Limited (https://lauls.in)",
+      "commercialUse": false
+    }
+  }
+}

@@ -69,7 +69,7 @@ export default function LogisticsPrecisionTubes() {
                     <feature.icon size={20} className="text-highlight" />
                   </div>
                   <div>
-                    <h4 className="text-white font-medium mb-1">{feature.title}</h4>
+                    <h3 className="text-white font-medium mb-1">{feature.title}</h3>
                     <p className="text-sm text-white/50">{feature.description}</p>
                   </div>
                 </motion.div>

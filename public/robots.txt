@@ -1,0 +1,40 @@
+# robots.txt for lauls.in
+
+# Default: allow all crawlers
+User-agent: *
+Allow: /
+Disallow: /_next/
+Disallow: /api/
+
+# AI agent crawlers - explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+Sitemap: https://lauls.in/sitemap.xml

@@ -76,7 +76,7 @@ export default function ContactDepartments() {
                    <Icon className="text-gray-400 group-hover:text-[#DCA54C] transition-colors" size={28} strokeWidth={1.5} />
                  </div>
                  <div className="pt-1">
-                   <h4 className="text-sm font-bold text-[#0A1628] uppercase tracking-widest mb-1">{method.title}</h4>
+                    <h3 className="text-sm font-bold text-[#0A1628] uppercase tracking-widest mb-1">{method.title}</h3>
                    <a 
                      href={method.href} 
                      target={method.title === "WHATSAPP" || method.title === "LINKEDIN" ? "_blank" : undefined} 
