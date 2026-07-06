@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { cloudinary } from "@/utils/cloudinary";
+import LevAiBot from "@/components/levai/LevAiBot";
 import FloatingContact from "@/components/FloatingContact";
 import Schema from "@/components/seo/Schema";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
@@ -122,6 +123,7 @@ export default function RootLayout({
 
         {children}
         <FloatingContact />
+        <LevAiBot />
       </body>
     </html>
   );

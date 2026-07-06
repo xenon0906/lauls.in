@@ -71,7 +71,7 @@ export default function FloatingContact() {
           initial={{ opacity: 0, y: 50, scale: 0.5 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 50, scale: 0.5 }}
-          className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[100] flex flex-col gap-4 items-end"
+          className="fixed bottom-6 left-6 md:bottom-8 md:left-8 z-[100] flex flex-col gap-4 items-start"
         >
           {/* WhatsApp Action Area */}
           <div className="relative flex items-center group">
@@ -83,11 +83,11 @@ export default function FloatingContact() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -5 }}
                 transition={{ duration: 0.3 }}
-                className="absolute bottom-full right-0 mb-3 whitespace-nowrap bg-white text-primary text-sm font-semibold py-2.5 px-4 rounded-xl shadow-xl shadow-black/10 border border-black/5 pointer-events-none"
+                className="absolute bottom-full left-0 mb-3 whitespace-nowrap bg-white text-primary text-sm font-semibold py-2.5 px-4 rounded-xl shadow-xl shadow-black/10 border border-black/5 pointer-events-none"
               >
                 {messages[messageIndex]}
                 {/* Tooltip Arrow */}
-                <div className="absolute -bottom-1.5 right-[22px] w-3 h-3 bg-white rotate-45 border-r border-b border-black/5"></div>
+                <div className="absolute -bottom-1.5 left-[22px] w-3 h-3 bg-white rotate-45 border-r border-b border-black/5"></div>
               </motion.div>
             </AnimatePresence>
 
