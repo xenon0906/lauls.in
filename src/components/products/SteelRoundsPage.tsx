@@ -29,11 +29,12 @@ const products = [
 
 export default function SteelRoundsPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white" aria-label="Steel Rounds Product Catalog">
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative min-h-[100svh] flex items-center overflow-hidden">
+      <article>
+        {/* Hero */}
+        <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <Image
           src={cloudinary("images/products/steel_rounds_stacked.png")}
           alt="Steel Rounds"
@@ -86,6 +87,7 @@ export default function SteelRoundsPage() {
           ))}
         </div>
       </section>
+      </article>
 
       <Footer />
     </main>

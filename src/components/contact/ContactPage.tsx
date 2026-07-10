@@ -157,7 +157,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 font-sans text-slate-800 selection:bg-[#DCA54C] selection:text-[#0A1628] overflow-x-hidden">
+    <main className="min-h-screen bg-slate-50 font-sans text-slate-800 selection:bg-[#DCA54C] selection:text-[#0A1628] overflow-x-hidden" aria-label="Contact Lauls Private Limited">
       <Navbar />
 
       {/* --- SECTION 1: HERO (Solid Navy Split Layout) --- */}
@@ -288,7 +288,7 @@ export default function ContactPage() {
       </section>
 
       {/* --- SECTION 2: FORM & COMPANY DETAILS SPLIT --- */}
-      <section id="contact-form" className="relative pb-24 z-20 bg-slate-50">
+      <section id="contact-form" className="relative pb-24 z-20 bg-slate-50" aria-label="Contact Form and Company Details">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
@@ -554,7 +554,7 @@ export default function ContactPage() {
       </section>
 
       {/* --- SECTION 3: LOCATIONS NETWORK GRID --- */}
-      <section className="py-24 bg-white border-t border-slate-200">
+      <section className="py-24 bg-white border-t border-slate-200" aria-label="Office Locations">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
             <div>

@@ -8,11 +8,15 @@ import AboutContact from "@/components/about/AboutContact";
 
 export default function EVPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white" aria-label="Electric Truck Fleet Operations">
       <Navbar />
-      <EVHero />
-      <EVFleetDetails />
-      <AboutContact />
+      <article>
+        <EVHero />
+        <EVFleetDetails />
+      </article>
+      <aside>
+        <AboutContact />
+      </aside>
       <Footer />
     </main>
   );

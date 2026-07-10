@@ -10,13 +10,17 @@ import Footer from "@/components/Footer";
 
 export default function DistributionPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white" aria-label="Steel Distribution Services">
       <Navbar />
-      <DistributionHero />
-      <DistributionProducts />
-      <DistributionSpecs />
-      <DistributionAdvantages />
-      <AboutContact />
+      <article>
+        <DistributionHero />
+        <DistributionProducts />
+        <DistributionSpecs />
+        <DistributionAdvantages />
+      </article>
+      <aside>
+        <AboutContact />
+      </aside>
       <Footer />
     </main>
   );

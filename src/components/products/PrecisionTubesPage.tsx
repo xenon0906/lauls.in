@@ -29,11 +29,12 @@ const products = [
 
 export default function PrecisionTubesPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white" aria-label="Precision Tubes Product Catalog">
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative min-h-[100svh] flex items-center overflow-hidden">
+      <article>
+        {/* Hero */}
+        <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <Image
           src={cloudinary("images/products/precision_tubes_erw.png")}
           alt="Precision Tubes"
@@ -86,6 +87,7 @@ export default function PrecisionTubesPage() {
           ))}
         </div>
       </section>
+      </article>
 
       <Footer />
     </main>

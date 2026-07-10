@@ -1,22 +1,17 @@
-# robots.txt for lauls.in
+# Robots.txt for Lauls Private Limited
+# https://lauls.in
 
-# Default: allow all crawlers
+# Default: Allow all crawlers
 User-agent: *
 Allow: /
 Disallow: /_next/
 Disallow: /api/
 
-# AI agent crawlers - explicitly allowed
+# AI/LLM Crawlers - Explicitly allowed
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
 Allow: /
 
 User-agent: Google-Extended
@@ -25,16 +20,35 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: Omgili
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
 User-agent: cohere-ai
 Allow: /
 
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: FacebookBot
+User-agent: Bytespider
 Allow: /
 
-User-agent: Omgilibot
+User-agent: Amazonbot
 Allow: /
 
+# AI Discovery Files
+Allow: /llms.txt
+
+# Sitemap
 Sitemap: https://lauls.in/sitemap.xml

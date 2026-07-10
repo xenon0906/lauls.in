@@ -19,15 +19,20 @@ export default function AboutPage() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
       className="min-h-screen"
+      aria-label="About Lauls Private Limited"
     >
       <Navbar />
-      <AboutIntro />
-      <FoundersLineage />
-      <AboutPillars />
-      <AboutLeadership />
-      <AboutTimeline />
-      <AboutStatsBar />
-      <AboutContact />
+      <article>
+        <AboutIntro />
+        <FoundersLineage />
+        <AboutPillars />
+        <AboutLeadership />
+        <AboutTimeline />
+        <AboutStatsBar />
+      </article>
+      <aside>
+        <AboutContact />
+      </aside>
       <Footer />
     </motion.main>
   );

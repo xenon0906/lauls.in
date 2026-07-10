@@ -9,12 +9,16 @@ import AboutContact from "@/components/about/AboutContact";
 
 export default function LogisticsPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white" aria-label="Logistics and Warehousing Services">
       <Navbar />
-      <LogisticsHero />
-      <LogisticsServices />
-      <LogisticsPrecisionTubes />
-      <AboutContact />
+      <article>
+        <LogisticsHero />
+        <LogisticsServices />
+        <LogisticsPrecisionTubes />
+      </article>
+      <aside>
+        <AboutContact />
+      </aside>
       <Footer />
     </main>
   );

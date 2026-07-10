@@ -90,6 +90,11 @@ export const metadata: Metadata = {
     "geo.placename": "Faridabad",
     "geo.position": "28.3888;77.3175",
     "ICBM": "28.3888, 77.3175",
+    "llms-txt": "/llms.txt",
+    "token-count": "500",
+    "ai-content-type": "company-information",
+    "ai-content-language": "en",
+    "ai-content-audience": "business-to-business",
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
@@ -110,6 +115,9 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#DCA54C" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-Friendly Content" />
+        <meta name="ai-content-version" content="1.0" />
+        <meta name="ai-content-updated" content={new Date().toISOString().split('T')[0]} />
         {/* Preconnects for ultra-fast asset loading at the edge */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

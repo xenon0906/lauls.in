@@ -8,11 +8,15 @@ import AboutContact from "@/components/about/AboutContact";
 
 export default function CSRPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white" aria-label="CSR Initiatives">
       <Navbar />
-      <CSRHero />
-      <CSRPillars />
-      <AboutContact />
+      <article>
+        <CSRHero />
+        <CSRPillars />
+      </article>
+      <aside>
+        <AboutContact />
+      </aside>
       <Footer />
     </main>
   );

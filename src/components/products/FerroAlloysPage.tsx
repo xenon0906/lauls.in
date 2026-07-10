@@ -45,11 +45,12 @@ const products = [
 
 export default function FerroAlloysPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white" aria-label="Ferro Alloys Product Catalog">
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative min-h-[100svh] flex items-center overflow-hidden">
+      <article>
+        {/* Hero */}
+        <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <Image
           src={cloudinary("images/products/ferro_alloys_raw.png")}
           alt="Raw Ferro Alloys"
@@ -104,6 +105,7 @@ export default function FerroAlloysPage() {
           ))}
         </div>
       </section>
+      </article>
 
       <Footer />
     </main>
